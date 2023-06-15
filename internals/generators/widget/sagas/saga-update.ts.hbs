@@ -1,0 +1,73 @@
+import { /* take, */ call, put, select, takeLatest } from 'redux-saga/effects';
+import { request } from 'utils/request';
+import Constant from 'constants/index';
+import { {{ camelCase ServiceName }}sActions } from 'services/{{dashCase ServiceName}}/{{dashCase ServiceName}}-reducer';
+import { select{{ properCase ServiceName }}sFilters } from 'services/{{dashCase ServiceName}}/{{dashCase ServiceName}}-selectors';
+import { selectAuthToken } from 'services/auth/auth-selectors';
+import { Filters{{#if wantModel}}, {{ properCase ModelName }}{{/if}} } from 'models';
+
+/**
+ *  repos request/response handler
+ */
+export function* update{{ properCase ServiceName }}() {
+
+    try {
+        // Call our request helper (see 'utils/request')
+        yield put({{ camelCase ServiceName }}sActions.loading(true));
+
+        const { token } = yield select(selectAuthToken);
+        const { id, ...params}: Filters = yield select(select{{ properCase ServiceName }}sFilters);
+
+        if (!!token) {
+            yield put(
+                {{ camelCase ServiceName }}sActions.error({ name: 'error', message: 'cannot update data, not authenticated', data: {} }),
+            );
+            return;
+        }
+
+        const options: any = {
+            url: `${Constant.{{#if wantModel}}{{ camelCase ModelName }}{{else}}{{ camelCase ServiceName }}{{/if}}s}/${id}`,
+            method: 'PUT',
+            headers: {
+                'Content-Type': 'application/json;charset=utf-8',
+                Authorization: token,
+            },
+            params,
+        };
+
+        console.log('update{{ properCase ServiceName }}s.saga: updating {{ camelCase ServiceName }}s with (token, options) ', token, options);
+
+        const {{ camelCase ServiceName }}: {{#if wantModel}}{{ properCase ModelName }}{{else}}any{{/if}} = yield call(request, options);
+
+        console.log('update{{ properCase ServiceName }}s.saga: got update results ({{ camelCase ServiceName }}) ', {{ camelCase ServiceName }});
+
+        yield put({{ camelCase ServiceName }}sActions.set{{> ServiceModel }}({{ camelCase ServiceName }}));
+    } catch (err) {
+        console.warn('update{{ properCase ServiceName }}s.saga.ERROR: got error (err) ', err);
+
+        const { status = 0, message = '' } = { ...err.response };
+
+        if (status === 401) {
+            yield put({{ camelCase ServiceName }}sActions.error({ name: 'error', message: 'Authentication failed', data: { status, message } }));
+        } else {
+            yield put(
+                {{ camelCase ServiceName }}sActions.error({ name: 'error', message: 'Updating {{ camelCase ServiceName }}s failed', data: { status, message } }),
+            );
+        }
+    }
+
+    yield put({{ camelCase ServiceName }}sActions.loading(false));
+}
+
+/**
+ * Root saga manages watcher lifecycle
+ */
+export function* update{{ properCase ServiceName }}Saga() {
+    // Watches for update{{> ServiceModel }}s actions and calls update{{> ServiceModel }}s when one comes in.
+    // By using `takeLatest` only the result of the latest API call is applied.
+    // It returns task descriptor (just like fork) so we can continue execution
+    // It will be cancelled automatically on component unmount
+    yield takeLatest({{ camelCase ServiceName }}sActions.update{{> ServiceModel }}.type, update{{ properCase ServiceName }});
+}
+
+export default update{{ properCase ServiceName }}Saga;

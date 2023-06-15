@@ -1,0 +1,58 @@
+$risk-cell-width: 40px;
+$risk-cell-height: 40px;
+$risk-title-cell-width: 150px;
+$risk-title-cell-height: 110px;
+
+.x-cls-car-body-head {
+    height: 1$risk-title-cell-height;
+    width: $risk-title-cell-width;
+    display: flex;
+    background-color: #424242;
+
+    .studid-label,
+    .carbodyid-label {
+        display: flex;
+        flex-flow: row nowrap;
+
+        align-items: center;
+        justify-content: center;
+        &:hover {
+            cursor: pointer;
+        }
+        & > div {
+            font-family: Roboto;
+            font-style: normal;
+            font-weight: normal;
+            font-size: 14px;
+            padding: 0px 5px 0px 5px;
+
+            display: flex;
+            align-items: center;
+            justify-content: flex-end;
+            text-align: right;
+            letter-spacing: 0.4px;
+            white-space: nowrap;
+        }
+        svg {
+            width: 24px;
+            height: 24px;
+            min-width: initial;
+            max-height: initial;
+        }
+    }
+    .studid-label {
+        height: calc(#{$risk-title-cell-height} - 10px);
+        display: flex;
+        transform: rotate(-90deg);
+        & > * {
+            color: #ffd20a;
+        }
+    }
+    .carbodyid-label {
+        width: calc(#{$risk-title-cell-width} - 33px);
+        align-self: flex-end;
+        & > * {
+            color: #c3d4fb;
+        }
+    }
+}

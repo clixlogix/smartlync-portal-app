@@ -1,0 +1,20 @@
+@import 'scss/main.scss';
+.x-cls-position-arrow {
+    opacity: 1;
+
+    .plant-icon {
+        padding-right: 7px;
+    }
+    .change-down {
+        color: $smartlync-green;
+    }
+    .change-up {
+        color: $smartlync-orange;
+    }
+    .new {
+        color: $smartlync-primary-yellow;
+    }
+    .no-change {
+        color: $smartlync-blue;
+    }
+}

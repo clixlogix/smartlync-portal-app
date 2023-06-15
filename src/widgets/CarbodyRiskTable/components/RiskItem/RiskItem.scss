@@ -1,0 +1,23 @@
+@import 'scss/main.scss';
+
+.x-cls-risk-item {
+    display: flex;
+
+    .risk-item {
+        flex: 1;
+        cursor: pointer;
+
+        &.blue {
+            background-color: rgba(166, 213, 250, 0.24);
+            border: 1px solid #64b5f6;
+        }
+        &.yellow {
+            background-color: rgba(255, 213, 153, 0.48);
+            border: 1px solid #f57c00;
+        }
+        &.red {
+            background-color: rgba(244, 67, 54, 0.5);
+            border: 1px solid rgba(244, 67, 54, 0.5);
+        }
+    }
+}

@@ -1,0 +1,314 @@
+@import 'scss/main.scss';
+$card-background-color: #243240;
+$text-color-white: #ffffff;
+$text-color-grey: #a0a0a0;
+$base-color: #ffdb0a;
+$border-dark: rgba($base-color, 0.88);
+$basic-white: #ffffff;
+$basic-black: #000000;
+$project-header: #243240;
+.x-cls-top-fault-count-widget-table {
+    display: flex;
+    .react-grid-item {
+        // default widget background and border
+        background-color: #333;
+        border: 1px solid #bbb;
+    }
+    .flexOne {
+        flex: 1;
+    }
+    td.carBody-data-cell {
+        border: 1px solid #525252;
+        background-color: $basic-black;
+        min-width: 80px;
+        max-width: 80px;
+        text-align: center;
+        cursor: pointer;
+        &.carBody-data {
+            background-color: white;
+        }
+    }
+    th.carBody-data-cell-header {
+        &.carBodyHeader-data {
+            background-color: #222;
+        }
+    }
+    .react-grid-item {
+        // default widget background and border
+        background-color: #333;
+        border: 1px solid #bbb;
+    }
+    .firstColumnStyle {
+        &.highLightFilter {
+            border-left: 1px solid;
+            border-right: 1px solid;
+            border-top: 2px solid;
+            border-bottom: 2px solid;
+            border-color: greenyellow;
+        }
+    }
+}
+
+.x-cls-car-body-analysis-widget-table {
+    .carBody-table-pill {
+        background-color: #f44336;
+        border: none;
+        color: black;
+        padding: 15px 30px;
+        text-align: center;
+        text-decoration: none;
+        display: inline-block;
+        border-radius: 16px;
+    }
+    .carBody-table-pill-empty {
+        border: 1px solid #29b6f6;
+        padding: 15px 30px;
+        text-align: center;
+        text-decoration: none;
+        border-radius: 16px;
+    }
+    .pill-blue {
+        background-color: #29b6f6;
+        width: 100%;
+        height: 100%;
+    }
+    .pill-yellow {
+        background-color: rgba(255, 213, 153, 0.48);
+        width: 100%;
+        height: 100%;
+    }
+    .pill-red {
+        background: rgba(244, 67, 54, 0.5);
+        width: 100%;
+        height: 100%;
+    }
+    .x-cls-top-fault-count-widget-table {
+        td:last-child {
+            border: 1px solid #424242;
+            outline: 1px solid #424242;
+            background-color: #424242;
+        }
+        td.cell-content {
+            &.carbodyid-cell {
+                background-color: #424242;
+                color: #fff;
+                padding: 0px;
+                text-align: center;
+                width: 150px;
+                outline: 1px solid #525252;
+                // border: 1px solid #525252;
+            }
+            &.overall-risk-cell {
+                padding: 0px;
+                background-color: #424242;
+                color: #fff;
+                width: 10px;
+                padding: 0px;
+                margin: 0px;
+                outline: 1px solid #525252;
+                border: 1px solid #525252;
+            }
+            &.risk-cell {
+                padding: 0px;
+                background-color: #424242;
+                color: #fff;
+                width: 10px;
+                padding: 0px;
+                margin: 0px;
+                outline: 1px solid #525252;
+                // border: 1px solid #525252;
+            }
+        }
+        .cell-header {
+            &.carbodyid-head-cell {
+                white-space: nowrap;
+                padding: 0px;
+                background-color: #424242;
+                color: white;
+                outline: 1px solid #525252;
+                // border: 1px solid #525252;
+            }
+            &.overall-risk-head-cell {
+                white-space: nowrap;
+                width: 10px;
+                padding: 0px;
+                height: 90px;
+                background-color: #424242;
+                color: #fff;
+                outline: 1px solid #525252;
+                // border: 1px solid #525252;
+            }
+        }
+    }
+    .x-cls-top-fault-count-widget-table {
+        .x-cls-table > div + div {
+            background-color: #424242;
+        }
+        th.x-cls-carbody-table-header-cells {
+            white-space: nowrap;
+            padding: 0px;
+            background-color: #424242;
+            color: white;
+            outline: 1px solid #525252;
+            // border: 1px solid #525252;
+        }
+        th.x-cls-overall-risk-head {
+            width: 33px;
+            max-width: 33px;
+        }
+        th.x-cls-overall-risk-head:nth-child(2),
+        td.overall-risk-cell:nth-child(2) {
+            border-left: 1px solid #fff;
+            border-right: 2px solid #fff;
+            outline: 0px solid #525252;
+            width: 32px;
+        }
+        tbody > tr:first-child {
+            position: sticky;
+            top: 150px;
+            left: 0px;
+            td.cell-content.carbodyid-cell {
+                // outline: 1px solid #ffd20a;
+                border-right: 1px solid #fff;
+            }
+            td.cell-content.risk-cell > div + div {
+                position: absolute;
+                top: 0px;
+                width: 40px;
+                height: 29px;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                border-bottom: 1px solid #ffd20a;
+                border-top: 1px solid #ffd20a;
+            }
+            td {
+                position: relative;
+            }
+            td:first-child {
+                position: sticky;
+                top: 150px;
+                left: 0px;
+                z-index: 3;
+                border: 0px solid transparent;
+                outline: 0px solid transparent;
+                div + div.cell-content.carbodyid-cell {
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    border-top: 1px solid #ffd20a;
+                    border-bottom: 2px solid #ffd20a;
+                    & > div {
+                        height: 26px;
+                    }
+                    .overall-risk-label {
+                        color: #ffd20a;
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                        flex-flow: row nowrap;
+                    }
+                }
+            }
+            td:nth-child(2) {
+                position: sticky;
+                z-index: 3;
+                outline: 1px solid #fff;
+                .cell-content.overall-risk-cell {
+                    position: relative;
+                    border: 0px solid transparent;
+                    svg {
+                        position: absolute;
+                        top: -20px;
+                        left: -2px;
+                        width: 35px;
+                        height: 39px;
+                    }
+                }
+            }
+            td:last-child {
+                & > * {
+                    display: none;
+                }
+            }
+        }
+        tbody {
+            td:first-child {
+                left: 0px;
+            }
+            td:nth-child(2) {
+                left: 150px;
+                z-index: 2;
+                .cell-content.overall-risk-cell {
+                    position: absolute;
+                    top: 0px;
+                    left: 0px;
+                    height: calc(100% + 3px);
+                    width: 100%;
+                    border-right: 1px solid #fff;
+                    border-left: 1px solid #fff;
+                    & > div {
+                        height: calc(100% - 1px);
+                        width: calc(100% + 4px);
+                        border-bottom: 3px solid #525252;
+                        & > div {
+                            display: flex;
+                            align-items: center;
+                            justify-content: center;
+                            align-self: center;
+                            justify-self: center;
+                        }
+                    }
+                }
+            }
+            td:first-child,
+            td:nth-child(2) {
+                position: sticky;
+                z-index: 2;
+            }
+        }
+        thead > tr:first-child > th:first-child {
+            top: 0px;
+            left: 0px;
+            z-index: 4;
+            position: sticky;
+            outline: 1px solid #fff;
+        }
+        thead > tr {
+            position: sticky;
+            top: 0px;
+            left: 0px;
+            th:nth-child(2) {
+                position: sticky;
+                top: 0px;
+                left: 150px;
+            }
+        }
+    }
+    .x-cls-carbody-table-header-cells {
+        & > div {
+            width: 100%;
+            height: 100%;
+            white-space: nowrap;
+            // width: 10px;
+            // padding-top: 20px;
+            color: white;
+            // background-color: #424242;
+            font-size: 12px;
+            margin: -1px;
+            transform: rotate(-90deg);
+            /* Legacy vendor prefixes that you probably don't need... */
+            /* Safari */
+            -webkit-transform: rotate(-90deg);
+            /* Firefox */
+            -moz-transform: rotate(-90deg);
+            /* IE */
+            -ms-transform: rotate(-90deg);
+            /* Opera */
+            -o-transform: rotate(-90deg);
+            &.yellow-text {
+                color: rgba(255, 210, 10, 1);
+            }
+        }
+    }
+}

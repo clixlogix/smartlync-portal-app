@@ -1,0 +1,57 @@
+@import 'scss/main.scss';
+
+.x-cls-fleet-expand-device-table-widget {
+    opacity: 1;
+    display: flex;
+    flex: 1;
+    height: 300px;
+    margin-top: 20px;
+
+    & > div,
+    & > div > div {
+        flex: 1;
+    }
+
+    &.react-grid-item {
+        // default widget background and border
+        background-color: #333;
+        border: 1px solid #bbb;
+    }
+
+    .report-description-cell {
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: initial;
+    }
+
+    .fault-code {
+        width: 77px;
+        height: 56px;
+    }
+
+    .x-cell-value {
+        text-align: right;
+        padding: 0px 5px;
+
+        &.grey {
+            background-color: #f4433614;
+        }
+        &.light-red {
+            background-color: #f443363d;
+        }
+        &.medium-red {
+            background-color: #f4433680;
+        }
+        &.dark-red {
+            background-color: #991111;
+        }
+    }
+}
+
+.x-cls-fleet-expand-device-table-widget-header {
+    opacity: 1;
+}
+
+.x-cls-fleet-expand-device-table-widget-body {
+    opacity: 1;
+}

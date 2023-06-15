@@ -1,0 +1,48 @@
+.x-cls-carBody-table-header-cell {
+    position: sticky;
+    top: 0;
+    display: table-cell;
+    background-color: #333;
+    border: 1.0px solid #525252;
+    &>div {
+        padding-left: 0px;
+        padding-right: 0px;
+    }
+    .sort-label {
+        padding: 0;
+        margin: 0;
+        flex: initial !important;
+        font-size: 12px;
+        color: #333;
+        flex: 1;
+        justify-self: center;
+        justify-content: space-around;
+        align-items: center;
+        &>* {
+            margin: 0px;
+        }
+    }
+    .column-label {
+        font-size: 14px;
+        color: #333;
+        display: flex;
+        flex-flow: row nowrap;
+        justify-content: space-around;
+        align-items: center;
+    }
+    .sort-icon {
+        &.hide {
+            color: 'red';
+        }
+        &.show {
+            color: 'blue';
+        }
+    }
+    &.highLightFilter {
+        border-left: 2px solid;
+        border-right: 2px solid;
+        border-top: 1px solid;
+        border-bottom: 1px solid;
+        border-color: greenyellow;
+    }
+}

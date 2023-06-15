@@ -1,0 +1,6 @@
+#/usr/bin/env bash
+( cd src/pages && rm -rf MyPage MyWidget )
+( cd src/services && rm -rf my-page my-service my-widget )
+( cd src/components && rm -rf MyComponent MyWidget )
+( cd src/widgets && rm -rf MyComponent MyWidget )
+rm -rf src/services/my-service serc/models/my-model-model.ts

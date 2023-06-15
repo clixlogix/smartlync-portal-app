@@ -1,0 +1,73 @@
+import { /* take, */ call, put, select, takeLatest } from 'redux-saga/effects';
+import { request } from 'utils/request';
+import Constant from 'constants/index';
+import { {{ camelCase ServiceName }}sActions } from './{{dashCase ServiceName}}-reducer';
+import { select{{ properCase ServiceName }}Filters } from './{{dashCase ServiceName}}-selectors';
+import { selectAuthToken } from 'services/auth/auth-selectors';
+import { Filters, /* {{ properCase ServiceName }}s */ } from 'models';
+
+/**
+ *  repos request/response handler
+ */
+export function* get{{> ServiceModel }}s() {
+
+    try {
+        // Call our request helper (see 'utils/request')
+        yield put({{ camelCase ServiceName }}sActions.loading(true));
+
+        const { token } = yield select(selectAuthToken);
+        const params: Filters = yield select(select{{> ServiceModel }}Filters);
+
+        if (!!token) {
+            yield put(
+                {{ camelCase ServiceName }}sActions.error({ name: 'error', message: 'cannot get data, not authenticated', data: {} }),
+            );
+            return;
+        }
+
+        const options: any = {
+            url: Constant.{{> serviceModel }}s,
+            method: 'GET',
+            headers: {
+                'Content-Type': 'application/json;charset=utf-8',
+                Authorization: token,
+            },
+            params,
+        };
+
+        console.log('get{{> ServiceModel }}s.saga: getting {{{> serviceModel }}s with (token, options) ', token, options);
+
+        const {{> serviceModel }}s: {{> AnyModels }} = yield call(request, options);
+
+        console.log('get{{> ServiceModel }}s.saga: got results ( {{> serviceModel }}s ) ', {{> serviceModel }}s);
+
+        yield put({{ camelCase ServiceName }}sActions.set{{> ServiceModel }}s({{> serviceModel }}s));
+    } catch (err) {
+        console.warn('get{{> ServiceModel }}s.saga.ERROR: got error (err) ', err);
+
+        const { status = 0, message = '' } = { ...err.response };
+
+        if (status === 401) {
+            yield put({{ camelCase ServiceName }}sActions.error({ name: 'error', message: 'Authentication failed', data: { status, message } }));
+        } else {
+            yield put(
+                {{ camelCase ServiceName }}sActions.error({ name: 'error', message: 'Getting {{> serviceModel }}s failed', data: { status, message } }),
+            );
+        }
+    }
+
+    yield put({{ camelCase ServiceName }}sActions.loading(false));
+}
+
+/**
+ * Root saga manages watcher lifecycle
+ */
+export function* {{> serviceModel }}sSaga() {
+    // Watches for get{{ properCase ServiceName }}s actions and calls get{{> ServiceModel }}s when one comes in.
+    // By using `takeLatest` only the result of the latest API call is applied.
+    // It returns task descriptor (just like fork) so we can continue execution
+    // It will be cancelled automatically on component unmount
+    yield takeLatest({{ camelCase ServiceName }}Actions.{{ camelCase ServiceName }}s.type, get{{> ServiceModel }}s);
+}
+
+export default {{> serviceModel }}sSaga;

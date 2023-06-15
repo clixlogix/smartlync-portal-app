@@ -1,0 +1,17 @@
+.x-cls-fault-report-widget {
+    opacity: 1;
+
+    &.react-grid-item {
+        // default widget background and border
+        background-color: #333;
+        border: 1px solid #bbb;
+    }
+}
+
+.x-cls-fault-report-widget-header {
+    opacity: 1;
+}
+
+.x-cls-fault-report-widget-body {
+    opacity: 1;
+}

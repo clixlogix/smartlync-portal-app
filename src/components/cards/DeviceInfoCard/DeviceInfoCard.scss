@@ -1,0 +1,249 @@
+$card-background-color: #303030;
+$text-color-white: #ffffff;
+$text-color-grey: #a0a0a0;
+
+.x-cls-device-info-component {
+    display: flex;
+    flex-direction: row;
+    text-align: left;
+    .device-card-property {
+        width: 350px;
+        height: initial;
+    }
+
+    .card-content-property {
+        display: flex;
+        flex-wrap: wrap;
+        background: #212121;
+        opacity: 1;
+        height: 100%;
+        padding: 0;
+        padding-bottom: 0 !important;
+
+        .info-card-container {
+            width: 162px;
+        }
+    }
+
+    .flex-row-property {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+    }
+    .header {
+        width: 350px;
+        height: 46px;
+        padding: 9px;
+        background-color: #121212;
+    }
+
+    .info-card {
+        padding-left: 5px;
+        background-color: #212121;
+        color: white;
+        width: 175px;
+        box-shadow: 0px -1px 0px 0px #ffffff1f inset;
+        .info-card-label {
+            font-size: 14px;
+            height: 46px;
+            display: flex;
+            align-items: center;
+            background-color: #212121;
+            box-shadow: inset 0px -1px 0px rgba(255, 255, 255, 0.12);
+            white-space: nowrap;
+            // padding: 9px;
+            .info-card-content {
+                padding: 8px;
+            }
+            .label {
+                align-items: center;
+                justify-content: flex-start;
+                display: flex;
+                flex: 1;
+                font-family: Roboto;
+                font-style: normal;
+                font-weight: normal;
+                font-size: 12px;
+                line-height: 14px;
+            }
+            .value {
+                align-items: flex-start;
+                justify-content: flex-end;
+                display: flex;
+                flex: 1;
+                font-family: Roboto;
+                font-style: normal;
+                font-weight: normal;
+                font-size: 12px;
+                line-height: 14px;
+            }
+            .taValue {
+                align-items: center;
+                justify-content: flex-end;
+                display: flex;
+                flex: 1;
+                font-size: 12px;
+                .chip {
+                    font-size: 12px;
+                }
+                .avatar {
+                    background-color: #d3ffd6;
+                    // font-size: 12;
+                    height: 12px;
+                    width: 12px;
+                }
+                .arrow {
+                    font-size: 10px;
+                    color: #4caf50;
+                }
+            }
+            .trend-icon {
+                color: #81c784;
+            }
+        }
+    }
+    .marginTen {
+        margin-top: 10px;
+    }
+
+    .marginEight {
+        margin-top: 8px;
+    }
+
+    .flex-col-property {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        height: 100%;
+    }
+
+    .align-property {
+        position: static;
+
+        font-family: Roboto;
+        font-style: normal;
+        font-weight: 600;
+        font-size: 16px;
+        line-height: 14px;
+        color: #ffffff;
+
+        /* Inside Auto Layout */
+
+        flex: none;
+        order: 0;
+        flex-grow: 0;
+        display: flex;
+        align-items: center;
+
+        &.left-side {
+            align-items: flex-start;
+        }
+        &.right-side {
+            align-self: flex-end;
+            align-self: center;
+            color: #ffffff80;
+            .x-cls-expand-icon {
+                font-size: 16px;
+                width: 23px;
+                height: 20px;
+            }
+            .x-cls-menu-icon {
+                margin-right: 9px;
+                font-size: 16px;
+                width: 23px;
+                height: 20px;
+            }
+            .pinned {
+                color: #ffdb38;
+                transform: rotate(40deg);
+            }
+            .x-cls-menu-icon:hover,
+            .x-cls-expand-icon:hover {
+                color: #ffdb38;
+            }
+        }
+    }
+
+    .circular-progress-title {
+        color: $text-color-white;
+        font: normal normal normal 14px/19px Open Sans;
+        letter-spacing: 0px;
+        text-align: left;
+        justify-self: flex-start;
+        white-space: nowrap;
+    }
+
+    .dot {
+        background: #f44336;
+        width: 5px;
+        height: 5px;
+        border-radius: 50%;
+        align-self: center;
+        display: flex;
+        margin-right: 4px;
+    }
+
+    .centered-justification {
+        justify-content: center;
+        align-items: center;
+    }
+
+    .flexOne {
+        flex: 1;
+    }
+
+    .flexOneBox {
+        flex: 1;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    .greyTitle {
+        text-align: center;
+        font: normal normal normal 22px/30px Open Sans;
+        letter-spacing: 0px;
+        color: $text-color-grey;
+        white-space: nowrap;
+    }
+
+    .valueLabels {
+        text-align: center;
+        padding: 5px;
+        font: normal normal normal 20px/28px Open Sans;
+        letter-spacing: 0px;
+        color: $text-color-white;
+        white-space: nowrap;
+        & > span {
+            font-size: 14px;
+            margin-left: -3px;
+        }
+    }
+
+    .progressText {
+        text-align: center;
+        font: normal normal normal 22px/30px Open Sans;
+        letter-spacing: 0px;
+        color: $text-color-white;
+    }
+
+    .x-health-value {
+        margin: 0px;
+        position: absolute;
+        left: 0px;
+        top: 0px;
+        font-size: 1.2em;
+        margin-left: 10px;
+
+        &.red {
+            color: red;
+        }
+        &.green {
+            color: green;
+        }
+        &.orange {
+            color: orange;
+        }
+    }
+}

@@ -1,0 +1,31 @@
+@import 'scss/main.scss';
+
+.x-cls-maintainance-action-table-widget {
+    opacity: 1;
+    display: flex;
+    flex: 1;
+
+    & > div,
+    & > div > div {
+        flex: 1;
+        border-radius: 20px;
+    }
+
+    &.react-grid-item {
+        // default widget background and border
+        background-color: #333;
+        border: 1px solid #bbb;
+    }
+}
+
+.x-cls-maintainance-action-table-widget-header {
+    opacity: 1;
+}
+
+.x-cls-maintainance-action-table-widget-body {
+    opacity: 1;
+}
+
+// .maintenance-header {
+//     color: black;
+// }

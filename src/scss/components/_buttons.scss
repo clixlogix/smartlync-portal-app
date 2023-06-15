@@ -1,0 +1,49 @@
+///custom button
+
+///@group Components
+///@param {String} $button-background [$smartlync-primary-color] - The background-color of the custom button
+///@param {String} $button-border [1px solid #FFDB0A;] - The border of the custom button
+///@param {Number} $button-border-radius [30px] - The border radius of the custom button
+///@param {String} $button-color [white] - The color of the custom button
+///@param {Length} $button-height [37px] - The height of the custom button
+///@param {Length} $button-width [71px] - The width of the custom button
+///@param {String} $button-font [] - The font-family of the custom button
+///@param {Number} $button-font-size [14px] - The font-size of the custom button
+///@param {Number} $button-padding [5px] - The padding of the custom button
+///@param {String} $button-text-tranform [capitalize] - The text transform of the custom button
+///@param {String} $button-cursor [pointer] - The cursor of the custom button
+///@output 'background-color', 'border', 'color', 'outline', 'font-family','font-size', 'height', 'padding', 'border-radius', 'text transform', and 'cursor' with fallback
+
+@mixin custom-button(
+    $button-background: $button-background,
+    $button-border: $button-border,
+    $button-border-radius: $button-border-radius,
+    $button-text-tranform: $button-text-tranform,
+    $button-color: $button-color,
+    $button-font: $button-font,
+    $button-font-size: $button-font-size,
+    $button-height: $button-height,
+    $button-width: $button-width,
+    $button-padding: $button-padding,
+    $button-margin: $button-margin,
+) {
+    background-color: $button-background;
+    border: $button-border;
+    border-radius: $button-border-radius;
+    text-transform: $button-text-tranform;
+    color: $button-color;
+    font: $button-font;
+    font-size: $button-font-size;
+    height: $button-height;
+    min-width: $button-width;
+    padding: $button-padding;
+    margin: $button-margin;
+}
+
+.drop-down-btn {
+    @include custom-button($button-background: #ffffff, $button-color: #000);
+}
+
+// .btn-small {
+//        @include custom-button()
+// }

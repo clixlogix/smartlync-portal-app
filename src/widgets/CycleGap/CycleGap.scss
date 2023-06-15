@@ -1,0 +1,10 @@
+.x-cls-cycle-gap-widget {
+    overflow: visible;
+    visibility: visible;
+    display: flex;
+    width: 60%;
+    max-width: 100%;
+    & > div {
+        overflow: visible !important;
+    }
+}

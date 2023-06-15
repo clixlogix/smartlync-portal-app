@@ -1,0 +1,9 @@
+@import 'scss/main.scss';
+.x-cls-parent-label {
+    color: $smartlync-primary-yellow;
+    font-size: 1.7em;
+
+    &.clickable {
+        cursor: pointer;
+    }
+}

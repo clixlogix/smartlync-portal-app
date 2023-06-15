@@ -1,0 +1,321 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<FileUpload /> should match the snapshot 1`] = `
+<div
+  class=" col upload-panels "
+>
+  <div
+    class="row btn-bar "
+  >
+    <div
+      class="col"
+    >
+      <div
+        class="py-2 control-btns"
+      >
+        <button
+          class="MuiButtonBase-root MuiButton-root MuiButton-text backToReports"
+          tabindex="0"
+          type="button"
+        >
+          <span
+            class="MuiButton-label"
+          >
+            <i
+              aria-hidden="true"
+              class="fa fa-arrow-left pr-2"
+            />
+            <span
+              class="custLabelSize"
+            >
+              Back
+            </span>
+          </span>
+          <span
+            class="MuiTouchRipple-root"
+          />
+        </button>
+      </div>
+    </div>
+    <div
+      class="col"
+    >
+      <div
+        class="py-2 control-btns"
+      >
+        <button
+          class="MuiButtonBase-root MuiButton-root MuiButton-text submit-button"
+          tabindex="0"
+          type="button"
+        >
+          <span
+            class="MuiButton-label"
+          >
+            <span
+              class="custLabelSize"
+            >
+              Finish
+            </span>
+          </span>
+          <span
+            class="MuiTouchRipple-root"
+          />
+        </button>
+      </div>
+    </div>
+  </div>
+  <div
+    class="main-content-container"
+  >
+    <div
+      class="row"
+    >
+      <div
+        class=" x-cls-upload-panel Upload"
+      >
+        <div
+          class="title-component"
+        >
+          <span
+            class="Title left"
+            style="font-size: 18px; color: rgb(255, 255, 255); text-align: start;"
+          >
+            Upload Measurement/Cycles XML
+          </span>
+        </div>
+        <div
+          class="Content"
+        >
+          <div
+            class="drop-zone"
+          >
+            <div
+              class="MuiDropzoneArea-root"
+              tabindex="0"
+            >
+              <input
+                accept="application/xlsx,application/xls,application/vnd.ms-excel,text/xml,application/xml,.xls,.xlsx,application/vnd.openxmlformats-officedocument.spreadsheetml.sheet"
+                autocomplete="off"
+                multiple=""
+                style="display: none;"
+                tabindex="-1"
+                type="file"
+              />
+              <div
+                class="MuiDropzoneArea-textContainer"
+              >
+                <p
+                  class="MuiTypography-root MuiDropzoneArea-text MuiTypography-h5"
+                >
+                  Drop files to Upload
+                </p>
+                <svg
+                  aria-hidden="true"
+                  class="MuiSvgIcon-root MuiDropzoneArea-icon"
+                  focusable="false"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    d="M19.35 10.04C18.67 6.59 15.64 4 12 4 9.11 4 6.6 5.64 5.35 8.04 2.34 8.36 0 10.91 0 14c0 3.31 2.69 6 6 6h13c2.76 0 5-2.24 5-5 0-2.64-2.05-4.78-4.65-4.96zM14 13v4h-4v-4H7l5-5 5 5h-3z"
+                  />
+                </svg>
+              </div>
+            </div>
+          </div>
+          <div
+            class="Files col"
+          >
+            <div
+              class="file-info col"
+            />
+            <div
+              class="file-info-footer"
+            >
+              
+               
+              0
+               files
+            </div>
+          </div>
+          <div
+            class="status-container"
+          />
+        </div>
+        <div
+          class="actions-bar row"
+        />
+        <div
+          class="line-separator"
+          style="width: 100%; height: 1px; background: rgb(255, 255, 255); opacity: 0.4;"
+        />
+      </div>
+    </div>
+    <div
+      class="row"
+    >
+      <div
+        class=" x-cls-upload-panel Upload"
+      >
+        <div
+          class="title-component"
+        >
+          <span
+            class="Title left"
+            style="font-size: 18px; color: rgb(255, 255, 255); text-align: start;"
+          >
+            Upload Sytem Events XML
+          </span>
+        </div>
+        <div
+          class="Content"
+        >
+          <div
+            class="drop-zone"
+          >
+            <div
+              class="MuiDropzoneArea-root"
+              tabindex="0"
+            >
+              <input
+                accept="application/xlsx,application/xls,application/vnd.ms-excel,text/xml,application/xml,.xls,.xlsx,application/vnd.openxmlformats-officedocument.spreadsheetml.sheet"
+                autocomplete="off"
+                multiple=""
+                style="display: none;"
+                tabindex="-1"
+                type="file"
+              />
+              <div
+                class="MuiDropzoneArea-textContainer"
+              >
+                <p
+                  class="MuiTypography-root MuiDropzoneArea-text MuiTypography-h5"
+                >
+                  Drop files to Upload
+                </p>
+                <svg
+                  aria-hidden="true"
+                  class="MuiSvgIcon-root MuiDropzoneArea-icon"
+                  focusable="false"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    d="M19.35 10.04C18.67 6.59 15.64 4 12 4 9.11 4 6.6 5.64 5.35 8.04 2.34 8.36 0 10.91 0 14c0 3.31 2.69 6 6 6h13c2.76 0 5-2.24 5-5 0-2.64-2.05-4.78-4.65-4.96zM14 13v4h-4v-4H7l5-5 5 5h-3z"
+                  />
+                </svg>
+              </div>
+            </div>
+          </div>
+          <div
+            class="Files col"
+          >
+            <div
+              class="file-info col"
+            />
+            <div
+              class="file-info-footer"
+            >
+              
+               
+              0
+               files
+            </div>
+          </div>
+          <div
+            class="status-container"
+          />
+        </div>
+        <div
+          class="actions-bar row"
+        />
+        <div
+          class="line-separator"
+          style="width: 100%; height: 1px; background: rgb(255, 255, 255); opacity: 0.4;"
+        />
+      </div>
+    </div>
+    <div
+      class="row"
+    >
+      <div
+        class=" x-cls-upload-panel Upload"
+      >
+        <div
+          class="title-component"
+        >
+          <span
+            class="Title left"
+            style="font-size: 18px; color: rgb(255, 255, 255); text-align: start;"
+          >
+            Upload Maintenance XML
+          </span>
+        </div>
+        <div
+          class="Content"
+        >
+          <div
+            class="drop-zone"
+          >
+            <div
+              class="MuiDropzoneArea-root"
+              tabindex="0"
+            >
+              <input
+                accept="application/xlsx,application/xls,application/vnd.ms-excel,text/xml,application/xml,.xls,.xlsx,application/vnd.openxmlformats-officedocument.spreadsheetml.sheet"
+                autocomplete="off"
+                multiple=""
+                style="display: none;"
+                tabindex="-1"
+                type="file"
+              />
+              <div
+                class="MuiDropzoneArea-textContainer"
+              >
+                <p
+                  class="MuiTypography-root MuiDropzoneArea-text MuiTypography-h5"
+                >
+                  Drop files to Upload
+                </p>
+                <svg
+                  aria-hidden="true"
+                  class="MuiSvgIcon-root MuiDropzoneArea-icon"
+                  focusable="false"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    d="M19.35 10.04C18.67 6.59 15.64 4 12 4 9.11 4 6.6 5.64 5.35 8.04 2.34 8.36 0 10.91 0 14c0 3.31 2.69 6 6 6h13c2.76 0 5-2.24 5-5 0-2.64-2.05-4.78-4.65-4.96zM14 13v4h-4v-4H7l5-5 5 5h-3z"
+                  />
+                </svg>
+              </div>
+            </div>
+          </div>
+          <div
+            class="Files col"
+          >
+            <div
+              class="file-info col"
+            />
+            <div
+              class="file-info-footer"
+            >
+              
+               
+              0
+               files
+            </div>
+          </div>
+          <div
+            class="status-container"
+          />
+        </div>
+        <div
+          class="actions-bar row"
+        />
+        <div
+          class="line-separator"
+          style="width: 100%; height: 1px; background: rgb(255, 255, 255); opacity: 0.4;"
+        />
+      </div>
+    </div>
+  </div>
+</div>
+`;

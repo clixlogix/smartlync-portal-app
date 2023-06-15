@@ -1,0 +1,15 @@
+import { CustomError } from 'utils/error';
+import { Filters{{#if wantModel}}, {{ properCase ModelName }}, {{ properCase ModelName }}s {{/if}} } from 'models';
+
+/* --- STATE --- */
+export interface {{ properCase ServiceName }}sState {
+    {{> serviceModel }}s?: {{> AnyModels }};
+    {{> serviceModel }}?: {{> AnyModel }} | undefined;
+    {{> serviceModel }}sFilteredByRules: {{> AnyModels }};
+    filters: Filters;
+
+    error: CustomError | undefined;
+    isLoading: boolean;
+}
+
+export default {{ properCase ServiceName }}sState;

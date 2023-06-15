@@ -1,0 +1,30 @@
+.x-cls-topFaultCount-table-body-cell {
+    &>div {
+        // padding-left: 10px;
+        // padding-right: 10px;
+    }
+    .data-cell-value {
+        // color: $basic-white;
+        color: #fff;
+    }
+    &.past-datas {
+        margin: -10px;
+        height: 39px;
+        // padding-top: 7px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        &.yellow {
+            background-color: rgb(189, 189, 23);
+        }
+        &.orange {
+            background-color: #FF9D00;
+        }
+        &.red {
+            background-color: red;
+        }
+        &.green {
+            background-color: green;
+        }
+    }
+}

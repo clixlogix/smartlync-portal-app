@@ -1,0 +1,14 @@
+/**
+ * This file is only need if you want to extract messages into JSON files in locales folder
+ * AND if you are also using the object syntax instead of string syntax. \
+ * Check the documentation section i18n for details
+ */
+import { translations } from 'locales/translations';
+import { _t } from 'utils/messages';
+
+export const messages = {
+    carBodyGraphTitle: _t(translations.Widgets.CarBodyGraph.WidgetTitle, 'CarBodyGraph widget'), // default value
+    carBodyGraphSubTitle: _t(translations.Widgets.CarBodyGraph.SubTitle, 'A carBodyGraph widget'), // default value
+    noData: _t(translations.ReportingViewPage.NoData, 'No data to Display'),
+    noDataSub: _t(translations.ReportingViewPage.NoDataSub, 'Select a value below to display correlating signals'),
+};

@@ -1,0 +1,113 @@
+.hide-these {
+    .__x-cls-carBody-table-header-cells {
+        position: sticky;
+        top: 0;
+        display: table-cell;
+        background-color: #424242;
+        border: 1px solid #525252;
+        & > div {
+            padding-left: 0px;
+            padding-right: 0px;
+        }
+        .sort-label {
+            padding: 0;
+            margin: 0;
+            flex: initial !important;
+            font-size: 12px;
+            color: #fff;
+            flex: 1;
+            justify-self: center;
+            justify-content: space-around;
+            align-items: center;
+            & > * {
+                margin: 0px;
+            }
+        }
+        .column-label {
+            font-size: 14px;
+            color: #fff;
+            display: flex;
+            flex-flow: row nowrap;
+            justify-content: space-around;
+            align-items: center;
+        }
+        .sort-icon {
+            &.hide {
+                color: 'red';
+            }
+            &.show {
+                color: 'blue';
+            }
+        }
+        &.highLightFilter {
+            border-left: 2px solid;
+            border-right: 2px solid;
+            border-top: 1px solid;
+            border-bottom: 1px solid;
+            border-color: greenyellow;
+        }
+    }
+
+    .x-cls-table-header-first-column {
+        display: flex;
+    }
+
+    .first-column-text {
+        display: flex;
+        flex-direction: row;
+        color: white;
+        background-color: #424242;
+        font-size: 12px;
+        height: 150px;
+    }
+
+    .text-rotate-title {
+        // width: 10px;
+        // padding-top: 20px;
+        color: white;
+        // background-color: #424242;
+        font-size: 12px;
+        margin: -1px;
+        transform: rotate(-90deg);
+        /* Legacy vendor prefixes that you probably don't need... */
+        /* Safari */
+        -webkit-transform: rotate(-90deg);
+        /* Firefox */
+        -moz-transform: rotate(-90deg);
+        /* IE */
+        -ms-transform: rotate(-90deg);
+        /* Opera */
+        -o-transform: rotate(-90deg);
+        &.yellow-text {
+            color: rgba(255, 210, 10, 1);
+        }
+    }
+}
+
+.x-cls-carbody-table-header-cells {
+    & > div {
+        width: 100%;
+        height: 100%;
+        white-space: nowrap;
+
+        // width: 10px;
+        // padding-top: 20px;
+        color: white;
+        // background-color: #424242;
+        font-size: 12px;
+        margin: -1px;
+        transform: rotate(-90deg);
+        /* Legacy vendor prefixes that you probably don't need... */
+        /* Safari */
+        -webkit-transform: rotate(-90deg);
+        /* Firefox */
+        -moz-transform: rotate(-90deg);
+        /* IE */
+        -ms-transform: rotate(-90deg);
+        /* Opera */
+        -o-transform: rotate(-90deg);
+        &.yellow-text {
+            color: rgba(255, 210, 10, 1);
+        }
+    }
+}

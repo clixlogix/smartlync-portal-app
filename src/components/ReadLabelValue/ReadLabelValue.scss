@@ -1,0 +1,15 @@
+@import 'scss/main.scss';
+.x-cls-read-label-value {
+    opacity: 1;
+    color: $smartlync-white;
+    border-radius: 100px;
+    padding: 4px;
+    font-size: 16px;
+
+    padding: 4px;
+    font-size: 16px;
+    white-space: nowrap;
+    width: 809px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}

@@ -1,0 +1,117 @@
+.x-cls-signal-chart {
+    display: flex;
+    flex-flow: column nowrap;
+    background: #243240;
+    padding: 20px;
+
+    .x-title-bar {
+        .x-title-label {
+            float: left;
+            font-family: Roboto;
+            font-style: normal;
+            font-weight: 500;
+            font-size: 20px;
+            line-height: 160%;
+            display: flex;
+            align-items: center;
+            letter-spacing: 0.15px;
+            color: #ffffff;
+        }
+        .x-show-btn-grp {
+            display: flex;
+            flex-flow: row;
+            float: right;
+            align-items: center;
+
+            .x-label {
+                font-family: Roboto;
+                font-style: normal;
+                font-weight: normal;
+                font-size: 16px;
+                line-height: 150%;
+                display: flex;
+                align-items: center;
+                letter-spacing: 0.15px;
+                color: #ffffff;
+            }
+
+            .x-show-signal-type {
+                button {
+                    // background: #2196f3;
+                    border-radius: 16px;
+                    flex: none;
+                    order: 0;
+                    flex-grow: 0;
+                    margin: 0px 7px;
+                    padding: 3px 10px;
+                    width: fit-content;
+                    height: 24px;
+
+                    span {
+                        font-family: Roboto;
+                        font-style: normal;
+                        font-weight: normal;
+                        font-size: 13px;
+                        line-height: 18px;
+                        display: flex;
+                        align-items: center;
+                        letter-spacing: 0.16px;
+                        color: rgba(0, 0, 0, 0.87);
+                    }
+
+                    &.VOLTAGE {
+                        border: 1px solid rgba(0, 0, 0, 0.87);
+                        background: #2196f3;
+                        span {
+                            color: rgba(0, 0, 0, 0.87);
+                        }
+                    }
+                    &.CURRENT {
+                        border: 1px solid #f48fb1;
+                        span {
+                            color: #f48fb1;
+                        }
+                    }
+                    &.LIFT_POSITION {
+                        border: 1px solid #66bb6a;
+                        span {
+                            color: #66bb6a;
+                        }
+                        background: #243240;
+                    }
+                    svg {
+                        width: 0.7em;
+                        height: 0.7em;
+                    }
+                }
+            }
+
+            .x-show-wip-wop-btn-grp {
+                button {
+                    border: 1px solid rgba(195, 212, 251, 0.5);
+                    font-family: Roboto;
+                    font-style: normal;
+                    font-weight: 500;
+                    font-size: 13px;
+                    line-height: 22px;
+                    letter-spacing: 0.46px;
+                    text-transform: uppercase;
+                    color: #c3d4fb;
+                    min-width: initial;
+                    width: 60px;
+
+                    span {
+                        font-family: Roboto;
+                        font-style: normal;
+                        font-weight: 500;
+                        font-size: 13px;
+                        line-height: 22px;
+                        letter-spacing: 0.46px;
+                        text-transform: uppercase;
+                        color: #c3d4fb;
+                    }
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,96 @@
+@import 'scss/main.scss';
+.select-field {
+    height: 32px;
+    border: 1px solid $smartlync-primary-yellow;
+    border-radius: 100px;
+    opacity: 1;
+    & > div,
+    & > div > div {
+        height: 32px;
+        padding-left: 3px;
+    }
+    &.inline {
+        .select-field-auto-complete {
+            & > div {
+                display: flex;
+                flex-flow: row nowrap;
+                align-items: center;
+                justify-content: flex-start;
+                padding-left: 10px;
+                text-overflow: ellipsis;
+                white-space: nowrap;
+                overflow: hidden;
+                border: none;
+                padding-right: 13px;
+            }
+        }
+        label {
+            color: $smartlync-white;
+            position: relative;
+            white-space: nowrap;
+            align-self: center;
+            justify-self: flex-start;
+            font-size: 16px;
+            transform: initial;
+            margin-bottom: 0px;
+            &::after {
+                content: ':';
+                font-family: FontAwesome;
+                margin-right: 0px;
+                font-weight: bold;
+            }
+        }
+        input {
+            margin: 0;
+            text-align: left;
+            font: normal normal bold 21px/28px Open Sans;
+            padding: 0px 0 0px 5px !important;
+            letter-spacing: 0px;
+            font-size: 18px;
+            color: $smartlync-primary-yellow !important;
+            background-color: transparent;
+            opacity: 1;
+            border: none;
+            &:focus {
+                outline: 0 !important;
+                border: 1px solid transparent;
+            }
+            &::placeholder {
+                margin: 0;
+                text-align: left;
+                font: normal normal bold 21px/28px Open Sans;
+                padding: 0px 0 0px 5px !important;
+                letter-spacing: 0px;
+                font-size: 18px;
+                color: $smartlync-primary-yellow !important;
+                background-color: transparent;
+                opacity: 1;
+                border: none;
+            }
+        }
+        svg {
+            color: $smartlync-white;
+        }
+    }
+    &.label-pos.top-left.select-field {
+        border: 0px solid transparent;
+        height: 80px;
+        .select-field {
+            display: flex;
+            flex-flow: column;
+            align-items: flex-start;
+            justify-content: flex-start;
+            overflow: visible;
+            label {
+                font-size: 1em;
+                align-self: flex-start;
+            }
+            .select-input {
+                height: 32px;
+                border: 1px solid #ffdb0a;
+                border-radius: 100px;
+                margin-top: 5px;
+            }
+        }
+    }
+}

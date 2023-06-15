@@ -1,0 +1,4409 @@
+{
+    "basePath": "",
+    "definitions": {
+        "RoleModel": {
+            "description": "",
+            "properties": {
+                "id": {
+                    "type": "string",
+                    "description": ""
+                },
+                "name": {
+                    "type": "string",
+                    "description": ""
+                }
+            },
+            "type": "object",
+            "required": ["id", "name"]
+        },
+        "UserModel": {
+            "description": "",
+            "properties": {
+                "id": {
+                    "type": "string",
+                    "description": ""
+                },
+                "firstName": {
+                    "type": "string",
+                    "description": ""
+                },
+                "lastName": {
+                    "type": "string",
+                    "description": ""
+                },
+                "userName": {
+                    "type": "string",
+                    "description": ""
+                },
+                "owner": {
+                    "type": "string",
+                    "description": ""
+                },
+                "phone": {
+                    "type": "string",
+                    "description": ""
+                },
+                "email": {
+                    "type": "string",
+                    "description": ""
+                },
+                "enabled": {
+                    "type": "boolean",
+                    "description": ""
+                },
+                "isServiceUser": {
+                    "type": "boolean",
+                    "description": ""
+                },
+                "organization": {
+                    "type": "string",
+                    "description": ""
+                },
+                "groupId": {
+                    "type": "string",
+                    "description": ""
+                },
+                "group": {
+                    "type": "array",
+                    "items": {
+                        "type": "string"
+                    },
+                    "description": ""
+                },
+                "groups": {
+                    "type": "object",
+                    "description": ""
+                },
+                "roles": {
+                    "type": "array",
+                    "items": {
+                        "$ref": "#/definitions/RoleModel"
+                    },
+                    "description": ""
+                },
+                "supportUsers": {
+                    "type": "array",
+                    "items": {
+                        "type": "string"
+                    },
+                    "description": ""
+                },
+                "availabilityStatus": {
+                    "enum": ["Online", "Away", "Busy", "In Meeting", "Do Not Disturb", "Offline"],
+                    "type": "string",
+                    "description": ""
+                },
+                "proCallIntroGuide": {
+                    "type": "boolean",
+                    "description": ""
+                },
+                "inviteUserIntroGuide": {
+                    "type": "boolean",
+                    "description": ""
+                },
+                "temperatureUnit": {
+                    "enum": ["F", "C"],
+                    "type": "string",
+                    "description": ""
+                },
+                "pressureUnit": {
+                    "enum": ["PSI", "BAR"],
+                    "type": "string",
+                    "description": ""
+                },
+                "timeZone": {
+                    "type": "string",
+                    "description": ""
+                },
+                "timeFormat": {
+                    "type": "boolean",
+                    "description": ""
+                },
+                "agreement": {
+                    "type": "boolean",
+                    "description": ""
+                },
+                "proCall30DayTrial": {
+                    "type": "string",
+                    "format": "date-time",
+                    "description": ""
+                },
+                "avatar": {
+                    "type": "string",
+                    "description": ""
+                },
+                "eventEmailDeviceBlackList": {
+                    "type": "array",
+                    "items": {
+                        "type": "string"
+                    },
+                    "description": ""
+                }
+            },
+            "type": "object",
+            "required": [
+                "id",
+                "firstName",
+                "lastName",
+                "temperatureUnit",
+                "pressureUnit",
+                "timeZone",
+                "timeFormat",
+                "avatar",
+                "eventEmailDeviceBlackList"
+            ]
+        },
+        "UserGroupModel": {
+            "description": "",
+            "properties": {
+                "Id": {
+                    "type": "string",
+                    "description": ""
+                },
+                "name": {
+                    "type": "string",
+                    "description": ""
+                },
+                "users": {
+                    "type": "array",
+                    "items": {
+                        "$ref": "#/definitions/UserModel"
+                    },
+                    "description": ""
+                },
+                "isServiceUsers": {
+                    "type": "boolean",
+                    "description": ""
+                }
+            },
+            "type": "object",
+            "required": ["Id", "name", "users", "isServiceUsers"]
+        },
+        "GroupDataModel": {
+            "description": "",
+            "properties": {
+                "name": {
+                    "type": "string",
+                    "description": ""
+                }
+            },
+            "type": "object",
+            "required": ["name"]
+        },
+        "CustomProperties": {
+            "description": "",
+            "properties": {
+                "availabilityStatus": {
+                    "enum": ["Online", "Away", "Busy", "In Meeting", "Do Not Disturb", "Offline"],
+                    "type": "string",
+                    "description": ""
+                },
+                "proCallIntroGuide": {
+                    "type": "boolean",
+                    "description": ""
+                },
+                "inviteUserIntroGuide": {
+                    "type": "boolean",
+                    "description": ""
+                },
+                "temperatureUnit": {
+                    "enum": ["F", "C"],
+                    "type": "string",
+                    "description": ""
+                },
+                "pressureUnit": {
+                    "enum": ["PSI", "BAR"],
+                    "type": "string",
+                    "description": ""
+                },
+                "timeZone": {
+                    "type": "string",
+                    "description": ""
+                },
+                "timeFormat": {
+                    "type": "boolean",
+                    "description": ""
+                },
+                "agreement": {
+                    "type": "boolean",
+                    "description": ""
+                },
+                "proCall30DayTrial": {
+                    "type": "string",
+                    "format": "date-time",
+                    "description": ""
+                },
+                "deviceGroups": {
+                    "type": "array",
+                    "items": {
+                        "type": "string"
+                    },
+                    "description": ""
+                },
+                "deleted": {
+                    "type": "boolean",
+                    "description": ""
+                },
+                "avatar": {
+                    "type": "string",
+                    "description": ""
+                },
+                "language": {
+                    "type": "string",
+                    "description": ""
+                }
+            },
+            "type": "object"
+        },
+        "UpdateUserByIdInput": {
+            "description": "",
+            "properties": {
+                "id": {
+                    "type": "string",
+                    "description": ""
+                },
+                "firstName": {
+                    "type": "string",
+                    "description": ""
+                },
+                "lastName": {
+                    "type": "string",
+                    "description": ""
+                },
+                "phone": {
+                    "type": "string",
+                    "description": ""
+                },
+                "email": {
+                    "type": "string",
+                    "description": ""
+                },
+                "passcode": {
+                    "type": "string",
+                    "description": ""
+                },
+                "password": {
+                    "type": "string",
+                    "description": ""
+                },
+                "userName": {
+                    "type": "string",
+                    "description": ""
+                },
+                "status": {
+                    "type": "object",
+                    "description": ""
+                },
+                "enabled": {
+                    "type": "boolean",
+                    "description": ""
+                },
+                "availabilityStatus": {
+                    "enum": ["Online", "Away", "Busy", "In Meeting", "Do Not Disturb", "Offline"],
+                    "type": "string",
+                    "description": ""
+                },
+                "proCallIntroGuide": {
+                    "type": "boolean",
+                    "description": ""
+                },
+                "inviteUserIntroGuide": {
+                    "type": "boolean",
+                    "description": ""
+                },
+                "inventoryId": {
+                    "type": "string",
+                    "description": ""
+                },
+                "temperatureUnit": {
+                    "type": "boolean",
+                    "description": ""
+                },
+                "pressureUnit": {
+                    "type": "boolean",
+                    "description": ""
+                },
+                "timeZone": {
+                    "type": "string",
+                    "description": ""
+                },
+                "timeFormat": {
+                    "type": "boolean",
+                    "description": ""
+                },
+                "agreement": {
+                    "type": "boolean",
+                    "description": ""
+                },
+                "proCall30DayTrial": {
+                    "type": "string",
+                    "format": "date-time",
+                    "description": ""
+                },
+                "deviceGroups": {
+                    "type": "array",
+                    "items": {
+                        "type": "string"
+                    },
+                    "description": ""
+                },
+                "deleted": {
+                    "type": "boolean",
+                    "description": ""
+                },
+                "avatar": {
+                    "type": "string",
+                    "description": ""
+                },
+                "language": {
+                    "type": "string",
+                    "description": ""
+                },
+                "eventEmailDeviceBlackList": {
+                    "type": "array",
+                    "items": {
+                        "type": "string"
+                    },
+                    "description": ""
+                },
+                "customProperties": {
+                    "$ref": "#/definitions/CustomProperties"
+                }
+            },
+            "type": "object"
+        },
+        "RegisterNavGroupModel": {
+            "description": "",
+            "properties": {
+                "navId": {
+                    "type": "string",
+                    "description": ""
+                }
+            },
+            "type": "object",
+            "required": ["navId"]
+        },
+        "InviteUserData": {
+            "description": "",
+            "properties": {
+                "Id": {
+                    "type": "string",
+                    "description": ""
+                },
+                "userName": {
+                    "type": "string",
+                    "description": ""
+                },
+                "phone": {
+                    "type": "string",
+                    "description": ""
+                },
+                "email": {
+                    "type": "string",
+                    "description": ""
+                },
+                "firstName": {
+                    "type": "string",
+                    "description": ""
+                },
+                "lastName": {
+                    "type": "string",
+                    "description": ""
+                },
+                "invitationCode": {
+                    "type": "string",
+                    "description": ""
+                },
+                "groupName": {
+                    "type": "string",
+                    "description": ""
+                },
+                "adminToken": {
+                    "type": "string",
+                    "description": ""
+                },
+                "groupType": {
+                    "enum": ["NONE", "STANLEY", "DEALER", "CUSTOMER", "USER", "PRO"],
+                    "type": "string",
+                    "description": ""
+                },
+                "owner": {
+                    "type": "string",
+                    "description": ""
+                }
+            },
+            "type": "object",
+            "required": [
+                "Id",
+                "userName",
+                "phone",
+                "email",
+                "firstName",
+                "lastName",
+                "invitationCode",
+                "groupName",
+                "adminToken",
+                "groupType",
+                "owner"
+            ]
+        },
+        "InviteUserInput": {
+            "description": "",
+            "properties": {
+                "userName": {
+                    "type": "string",
+                    "description": ""
+                },
+                "phone": {
+                    "type": "string",
+                    "description": ""
+                },
+                "email": {
+                    "type": "string",
+                    "description": ""
+                },
+                "firstName": {
+                    "type": "string",
+                    "description": ""
+                },
+                "lastName": {
+                    "type": "string",
+                    "description": ""
+                },
+                "invitationCode": {
+                    "type": "string",
+                    "description": ""
+                },
+                "groupName": {
+                    "type": "string",
+                    "description": ""
+                },
+                "adminToken": {
+                    "type": "string",
+                    "description": ""
+                },
+                "groupType": {
+                    "enum": ["NONE", "STANLEY", "DEALER", "CUSTOMER", "USER", "PRO"],
+                    "type": "string",
+                    "description": ""
+                },
+                "owner": {
+                    "type": "string",
+                    "description": ""
+                }
+            },
+            "type": "object",
+            "required": [
+                "userName",
+                "phone",
+                "email",
+                "firstName",
+                "lastName",
+                "invitationCode",
+                "groupName",
+                "adminToken",
+                "groupType",
+                "owner"
+            ]
+        },
+        "UserAuthModel": {
+            "description": "",
+            "properties": {
+                "owner": {
+                    "type": "string",
+                    "description": ""
+                },
+                "token": {
+                    "type": "string",
+                    "description": ""
+                },
+                "userName": {
+                    "type": "string",
+                    "description": ""
+                },
+                "email": {
+                    "type": "string",
+                    "description": ""
+                },
+                "groups": {
+                    "type": "array",
+                    "items": {
+                        "type": "string"
+                    },
+                    "description": ""
+                }
+            },
+            "type": "object",
+            "required": ["owner", "token", "userName", "email"]
+        },
+        "LoginModel": {
+            "description": "",
+            "properties": {
+                "userName": {
+                    "type": "string",
+                    "description": ""
+                },
+                "password": {
+                    "type": "string",
+                    "description": ""
+                }
+            },
+            "type": "object",
+            "required": ["userName", "password"]
+        },
+        "LogoutModel": {
+            "description": "",
+            "properties": {
+                "userName": {
+                    "type": "string",
+                    "description": ""
+                },
+                "apnToken": {
+                    "type": "string",
+                    "description": ""
+                },
+                "voipToken": {
+                    "type": "string",
+                    "description": ""
+                }
+            },
+            "type": "object",
+            "required": ["userName", "apnToken", "voipToken"]
+        },
+        "CreateUserInput": {
+            "description": "",
+            "properties": {
+                "firstName": {
+                    "type": "string",
+                    "description": ""
+                },
+                "lastName": {
+                    "type": "string",
+                    "description": ""
+                },
+                "userName": {
+                    "type": "string",
+                    "description": ""
+                },
+                "password": {
+                    "type": "string",
+                    "description": ""
+                },
+                "email": {
+                    "type": "string",
+                    "description": ""
+                },
+                "phone": {
+                    "type": "string",
+                    "description": ""
+                },
+                "invitationCode": {
+                    "type": "string",
+                    "description": ""
+                }
+            },
+            "type": "object",
+            "required": ["firstName", "lastName", "userName", "password", "invitationCode"]
+        },
+        "PasswordModel": {
+            "description": "",
+            "properties": {
+                "userName": {
+                    "type": "string",
+                    "description": ""
+                },
+                "password": {
+                    "type": "string",
+                    "description": ""
+                },
+                "passcode": {
+                    "type": "string",
+                    "description": ""
+                },
+                "email": {
+                    "type": "string",
+                    "description": ""
+                },
+                "phone": {
+                    "type": "string",
+                    "description": ""
+                },
+                "type": {
+                    "enum": ["PASSWORD", "PASSCODE", "ACCOUNT_CREATION"],
+                    "type": "string",
+                    "description": ""
+                },
+                "status": {
+                    "enum": [0, 1],
+                    "type": "number",
+                    "description": ""
+                }
+            },
+            "type": "object",
+            "required": ["userName", "type", "status"]
+        },
+        "Address": {
+            "description": "",
+            "properties": {
+                "house_number": {
+                    "type": "string",
+                    "description": ""
+                },
+                "road": {
+                    "type": "string",
+                    "description": ""
+                },
+                "neighbourhood": {
+                    "type": "string",
+                    "description": ""
+                },
+                "locality": {
+                    "type": "string",
+                    "description": ""
+                },
+                "suburb": {
+                    "type": "string",
+                    "description": ""
+                },
+                "city": {
+                    "type": "string",
+                    "description": ""
+                },
+                "county": {
+                    "type": "string",
+                    "description": ""
+                },
+                "state": {
+                    "type": "string",
+                    "description": ""
+                },
+                "postcode": {
+                    "type": "string",
+                    "description": ""
+                },
+                "country": {
+                    "type": "string",
+                    "description": ""
+                },
+                "country_code": {
+                    "type": "string",
+                    "description": ""
+                }
+            },
+            "type": "object",
+            "required": [
+                "house_number",
+                "road",
+                "neighbourhood",
+                "locality",
+                "suburb",
+                "city",
+                "county",
+                "state",
+                "postcode",
+                "country",
+                "country_code"
+            ]
+        },
+        "DeviceLocationModel": {
+            "description": "",
+            "properties": {
+                "longitude": {
+                    "type": "number",
+                    "format": "double",
+                    "description": ""
+                },
+                "altitude": {
+                    "type": "number",
+                    "format": "double",
+                    "description": ""
+                },
+                "latitude": {
+                    "type": "number",
+                    "format": "double",
+                    "description": ""
+                },
+                "address": {
+                    "$ref": "#/definitions/Address"
+                }
+            },
+            "type": "object",
+            "required": ["longitude", "altitude", "latitude", "address"]
+        },
+        "JobIntervalModel": {
+            "description": "",
+            "properties": {
+                "id": {
+                    "type": "string",
+                    "description": ""
+                },
+                "startTime": {
+                    "type": "string",
+                    "format": "date-time",
+                    "description": ""
+                },
+                "endTime": {
+                    "type": "string",
+                    "format": "date-time",
+                    "description": ""
+                },
+                "deviceId": {
+                    "type": "string",
+                    "description": ""
+                },
+                "userName": {
+                    "type": "string",
+                    "description": ""
+                },
+                "notes": {
+                    "type": "string",
+                    "description": ""
+                },
+                "stats": {
+                    "type": "object",
+                    "description": ""
+                }
+            },
+            "type": "object",
+            "required": ["id", "startTime", "endTime", "deviceId", "userName", "notes"]
+        },
+        "DeviceModel": {
+            "description": "",
+            "properties": {
+                "id": {
+                    "type": "string",
+                    "description": ""
+                },
+                "lastUpdated": {
+                    "type": "string",
+                    "format": "date-time",
+                    "description": ""
+                },
+                "name": {
+                    "type": "string",
+                    "description": ""
+                },
+                "type": {
+                    "type": "string",
+                    "description": ""
+                },
+                "status": {
+                    "type": "string",
+                    "description": ""
+                },
+                "location": {
+                    "$ref": "#/definitions/DeviceLocationModel"
+                },
+                "serialNumber": {
+                    "type": "string",
+                    "description": ""
+                },
+                "modelNumber": {
+                    "type": "string",
+                    "description": ""
+                },
+                "revision": {
+                    "type": "string",
+                    "description": ""
+                },
+                "creationTime": {
+                    "type": "string",
+                    "format": "date-time",
+                    "description": ""
+                },
+                "totalCycles": {
+                    "type": "number",
+                    "format": "double",
+                    "description": ""
+                },
+                "totalHours": {
+                    "type": "number",
+                    "format": "double",
+                    "description": ""
+                },
+                "jobIntervals": {
+                    "type": "array",
+                    "items": {
+                        "$ref": "#/definitions/JobIntervalModel"
+                    },
+                    "description": ""
+                }
+            },
+            "type": "object",
+            "required": [
+                "id",
+                "lastUpdated",
+                "name",
+                "type",
+                "status",
+                "location",
+                "serialNumber",
+                "modelNumber",
+                "revision",
+                "creationTime",
+                "totalCycles",
+                "totalHours",
+                "jobIntervals"
+            ]
+        },
+        "EventDataItem": {
+            "description": "",
+            "properties": {
+                "key": {
+                    "type": "string",
+                    "description": ""
+                },
+                "name": {
+                    "type": "string",
+                    "description": ""
+                },
+                "value": {
+                    "type": "number",
+                    "format": "double",
+                    "description": ""
+                },
+                "count": {
+                    "type": "number",
+                    "format": "double",
+                    "description": ""
+                },
+                "color": {
+                    "type": "string",
+                    "description": ""
+                }
+            },
+            "type": "object",
+            "required": ["key"]
+        },
+        "EventResultData": {
+            "description": "",
+            "properties": {
+                "eventTimeTotal": {
+                    "type": "array",
+                    "items": {
+                        "$ref": "#/definitions/EventDataItem"
+                    },
+                    "description": ""
+                },
+                "totalActiveHours": {
+                    "type": "number",
+                    "format": "double",
+                    "description": ""
+                },
+                "totalCycles": {
+                    "type": "number",
+                    "format": "double",
+                    "description": ""
+                }
+            },
+            "type": "object",
+            "required": ["eventTimeTotal", "totalActiveHours", "totalCycles"]
+        },
+        "GetDeviceStatsIntervalOutputModel": {
+            "description": "",
+            "properties": {
+                "deviceId": {
+                    "type": "string",
+                    "description": ""
+                },
+                "data": {
+                    "$ref": "#/definitions/EventResultData"
+                }
+            },
+            "type": "object",
+            "required": ["deviceId", "data"]
+        },
+        "DeviceEventModel": {
+            "description": "",
+            "properties": {
+                "id": {
+                    "type": "string",
+                    "description": ""
+                }
+            },
+            "type": "object",
+            "required": ["id"]
+        },
+        "UserDeviceTokenDataModel": {
+            "description": "",
+            "properties": {
+                "id": {
+                    "type": "string",
+                    "description": ""
+                },
+                "userName": {
+                    "type": "string",
+                    "description": ""
+                },
+                "deviceToken": {
+                    "type": "string",
+                    "description": ""
+                },
+                "platform": {
+                    "enum": ["ios", "android"],
+                    "type": "string",
+                    "description": ""
+                },
+                "type": {
+                    "enum": ["apn", "voip"],
+                    "type": "string",
+                    "description": ""
+                },
+                "currentStatus": {
+                    "enum": ["IN_CALL", "RINGING", "NONE"],
+                    "type": "string",
+                    "description": ""
+                }
+            },
+            "type": "object",
+            "required": ["userName", "deviceToken", "platform", "type", "currentStatus"]
+        },
+        "CreateUserDeviceTokenInputModel": {
+            "description": "",
+            "properties": {
+                "deviceToken": {
+                    "type": "string",
+                    "description": ""
+                },
+                "platform": {
+                    "enum": ["ios", "android"],
+                    "type": "string",
+                    "description": ""
+                },
+                "userName": {
+                    "type": "string",
+                    "description": ""
+                },
+                "type": {
+                    "enum": ["apn", "voip"],
+                    "type": "string",
+                    "description": ""
+                }
+            },
+            "type": "object",
+            "required": ["deviceToken", "platform", "type"]
+        },
+        "SetUserDeviceTokenStatusInputModel": {
+            "description": "",
+            "properties": {
+                "token": {
+                    "type": "string",
+                    "description": ""
+                },
+                "currentStatus": {
+                    "enum": ["IN_CALL", "RINGING", "NONE"],
+                    "type": "string",
+                    "description": ""
+                }
+            },
+            "type": "object",
+            "required": ["token", "currentStatus"]
+        },
+        "CreateConferenceRoomOutput": {
+            "description": "",
+            "properties": {
+                "id": {
+                    "type": "string",
+                    "description": ""
+                },
+                "room": {
+                    "type": "object",
+                    "description": ""
+                },
+                "username": {
+                    "type": "string",
+                    "description": ""
+                },
+                "token": {
+                    "type": "string",
+                    "description": ""
+                },
+                "isHost": {
+                    "type": "boolean",
+                    "description": ""
+                },
+                "deviceToken": {
+                    "type": "object",
+                    "description": ""
+                },
+                "status": {
+                    "enum": ["IN_ROOM", "PENDING", "LEFT", "CANCELED", "REJECTED", "TIMEOUT"],
+                    "type": "string",
+                    "description": ""
+                }
+            },
+            "type": "object",
+            "required": ["id", "room", "username", "isHost", "status"]
+        },
+        "CreateConferenceRoomInput": {
+            "description": "",
+            "properties": {
+                "deviceToken": {
+                    "type": "string",
+                    "description": ""
+                }
+            },
+            "type": "object",
+            "required": ["deviceToken"]
+        },
+        "InviteUserVideoCallInput": {
+            "description": "",
+            "properties": {
+                "receiverUsername": {
+                    "type": "string",
+                    "description": ""
+                },
+                "roomId": {
+                    "type": "string",
+                    "description": ""
+                }
+            },
+            "type": "object",
+            "required": ["receiverUsername", "roomId"]
+        },
+        "RejectConferenceInvitationInput": {
+            "description": "",
+            "properties": {
+                "roomId": {
+                    "type": "string",
+                    "description": ""
+                },
+                "deviceToken": {
+                    "type": "string",
+                    "description": ""
+                }
+            },
+            "type": "object",
+            "required": ["roomId", "deviceToken"]
+        },
+        "RingingConferenceInvitationInput": {
+            "description": "",
+            "properties": {
+                "roomId": {
+                    "type": "string",
+                    "description": ""
+                },
+                "deviceToken": {
+                    "type": "string",
+                    "description": ""
+                }
+            },
+            "type": "object",
+            "required": ["roomId", "deviceToken"]
+        },
+        "CancelConferenceSessionInput": {
+            "description": "",
+            "properties": {
+                "roomId": {
+                    "type": "string",
+                    "description": ""
+                },
+                "username": {
+                    "type": "string",
+                    "description": ""
+                }
+            },
+            "type": "object",
+            "required": ["roomId", "username"]
+        },
+        "LeaveVideoConferenceInput": {
+            "description": "",
+            "properties": {
+                "roomId": {
+                    "type": "string",
+                    "description": ""
+                }
+            },
+            "type": "object",
+            "required": ["roomId"]
+        },
+        "ConferenceModel": {
+            "description": "",
+            "properties": {
+                "id": {
+                    "type": "string",
+                    "description": ""
+                },
+                "room": {
+                    "type": "object",
+                    "description": ""
+                },
+                "username": {
+                    "type": "string",
+                    "description": ""
+                },
+                "token": {
+                    "type": "string",
+                    "description": ""
+                },
+                "isHost": {
+                    "type": "boolean",
+                    "description": ""
+                },
+                "deviceToken": {
+                    "type": "object",
+                    "description": ""
+                },
+                "status": {
+                    "enum": ["IN_ROOM", "PENDING", "LEFT", "CANCELED", "REJECTED", "TIMEOUT"],
+                    "type": "string",
+                    "description": ""
+                }
+            },
+            "type": "object",
+            "required": ["id", "room", "username", "isHost", "status"]
+        },
+        "AcceptConferenceInvitationInput": {
+            "description": "",
+            "properties": {
+                "roomId": {
+                    "type": "string",
+                    "description": ""
+                },
+                "deviceToken": {
+                    "type": "string",
+                    "description": ""
+                },
+                "twilioToken": {
+                    "type": "string",
+                    "description": ""
+                }
+            },
+            "type": "object",
+            "required": ["roomId", "deviceToken", "twilioToken"]
+        },
+        "Boolean": {
+            "description": "",
+            "properties": {},
+            "type": "object"
+        },
+        "SupportUserModel": {
+            "description": "",
+            "properties": {
+                "groupId": {
+                    "type": "string",
+                    "description": ""
+                },
+                "userName": {
+                    "type": "string",
+                    "description": ""
+                },
+                "isServiceUser": {
+                    "$ref": "#/definitions/Boolean"
+                }
+            },
+            "type": "object",
+            "required": ["groupId", "userName", "isServiceUser"]
+        },
+        "AnObject": {
+            "description": "",
+            "properties": {},
+            "type": "object"
+        },
+        "ChatMessageModel": {
+            "description": "",
+            "properties": {
+                "receiverId": {
+                    "type": "string",
+                    "description": ""
+                },
+                "senderId": {
+                    "type": "string",
+                    "description": ""
+                },
+                "room": {
+                    "type": "string",
+                    "description": ""
+                },
+                "payload": {
+                    "$ref": "#/definitions/AnObject"
+                },
+                "createdAt": {
+                    "type": "string",
+                    "format": "date-time",
+                    "description": ""
+                },
+                "text": {
+                    "type": "string",
+                    "description": ""
+                },
+                "user": {
+                    "$ref": "#/definitions/UserModel"
+                }
+            },
+            "type": "object",
+            "required": ["receiverId", "senderId", "text"]
+        },
+        "RecordingModel": {
+            "description": "",
+            "properties": {
+                "name": {
+                    "type": "string",
+                    "description": ""
+                },
+                "accountSid": {
+                    "type": "string",
+                    "description": ""
+                },
+                "status": {
+                    "enum": ["Completed"],
+                    "type": "string",
+                    "description": ""
+                },
+                "dateCreated": {
+                    "type": "string",
+                    "format": "date-time",
+                    "description": ""
+                },
+                "dateUpdated": {
+                    "type": "string",
+                    "format": "date-time",
+                    "description": ""
+                },
+                "dateDeleted": {
+                    "type": "string",
+                    "format": "date-time",
+                    "description": ""
+                },
+                "sid": {
+                    "type": "string",
+                    "description": ""
+                },
+                "sourceSid": {
+                    "type": "string",
+                    "description": ""
+                },
+                "size": {
+                    "type": "number",
+                    "format": "double",
+                    "description": ""
+                },
+                "type": {
+                    "enum": ["audio"],
+                    "type": "string",
+                    "description": ""
+                },
+                "duration": {
+                    "type": "number",
+                    "format": "double",
+                    "description": ""
+                },
+                "containerFormat": {
+                    "enum": ["mka", "mkv"],
+                    "type": "string",
+                    "description": ""
+                },
+                "codec": {
+                    "enum": ["OPUS"],
+                    "type": "string",
+                    "description": ""
+                },
+                "trackName": {
+                    "type": "string",
+                    "description": ""
+                },
+                "offset": {
+                    "type": "number",
+                    "format": "double",
+                    "description": ""
+                },
+                "groupingSids": {
+                    "type": "object",
+                    "description": ""
+                },
+                "participants": {
+                    "type": "array",
+                    "items": {
+                        "type": "string"
+                    },
+                    "description": ""
+                }
+            },
+            "type": "object",
+            "required": [
+                "name",
+                "accountSid",
+                "status",
+                "dateCreated",
+                "dateUpdated",
+                "dateDeleted",
+                "sid",
+                "sourceSid",
+                "size",
+                "type",
+                "duration",
+                "containerFormat",
+                "codec",
+                "trackName",
+                "offset",
+                "groupingSids",
+                "participants"
+            ]
+        },
+        "SystemVersion": {
+            "description": "",
+            "properties": {
+                "mobile": {
+                    "type": "object",
+                    "properties": {
+                        "minimum": {
+                            "type": "string",
+                            "description": ""
+                        },
+                        "last": {
+                            "type": "string",
+                            "description": ""
+                        },
+                        "current": {
+                            "type": "string",
+                            "description": ""
+                        }
+                    },
+                    "description": ""
+                },
+                "api": {
+                    "type": "string",
+                    "description": ""
+                }
+            },
+            "type": "object",
+            "required": ["mobile", "api"]
+        },
+        "ReportModel": {
+            "description": "",
+            "properties": {
+                "id": {
+                    "type": "number",
+                    "format": "double",
+                    "description": ""
+                },
+                "data": {
+                    "type": "array",
+                    "items": {
+                        "type": "object"
+                    },
+                    "description": ""
+                }
+            },
+            "type": "object",
+            "required": ["id", "data"]
+        },
+        "StatsModel": {
+            "description": "",
+            "properties": {
+                "unit": {
+                    "type": "string",
+                    "description": ""
+                },
+                "value": {
+                    "type": "number",
+                    "format": "double",
+                    "description": ""
+                },
+                "time": {
+                    "type": "string",
+                    "description": ""
+                }
+            },
+            "type": "object",
+            "required": ["unit", "value", "time"]
+        },
+        "StatsKey": {
+            "description": "",
+            "properties": {
+                "key": {
+                    "$ref": "#/definitions/StatsModel"
+                }
+            },
+            "type": "object",
+            "required": ["key"]
+        },
+        "InsiteReportParameters": {
+            "description": "",
+            "properties": {
+                "deviceId": {
+                    "type": "number",
+                    "format": "double",
+                    "description": ""
+                },
+                "dateFrom": {
+                    "type": "string",
+                    "description": ""
+                },
+                "dateTo": {
+                    "type": "string",
+                    "description": ""
+                },
+                "pageSize": {
+                    "type": "number",
+                    "format": "double",
+                    "description": ""
+                },
+                "source": {
+                    "type": "string",
+                    "description": ""
+                },
+                "extras": {
+                    "type": "object",
+                    "properties": {},
+                    "description": ""
+                },
+                "status": {
+                    "type": "string",
+                    "description": ""
+                },
+                "type": {
+                    "type": "string",
+                    "description": ""
+                },
+                "alarmType": {
+                    "type": "string",
+                    "description": ""
+                },
+                "includeAlarms": {
+                    "type": "array",
+                    "items": {
+                        "type": "string"
+                    },
+                    "description": ""
+                },
+                "alarmsCount": {
+                    "type": "object",
+                    "properties": {},
+                    "description": ""
+                }
+            },
+            "type": "object",
+            "required": ["status"]
+        },
+        "DeviceEventStatsModel": {
+            "description": "",
+            "properties": {
+                "type": {
+                    "type": "string",
+                    "description": ""
+                },
+                "stats": {
+                    "type": "array",
+                    "items": {
+                        "$ref": "#/definitions/StatsKey"
+                    },
+                    "description": ""
+                },
+                "constraints": {
+                    "$ref": "#/definitions/InsiteReportParameters"
+                }
+            },
+            "type": "object",
+            "required": ["type", "stats", "constraints"]
+        },
+        "DeviceAlarmModel": {
+            "description": "",
+            "properties": {
+                "id": {
+                    "type": "string",
+                    "description": ""
+                },
+                "count": {
+                    "type": "number",
+                    "format": "double",
+                    "description": ""
+                },
+                "severity": {
+                    "enum": ["CRITICAL", "MAJOR", "MINOR"],
+                    "type": "string",
+                    "description": ""
+                },
+                "status": {
+                    "enum": ["ACTIVE", "CLEARED"],
+                    "type": "string",
+                    "description": ""
+                },
+                "text": {
+                    "type": "string",
+                    "description": ""
+                },
+                "type": {
+                    "enum": ["c8y_ThresholdAlarm", "c8y_Threshold_RCCW"],
+                    "type": "string",
+                    "description": ""
+                },
+                "possibleCauses": {
+                    "type": "string",
+                    "description": ""
+                },
+                "thresholdVal": {
+                    "type": "string",
+                    "description": ""
+                },
+                "measurementVal": {
+                    "type": "string",
+                    "description": ""
+                },
+                "measurementType": {
+                    "enum": ["pressure", "temperature"],
+                    "type": "string",
+                    "description": ""
+                },
+                "units": {
+                    "enum": ["PSI", "BAR"],
+                    "type": "string",
+                    "description": ""
+                },
+                "recommendations": {
+                    "type": "string",
+                    "description": ""
+                },
+                "alertTitle": {
+                    "type": "string",
+                    "description": ""
+                },
+                "location": {
+                    "$ref": "#/definitions/DeviceLocationModel"
+                }
+            },
+            "type": "object",
+            "required": [
+                "id",
+                "count",
+                "severity",
+                "status",
+                "text",
+                "type",
+                "possibleCauses",
+                "thresholdVal",
+                "measurementVal",
+                "measurementType",
+                "units",
+                "recommendations",
+                "alertTitle",
+                "location"
+            ]
+        },
+        "ReportOutputModelDeviceAlarmModelArray": {
+            "description": "",
+            "properties": {
+                "constraints": {
+                    "$ref": "#/definitions/InsiteReportParameters"
+                },
+                "data": {
+                    "type": "array",
+                    "items": {
+                        "$ref": "#/definitions/DeviceAlarmModel"
+                    },
+                    "description": ""
+                }
+            },
+            "type": "object",
+            "required": ["constraints", "data"]
+        },
+        "GetMostRecentAlarmReportOutputModel": {
+            "description": "",
+            "properties": {
+                "mostRecentAlarm": {
+                    "$ref": "#/definitions/DeviceAlarmModel"
+                },
+                "constraints": {
+                    "$ref": "#/definitions/InsiteReportParameters"
+                },
+                "data": {
+                    "$ref": "#/definitions/DeviceAlarmModel"
+                }
+            },
+            "type": "object",
+            "required": ["mostRecentAlarm", "constraints", "data"]
+        },
+        "DeviceLocationTrackingModel": {
+            "description": "",
+            "properties": {
+                "deviceId": {
+                    "type": "string",
+                    "description": ""
+                },
+                "locations": {
+                    "type": "array",
+                    "items": {
+                        "$ref": "#/definitions/DeviceLocationModel"
+                    },
+                    "description": ""
+                },
+                "constraints": {
+                    "$ref": "#/definitions/InsiteReportParameters"
+                }
+            },
+            "type": "object",
+            "required": ["deviceId", "locations", "constraints"]
+        },
+        "UploadedMedia": {
+            "description": "",
+            "properties": {
+                "id": {
+                    "type": "string",
+                    "description": ""
+                },
+                "key": {
+                    "type": "string",
+                    "description": ""
+                },
+                "uri": {
+                    "type": "string",
+                    "description": ""
+                },
+                "location": {
+                    "type": "string",
+                    "description": ""
+                }
+            },
+            "type": "object",
+            "required": ["id", "key", "uri", "location"]
+        },
+        "RegisterInvitationModel": {
+            "description": "",
+            "properties": {
+                "userName": {
+                    "type": "string",
+                    "description": ""
+                },
+                "firstName": {
+                    "type": "string",
+                    "description": ""
+                },
+                "lastName": {
+                    "type": "string",
+                    "description": ""
+                },
+                "email": {
+                    "type": "string",
+                    "description": ""
+                },
+                "phone": {
+                    "type": "string",
+                    "description": ""
+                }
+            },
+            "type": "object",
+            "required": ["userName", "firstName", "lastName", "email", "phone"]
+        },
+        "ServiceTextChange": {
+            "description": "",
+            "properties": {
+                "text": {
+                    "type": "string",
+                    "description": ""
+                },
+                "timestamps": {
+                    "type": "number",
+                    "format": "double",
+                    "description": ""
+                }
+            },
+            "type": "object",
+            "required": ["text", "timestamps"]
+        },
+        "Media": {
+            "description": "",
+            "properties": {
+                "media": {
+                    "type": "array",
+                    "items": {
+                        "$ref": "#/definitions/UploadedMedia"
+                    },
+                    "description": ""
+                }
+            },
+            "type": "object",
+            "required": ["media"]
+        },
+        "ServiceTagModel": {
+            "description": "",
+            "properties": {
+                "id": {
+                    "type": "string",
+                    "description": ""
+                },
+                "name": {
+                    "type": "string",
+                    "description": ""
+                },
+                "color": {
+                    "type": "string",
+                    "description": ""
+                },
+                "groupId": {
+                    "type": "string",
+                    "description": ""
+                },
+                "createdAt": {
+                    "type": "string",
+                    "format": "date-time",
+                    "description": ""
+                },
+                "updatedAt": {
+                    "type": "string",
+                    "format": "date-time",
+                    "description": ""
+                }
+            },
+            "type": "object",
+            "required": ["name", "color", "groupId", "createdAt", "updatedAt"]
+        },
+        "ServiceRecordModel": {
+            "description": "",
+            "properties": {
+                "id": {
+                    "type": "string",
+                    "description": ""
+                },
+                "text": {
+                    "type": "string",
+                    "description": ""
+                },
+                "textHistory": {
+                    "type": "array",
+                    "items": {
+                        "$ref": "#/definitions/ServiceTextChange"
+                    },
+                    "description": ""
+                },
+                "devices": {
+                    "type": "array",
+                    "items": {
+                        "type": "string"
+                    },
+                    "description": ""
+                },
+                "groupId": {
+                    "type": "string",
+                    "description": ""
+                },
+                "media": {
+                    "type": "array",
+                    "items": {
+                        "$ref": "#/definitions/Media"
+                    },
+                    "description": ""
+                },
+                "tags": {
+                    "type": "array",
+                    "items": {
+                        "type": "string"
+                    },
+                    "description": ""
+                },
+                "tagsList": {
+                    "type": "array",
+                    "items": {
+                        "$ref": "#/definitions/ServiceTagModel"
+                    },
+                    "description": ""
+                },
+                "time": {
+                    "type": "string",
+                    "format": "date-time",
+                    "description": ""
+                },
+                "createdAt": {
+                    "type": "string",
+                    "format": "date-time",
+                    "description": ""
+                },
+                "updatedAt": {
+                    "type": "string",
+                    "format": "date-time",
+                    "description": ""
+                }
+            },
+            "type": "object",
+            "required": ["text", "devices", "media", "tags", "time"]
+        },
+        "CreateServiceTagModel": {
+            "description": "",
+            "properties": {
+                "name": {
+                    "type": "string",
+                    "description": ""
+                },
+                "color": {
+                    "type": "string",
+                    "description": ""
+                }
+            },
+            "type": "object",
+            "required": ["name", "color"]
+        },
+        "UpdateServiceTagModel": {
+            "description": "",
+            "properties": {
+                "id": {
+                    "type": "string",
+                    "description": ""
+                },
+                "name": {
+                    "type": "string",
+                    "description": ""
+                },
+                "color": {
+                    "type": "string",
+                    "description": ""
+                }
+            },
+            "type": "object",
+            "required": ["id", "name", "color"]
+        }
+    },
+    "info": {
+        "description": "API application to support cloud applications",
+        "license": {
+            "name": "MIT"
+        },
+        "title": "ELU API Application",
+        "version": "1.0.4"
+    },
+    "paths": {
+        "/api/users/": {
+            "get": {
+                "operationId": "UserGetUsers",
+                "produces": ["application/json"],
+                "responses": {
+                    "200": {
+                        "description": "Ok",
+                        "schema": {
+                            "type": "array",
+                            "items": {
+                                "$ref": "#/definitions/UserGroupModel"
+                            }
+                        }
+                    }
+                },
+                "description": "Retrieve a list of users",
+                "security": [
+                    {
+                        "Bearer": ["Insite-USER", "Insite-WebPortal"]
+                    }
+                ],
+                "parameters": []
+            }
+        },
+        "/api/users/(:id/)?avatar": {
+            "get": {
+                "operationId": "UserGetAvatar",
+                "produces": ["text/html"],
+                "responses": {
+                    "204": {
+                        "description": "No content"
+                    }
+                },
+                "description": "",
+                "security": [
+                    {
+                        "Bearer": ["Insite-USER", "Insite-WebPortal"]
+                    }
+                ],
+                "parameters": [
+                    {
+                        "description": "",
+                        "in": "path",
+                        "name": "id",
+                        "required": true,
+                        "type": "string"
+                    }
+                ]
+            },
+            "delete": {
+                "operationId": "UserDeleteAvatar",
+                "produces": ["application/json"],
+                "responses": {
+                    "200": {
+                        "description": "Ok",
+                        "schema": {
+                            "$ref": "#/definitions/UserModel"
+                        }
+                    }
+                },
+                "description": "Delete user Avatar",
+                "security": [
+                    {
+                        "Bearer": ["Insite-USER", "Insite-WebPortal"]
+                    }
+                ],
+                "parameters": [
+                    {
+                        "description": "",
+                        "in": "path",
+                        "name": "id",
+                        "required": true,
+                        "type": "string"
+                    }
+                ]
+            }
+        },
+        "/api/users/grouping": {
+            "get": {
+                "operationId": "UserGetUserGrouping",
+                "produces": ["application/json"],
+                "responses": {
+                    "200": {
+                        "description": "Ok",
+                        "schema": {
+                            "type": "array",
+                            "items": {
+                                "$ref": "#/definitions/UserGroupModel"
+                            }
+                        }
+                    }
+                },
+                "description": "Retrieve a list of currently logged in user's groups\nThese groups are UserParentServiceUsers-UserGroupGroups-UserGroupUsers\ne.g\n        Stanley-Distributors-StanleyUsers\n        StanleyServiceUsers-DistributorCustomers-DistributorUsers\n        DistributorServiceUsers-CustomerUsers-EmptyList",
+                "security": [
+                    {
+                        "Bearer": ["Insite-USER", "Insite-WebPortal"]
+                    }
+                ],
+                "parameters": []
+            }
+        },
+        "/api/users/{id}/grouping": {
+            "get": {
+                "operationId": "UserGetUserGroupingByUserId",
+                "produces": ["application/json"],
+                "responses": {
+                    "200": {
+                        "description": "Ok",
+                        "schema": {
+                            "type": "array",
+                            "items": {
+                                "$ref": "#/definitions/UserGroupModel"
+                            }
+                        }
+                    }
+                },
+                "description": "Retrieve a list of users by groups\nThese groups are UserParentServiceUsers-UserGroupGroups-UserGroupUsers\ne.g\n        Stanley-Distributors-StanleyUsers\n        StanleyServiceUsers-DistributorCustomers-DistributorUsers\n        DistributorServiceUsers-CustomerUsers-EmptyList",
+                "security": [
+                    {
+                        "Bearer": ["Insite-USER", "Insite-WebPortal"]
+                    }
+                ],
+                "parameters": [
+                    {
+                        "description": "- id os user whose groupings should be retrieved",
+                        "in": "path",
+                        "name": "id",
+                        "required": true,
+                        "type": "string"
+                    }
+                ]
+            }
+        },
+        "/api/users/profile": {
+            "get": {
+                "operationId": "UserGetProfile",
+                "produces": ["application/json"],
+                "responses": {
+                    "200": {
+                        "description": "Ok",
+                        "schema": {
+                            "$ref": "#/definitions/UserModel"
+                        }
+                    }
+                },
+                "description": "Retrieve the currently logged in user's profile information",
+                "security": [
+                    {
+                        "Bearer": ["Insite-USER", "Insite-WebPortal"]
+                    }
+                ],
+                "parameters": []
+            }
+        },
+        "/api/users/{id}/roles": {
+            "get": {
+                "operationId": "UserGetUserRoles",
+                "produces": ["application/json"],
+                "responses": {
+                    "200": {
+                        "description": "Ok",
+                        "schema": {
+                            "type": "array",
+                            "items": {
+                                "$ref": "#/definitions/RoleModel"
+                            }
+                        }
+                    }
+                },
+                "description": "Retrieve user roles information.",
+                "security": [
+                    {
+                        "Bearer": ["Insite-USER", "Insite-WebPortal"]
+                    }
+                ],
+                "parameters": [
+                    {
+                        "description": "",
+                        "in": "path",
+                        "name": "id",
+                        "required": true,
+                        "type": "string"
+                    }
+                ]
+            }
+        },
+        "/api/users/{id}": {
+            "get": {
+                "operationId": "UserGetUser",
+                "produces": ["application/json"],
+                "responses": {
+                    "200": {
+                        "description": "Ok",
+                        "schema": {
+                            "$ref": "#/definitions/UserModel"
+                        }
+                    }
+                },
+                "description": "Retrieve user account information.",
+                "security": [
+                    {
+                        "Bearer": ["Insite-USER", "Insite-WebPortal"]
+                    }
+                ],
+                "parameters": [
+                    {
+                        "description": "",
+                        "in": "path",
+                        "name": "id",
+                        "required": true,
+                        "type": "string"
+                    }
+                ]
+            },
+            "put": {
+                "operationId": "UserUpdateUser",
+                "produces": ["application/json"],
+                "responses": {
+                    "200": {
+                        "description": "Ok",
+                        "schema": {
+                            "$ref": "#/definitions/UserModel"
+                        }
+                    }
+                },
+                "description": "Update user account information.",
+                "security": [
+                    {
+                        "Bearer": ["Insite-USER", "Insite-WebPortal"]
+                    }
+                ],
+                "consumes": ["application/json"],
+                "parameters": [
+                    {
+                        "description": "",
+                        "in": "path",
+                        "name": "id",
+                        "required": true,
+                        "type": "string"
+                    },
+                    {
+                        "description": "",
+                        "in": "body",
+                        "name": "userUpdate",
+                        "required": true,
+                        "schema": {
+                            "$ref": "#/definitions/UpdateUserByIdInput"
+                        }
+                    }
+                ]
+            },
+            "delete": {
+                "operationId": "UserDeleteUser",
+                "produces": ["text/html"],
+                "responses": {
+                    "204": {
+                        "description": "No content"
+                    }
+                },
+                "description": "Delete user account information.",
+                "security": [
+                    {
+                        "Bearer": ["Insite-USER", "Insite-WebPortal"]
+                    }
+                ],
+                "parameters": [
+                    {
+                        "description": "",
+                        "in": "path",
+                        "name": "id",
+                        "required": true,
+                        "type": "string"
+                    }
+                ]
+            }
+        },
+        "/api/users/{id}/groups": {
+            "get": {
+                "operationId": "UserGetGroup",
+                "produces": ["application/json"],
+                "responses": {
+                    "200": {
+                        "description": "Ok",
+                        "schema": {
+                            "$ref": "#/definitions/GroupDataModel"
+                        }
+                    }
+                },
+                "description": "Retrieve user group information.",
+                "security": [
+                    {
+                        "Bearer": ["Insite-USER", "Insite-WebPortal"]
+                    }
+                ],
+                "parameters": [
+                    {
+                        "description": "",
+                        "in": "path",
+                        "name": "id",
+                        "required": true,
+                        "type": "string"
+                    }
+                ]
+            }
+        },
+        "/api/users/registernavid": {
+            "post": {
+                "operationId": "UserRegisterNavId",
+                "produces": ["text/html"],
+                "responses": {
+                    "204": {
+                        "description": "No content"
+                    }
+                },
+                "description": "",
+                "security": [
+                    {
+                        "Bearer": ["Insite-USER", "Insite-WebPortal"]
+                    }
+                ],
+                "consumes": ["application/json"],
+                "parameters": [
+                    {
+                        "description": "",
+                        "in": "body",
+                        "name": "input",
+                        "required": true,
+                        "schema": {
+                            "$ref": "#/definitions/RegisterNavGroupModel"
+                        }
+                    }
+                ]
+            }
+        },
+        "/api/invite-users/": {
+            "post": {
+                "operationId": "InviteUserInviteUser",
+                "produces": ["application/json"],
+                "responses": {
+                    "200": {
+                        "description": "Ok",
+                        "schema": {
+                            "$ref": "#/definitions/InviteUserData"
+                        }
+                    }
+                },
+                "description": "Invite a new User",
+                "consumes": ["application/json"],
+                "parameters": [
+                    {
+                        "description": "",
+                        "in": "body",
+                        "name": "newUser",
+                        "required": true,
+                        "schema": {
+                            "$ref": "#/definitions/InviteUserInput"
+                        }
+                    }
+                ]
+            }
+        },
+        "/api/invite-users/{code}": {
+            "get": {
+                "operationId": "InviteUserGetInviteUser",
+                "produces": ["application/json"],
+                "responses": {
+                    "200": {
+                        "description": "Ok",
+                        "schema": {
+                            "$ref": "#/definitions/InviteUserData"
+                        }
+                    }
+                },
+                "description": "Get Invite User By Invitation Code",
+                "parameters": [
+                    {
+                        "description": "",
+                        "in": "path",
+                        "name": "code",
+                        "required": true,
+                        "type": "string"
+                    }
+                ]
+            }
+        },
+        "/api/auth/login": {
+            "post": {
+                "operationId": "AuthLoginUser",
+                "produces": ["application/json"],
+                "responses": {
+                    "200": {
+                        "description": "Ok",
+                        "schema": {
+                            "$ref": "#/definitions/UserAuthModel"
+                        }
+                    }
+                },
+                "description": "log in and create jwt token",
+                "consumes": ["application/json"],
+                "parameters": [
+                    {
+                        "description": "- login user's credentials",
+                        "in": "body",
+                        "name": "login",
+                        "required": true,
+                        "schema": {
+                            "$ref": "#/definitions/LoginModel"
+                        }
+                    }
+                ]
+            }
+        },
+        "/api/auth/logout": {
+            "post": {
+                "operationId": "AuthLogoutUser",
+                "produces": ["text/html"],
+                "responses": {
+                    "204": {
+                        "description": "No content"
+                    }
+                },
+                "description": "log the user out by invalidating the token",
+                "security": [
+                    {
+                        "Bearer": ["Insite-USER", "Insite-WebPortal"]
+                    }
+                ],
+                "consumes": ["application/json"],
+                "parameters": [
+                    {
+                        "description": "",
+                        "in": "body",
+                        "name": "logoutModel",
+                        "required": true,
+                        "schema": {
+                            "$ref": "#/definitions/LogoutModel"
+                        }
+                    }
+                ]
+            }
+        },
+        "/api/auth/register": {
+            "post": {
+                "operationId": "AuthRegisterUser",
+                "produces": ["application/json"],
+                "responses": {
+                    "200": {
+                        "description": "Ok",
+                        "schema": {
+                            "$ref": "#/definitions/UserModel"
+                        }
+                    }
+                },
+                "description": "Register a new user.",
+                "consumes": ["application/json"],
+                "parameters": [
+                    {
+                        "description": "- information about user being registered",
+                        "in": "body",
+                        "name": "userData",
+                        "required": true,
+                        "schema": {
+                            "$ref": "#/definitions/CreateUserInput"
+                        }
+                    }
+                ]
+            }
+        },
+        "/api/auth/resetpassword/{userName}": {
+            "get": {
+                "operationId": "ResetPasswordResetPassword",
+                "produces": ["application/json"],
+                "responses": {
+                    "200": {
+                        "description": "Ok",
+                        "schema": {
+                            "$ref": "#/definitions/PasswordModel"
+                        }
+                    }
+                },
+                "description": "This API checks for a passcode for the user",
+                "security": [
+                    {
+                        "Bearer": []
+                    }
+                ],
+                "parameters": [
+                    {
+                        "description": "- forgot user's credentials",
+                        "in": "path",
+                        "name": "userName",
+                        "required": true,
+                        "type": "string"
+                    }
+                ]
+            }
+        },
+        "/api/auth/resetpassword/notify": {
+            "post": {
+                "operationId": "ResetPasswordSendNotification",
+                "produces": ["text/html"],
+                "responses": {
+                    "204": {
+                        "description": "No content"
+                    }
+                },
+                "description": "This API notifies a  user via passcode",
+                "security": [
+                    {
+                        "Bearer": []
+                    }
+                ],
+                "consumes": ["application/json"],
+                "parameters": [
+                    {
+                        "description": "",
+                        "in": "body",
+                        "name": "input",
+                        "required": true,
+                        "schema": {
+                            "$ref": "#/definitions/PasswordModel"
+                        }
+                    }
+                ]
+            }
+        },
+        "/api/auth/resetpassword/add": {
+            "post": {
+                "operationId": "ResetPasswordAddPassword",
+                "produces": ["application/json"],
+                "responses": {
+                    "200": {
+                        "description": "Ok",
+                        "schema": {
+                            "$ref": "#/definitions/PasswordModel"
+                        }
+                    }
+                },
+                "description": "This API adds a password for a user",
+                "security": [
+                    {
+                        "Bearer": []
+                    }
+                ],
+                "consumes": ["application/json"],
+                "parameters": [
+                    {
+                        "description": "",
+                        "in": "body",
+                        "name": "passwordDetails",
+                        "required": true,
+                        "schema": {
+                            "$ref": "#/definitions/PasswordModel"
+                        }
+                    }
+                ]
+            }
+        },
+        "/api/auth/resetpassword/checkpasscode/{passcode}": {
+            "get": {
+                "operationId": "ResetPasswordCheckPasscodeValidityandReturnUser",
+                "produces": ["application/json"],
+                "responses": {
+                    "200": {
+                        "description": "Ok",
+                        "schema": {
+                            "$ref": "#/definitions/PasswordModel"
+                        }
+                    }
+                },
+                "description": "This API checks if a  passcode is valid and return the corresponding user otherwise 404",
+                "security": [
+                    {
+                        "Bearer": []
+                    }
+                ],
+                "parameters": [
+                    {
+                        "description": "- passcode that was sent to user via email or text message",
+                        "in": "path",
+                        "name": "passcode",
+                        "required": true,
+                        "type": "string"
+                    }
+                ]
+            }
+        },
+        "/api/roles/": {
+            "get": {
+                "operationId": "RoleGetRoles",
+                "produces": ["application/json"],
+                "responses": {
+                    "200": {
+                        "description": "Ok",
+                        "schema": {
+                            "type": "array",
+                            "items": {
+                                "$ref": "#/definitions/RoleModel"
+                            }
+                        }
+                    }
+                },
+                "description": "Retrieve a list of Roles",
+                "security": [
+                    {
+                        "Bearer": ["Insite-USER"]
+                    }
+                ],
+                "parameters": []
+            }
+        },
+        "/api/roles/{id}": {
+            "get": {
+                "operationId": "RoleGetRole",
+                "produces": ["application/json"],
+                "responses": {
+                    "200": {
+                        "description": "Ok",
+                        "schema": {
+                            "$ref": "#/definitions/RoleModel"
+                        }
+                    }
+                },
+                "description": "Retrieve Role account information.",
+                "security": [
+                    {
+                        "Bearer": ["Insite-USER"]
+                    }
+                ],
+                "parameters": [
+                    {
+                        "description": "The id of Role to be retrieved",
+                        "in": "path",
+                        "name": "id",
+                        "required": true,
+                        "type": "string"
+                    }
+                ]
+            }
+        },
+        "/api/devices/": {
+            "get": {
+                "operationId": "DeviceGetDevices",
+                "produces": ["application/json"],
+                "responses": {
+                    "200": {
+                        "description": "Ok",
+                        "schema": {
+                            "type": "array",
+                            "items": {
+                                "$ref": "#/definitions/DeviceModel"
+                            }
+                        }
+                    }
+                },
+                "description": "Retrieve a list of devices",
+                "security": [
+                    {
+                        "Bearer": ["Insite-USER", "Insite-WebPortal"]
+                    }
+                ],
+                "parameters": [
+                    {
+                        "description": "",
+                        "in": "query",
+                        "name": "update-stats",
+                        "required": false,
+                        "type": "boolean",
+                        "default": true
+                    }
+                ]
+            }
+        },
+        "/api/devices/(:deviceId/)?alarms": {
+            "get": {
+                "operationId": "DeviceGetDeviceAlarms",
+                "produces": ["application/json"],
+                "responses": {
+                    "200": {
+                        "description": "Ok",
+                        "schema": {
+                            "type": "object"
+                        }
+                    }
+                },
+                "description": "Retrieve device/s alarms.",
+                "security": [
+                    {
+                        "Bearer": ["Insite-USER", "Insite-WebPortal"]
+                    }
+                ],
+                "parameters": [
+                    {
+                        "description": "",
+                        "in": "path",
+                        "name": "deviceId",
+                        "required": true,
+                        "type": "number",
+                        "format": "double"
+                    },
+                    {
+                        "description": "",
+                        "in": "query",
+                        "name": "dateFrom",
+                        "required": true,
+                        "type": "string",
+                        "format": "date-time"
+                    },
+                    {
+                        "description": "",
+                        "in": "query",
+                        "name": "dateTo",
+                        "required": true,
+                        "type": "string",
+                        "format": "date-time"
+                    },
+                    {
+                        "description": "",
+                        "in": "query",
+                        "name": "pageSize",
+                        "required": false,
+                        "type": "number",
+                        "format": "double",
+                        "default": 100
+                    },
+                    {
+                        "description": "",
+                        "in": "query",
+                        "name": "pageNumber",
+                        "required": false,
+                        "type": "number",
+                        "format": "double",
+                        "default": 0
+                    },
+                    {
+                        "description": "",
+                        "in": "query",
+                        "name": "alarmType",
+                        "required": true,
+                        "type": "string"
+                    },
+                    {
+                        "description": "",
+                        "in": "query",
+                        "name": "includeAlarms",
+                        "required": false,
+                        "type": "array",
+                        "items": {
+                            "type": "string"
+                        }
+                    },
+                    {
+                        "description": "",
+                        "in": "query",
+                        "name": "includeAlarmsSeverity",
+                        "required": false,
+                        "type": "array",
+                        "items": {
+                            "type": "string"
+                        }
+                    }
+                ]
+            }
+        },
+        "/api/devices/(:deviceId/)?alarms/recent": {
+            "get": {
+                "operationId": "DeviceGetRecentDeviceAlarms",
+                "produces": ["application/json"],
+                "responses": {
+                    "200": {
+                        "description": "Ok",
+                        "schema": {
+                            "type": "object"
+                        }
+                    }
+                },
+                "description": "Retrieve device/s recent alarms.",
+                "security": [
+                    {
+                        "Bearer": ["Insite-USER", "Insite-WebPortal"]
+                    }
+                ],
+                "parameters": [
+                    {
+                        "description": "",
+                        "in": "path",
+                        "name": "deviceId",
+                        "required": true,
+                        "type": "number",
+                        "format": "double"
+                    },
+                    {
+                        "description": "",
+                        "in": "query",
+                        "name": "dateFrom",
+                        "required": true,
+                        "type": "string",
+                        "format": "date-time"
+                    },
+                    {
+                        "description": "",
+                        "in": "query",
+                        "name": "dateTo",
+                        "required": true,
+                        "type": "string",
+                        "format": "date-time"
+                    },
+                    {
+                        "description": "",
+                        "in": "query",
+                        "name": "pageSize",
+                        "required": false,
+                        "type": "number",
+                        "format": "double",
+                        "default": 100
+                    },
+                    {
+                        "description": "",
+                        "in": "query",
+                        "name": "pageNumber",
+                        "required": false,
+                        "type": "number",
+                        "format": "double",
+                        "default": 0
+                    },
+                    {
+                        "description": "",
+                        "in": "query",
+                        "name": "alarmType",
+                        "required": true,
+                        "type": "string"
+                    },
+                    {
+                        "description": "",
+                        "in": "query",
+                        "name": "includeAlarms",
+                        "required": false,
+                        "type": "array",
+                        "items": {
+                            "type": "string"
+                        }
+                    },
+                    {
+                        "description": "",
+                        "in": "query",
+                        "name": "includeAlarmsSeverity",
+                        "required": false,
+                        "type": "array",
+                        "items": {
+                            "type": "string"
+                        }
+                    }
+                ]
+            }
+        },
+        "/api/devices/{id}": {
+            "get": {
+                "operationId": "DeviceGetDevice",
+                "produces": ["application/json"],
+                "responses": {
+                    "200": {
+                        "description": "Ok",
+                        "schema": {
+                            "$ref": "#/definitions/DeviceModel"
+                        }
+                    }
+                },
+                "description": "Retrieve device information.",
+                "security": [
+                    {
+                        "Bearer": ["Insite-USER", "Insite-WebPortal"]
+                    }
+                ],
+                "parameters": [
+                    {
+                        "description": "The id of device to be retrieved",
+                        "in": "path",
+                        "name": "id",
+                        "required": true,
+                        "type": "string"
+                    }
+                ]
+            }
+        },
+        "/api/devices/{deviceId}/stats": {
+            "get": {
+                "operationId": "DeviceGetDeviceStats",
+                "produces": ["application/json"],
+                "responses": {
+                    "200": {
+                        "description": "Ok",
+                        "schema": {
+                            "$ref": "#/definitions/GetDeviceStatsIntervalOutputModel"
+                        }
+                    }
+                },
+                "description": "Retrieve activity count and times for a device .",
+                "security": [
+                    {
+                        "Bearer": ["Insite-USER", "Insite-WebPortal"]
+                    }
+                ],
+                "parameters": [
+                    {
+                        "description": "The id of device to be retrieved",
+                        "in": "path",
+                        "name": "deviceId",
+                        "required": true,
+                        "type": "string"
+                    },
+                    {
+                        "description": "",
+                        "in": "query",
+                        "name": "startDate",
+                        "required": true,
+                        "type": "string",
+                        "format": "date-time"
+                    },
+                    {
+                        "description": "",
+                        "in": "query",
+                        "name": "endDate",
+                        "required": true,
+                        "type": "string",
+                        "format": "date-time"
+                    }
+                ]
+            }
+        },
+        "/api/devices/(:deviceId/)?events": {
+            "get": {
+                "operationId": "DeviceGetDeviceEvents",
+                "produces": ["application/json"],
+                "responses": {
+                    "200": {
+                        "description": "Ok",
+                        "schema": {
+                            "type": "array",
+                            "items": {
+                                "$ref": "#/definitions/DeviceEventModel"
+                            }
+                        }
+                    }
+                },
+                "description": "Retrieve events for device/s .",
+                "security": [
+                    {
+                        "Bearer": ["Insite-USER", "Insite-WebPortal"]
+                    }
+                ],
+                "parameters": [
+                    {
+                        "description": "The id of device",
+                        "in": "path",
+                        "name": "deviceId",
+                        "required": true,
+                        "type": "number",
+                        "format": "double"
+                    },
+                    {
+                        "description": "",
+                        "in": "query",
+                        "name": "dateFrom",
+                        "required": false,
+                        "type": "string",
+                        "format": "date-time"
+                    },
+                    {
+                        "description": "",
+                        "in": "query",
+                        "name": "dateTo",
+                        "required": false,
+                        "type": "string",
+                        "format": "date-time"
+                    },
+                    {
+                        "description": "",
+                        "in": "query",
+                        "name": "pageSize",
+                        "required": false,
+                        "type": "number",
+                        "format": "double",
+                        "default": 100
+                    },
+                    {
+                        "description": "",
+                        "in": "query",
+                        "name": "pageNumber",
+                        "required": false,
+                        "type": "number",
+                        "format": "double",
+                        "default": 0
+                    },
+                    {
+                        "description": "",
+                        "in": "query",
+                        "name": "includeEvents",
+                        "required": false,
+                        "type": "array",
+                        "items": {
+                            "type": "string"
+                        },
+                        "default": []
+                    }
+                ]
+            }
+        },
+        "/api/devices/{deviceId}/jobintervals/": {
+            "get": {
+                "operationId": "JobIntervalJobIntervals",
+                "produces": ["application/json"],
+                "responses": {
+                    "200": {
+                        "description": "Ok",
+                        "schema": {
+                            "type": "array",
+                            "items": {
+                                "$ref": "#/definitions/JobIntervalModel"
+                            }
+                        }
+                    }
+                },
+                "description": "This API gets job intervals for a  device",
+                "security": [
+                    {
+                        "Bearer": ["Insite-USER", "Insite-WebPortal"]
+                    }
+                ],
+                "parameters": [
+                    {
+                        "description": "",
+                        "in": "path",
+                        "name": "deviceId",
+                        "required": true,
+                        "type": "string"
+                    },
+                    {
+                        "description": "",
+                        "in": "query",
+                        "name": "dateFrom",
+                        "required": true,
+                        "type": "string",
+                        "format": "date-time"
+                    },
+                    {
+                        "description": "",
+                        "in": "query",
+                        "name": "dateTo",
+                        "required": true,
+                        "type": "string",
+                        "format": "date-time"
+                    }
+                ]
+            },
+            "post": {
+                "operationId": "JobIntervalCreateJobIntervalController",
+                "produces": ["application/json"],
+                "responses": {
+                    "200": {
+                        "description": "Ok",
+                        "schema": {
+                            "$ref": "#/definitions/JobIntervalModel"
+                        }
+                    }
+                },
+                "description": "This API creates job intervals for a  device",
+                "security": [
+                    {
+                        "Bearer": ["Insite-USER", "Insite-WebPortal"]
+                    }
+                ],
+                "consumes": ["application/json"],
+                "parameters": [
+                    {
+                        "description": "",
+                        "in": "path",
+                        "name": "deviceId",
+                        "required": true,
+                        "type": "string"
+                    },
+                    {
+                        "description": "",
+                        "in": "body",
+                        "name": "jobInterval",
+                        "required": true,
+                        "schema": {
+                            "$ref": "#/definitions/JobIntervalModel"
+                        }
+                    }
+                ]
+            }
+        },
+        "/api/devices/{deviceId}/jobintervals/{id}": {
+            "put": {
+                "operationId": "JobIntervalUpdateJobIntervalController",
+                "produces": ["application/json"],
+                "responses": {
+                    "200": {
+                        "description": "Ok",
+                        "schema": {
+                            "$ref": "#/definitions/JobIntervalModel"
+                        }
+                    }
+                },
+                "description": "This API updates job intervals for the device",
+                "security": [
+                    {
+                        "Bearer": ["Insite-USER", "Insite-WebPortal"]
+                    }
+                ],
+                "consumes": ["application/json"],
+                "parameters": [
+                    {
+                        "description": "- device's id",
+                        "in": "path",
+                        "name": "deviceId",
+                        "required": true,
+                        "type": "string"
+                    },
+                    {
+                        "description": "",
+                        "in": "path",
+                        "name": "id",
+                        "required": true,
+                        "type": "string"
+                    },
+                    {
+                        "description": "",
+                        "in": "body",
+                        "name": "jobInterval",
+                        "required": true,
+                        "schema": {
+                            "$ref": "#/definitions/JobIntervalModel"
+                        }
+                    }
+                ]
+            },
+            "delete": {
+                "operationId": "JobIntervalDeleteJobIntervalController",
+                "produces": ["application/json"],
+                "responses": {
+                    "200": {
+                        "description": "Ok",
+                        "schema": {
+                            "$ref": "#/definitions/JobIntervalModel"
+                        }
+                    }
+                },
+                "description": "This API deletes job intervals for the device",
+                "security": [
+                    {
+                        "Bearer": ["Insite-USER", "Insite-WebPortal"]
+                    }
+                ],
+                "parameters": [
+                    {
+                        "description": "",
+                        "in": "path",
+                        "name": "deviceId",
+                        "required": true,
+                        "type": "number",
+                        "format": "double"
+                    },
+                    {
+                        "description": "",
+                        "in": "path",
+                        "name": "id",
+                        "required": true,
+                        "type": "string"
+                    }
+                ]
+            }
+        },
+        "/api/deviceTokens/": {
+            "post": {
+                "operationId": "DeviceTokenCreateUserDeviceToken",
+                "produces": ["application/json"],
+                "responses": {
+                    "200": {
+                        "description": "Ok",
+                        "schema": {
+                            "$ref": "#/definitions/UserDeviceTokenDataModel"
+                        }
+                    }
+                },
+                "description": "Create user device token",
+                "security": [
+                    {
+                        "Bearer": ["Insite-USER"]
+                    }
+                ],
+                "consumes": ["application/json"],
+                "parameters": [
+                    {
+                        "description": "",
+                        "in": "body",
+                        "name": "createUserDeviceTokenInput",
+                        "required": true,
+                        "schema": {
+                            "$ref": "#/definitions/CreateUserDeviceTokenInputModel"
+                        }
+                    }
+                ]
+            },
+            "put": {
+                "operationId": "DeviceTokenUpdateUserDeviceToken",
+                "produces": ["application/json"],
+                "responses": {
+                    "200": {
+                        "description": "Ok",
+                        "schema": {
+                            "$ref": "#/definitions/UserDeviceTokenDataModel"
+                        }
+                    }
+                },
+                "description": "",
+                "security": [
+                    {
+                        "Bearer": ["Insite-USER"]
+                    }
+                ],
+                "consumes": ["application/json"],
+                "parameters": [
+                    {
+                        "description": "",
+                        "in": "body",
+                        "name": "updateUserDeviceTokenInput",
+                        "required": true,
+                        "schema": {
+                            "$ref": "#/definitions/SetUserDeviceTokenStatusInputModel"
+                        }
+                    }
+                ]
+            }
+        },
+        "/api/conferences/": {
+            "post": {
+                "operationId": "ConferenceCreateRoom",
+                "produces": ["application/json"],
+                "responses": {
+                    "200": {
+                        "description": "Ok",
+                        "schema": {
+                            "$ref": "#/definitions/CreateConferenceRoomOutput"
+                        }
+                    }
+                },
+                "description": "User request make a call",
+                "consumes": ["application/json"],
+                "parameters": [
+                    {
+                        "description": "",
+                        "in": "body",
+                        "name": "input",
+                        "required": true,
+                        "schema": {
+                            "$ref": "#/definitions/CreateConferenceRoomInput"
+                        }
+                    }
+                ]
+            }
+        },
+        "/api/conferences/{id}/invite": {
+            "post": {
+                "operationId": "ConferenceInviteUser",
+                "produces": ["text/html"],
+                "responses": {
+                    "204": {
+                        "description": "No content"
+                    }
+                },
+                "description": "",
+                "consumes": ["application/json"],
+                "parameters": [
+                    {
+                        "description": "",
+                        "in": "path",
+                        "name": "id",
+                        "required": true,
+                        "type": "string"
+                    },
+                    {
+                        "description": "",
+                        "in": "body",
+                        "name": "input",
+                        "required": true,
+                        "schema": {
+                            "$ref": "#/definitions/InviteUserVideoCallInput"
+                        }
+                    }
+                ]
+            }
+        },
+        "/api/conferences/{id}/reject": {
+            "post": {
+                "operationId": "ConferenceRejectCall",
+                "produces": ["text/html"],
+                "responses": {
+                    "204": {
+                        "description": "No content"
+                    }
+                },
+                "description": "Receiver Rejects Call",
+                "consumes": ["application/json"],
+                "parameters": [
+                    {
+                        "description": "",
+                        "in": "path",
+                        "name": "id",
+                        "required": true,
+                        "type": "string"
+                    },
+                    {
+                        "description": "",
+                        "in": "body",
+                        "name": "input",
+                        "required": true,
+                        "schema": {
+                            "$ref": "#/definitions/RejectConferenceInvitationInput"
+                        }
+                    }
+                ]
+            }
+        },
+        "/api/conferences/{id}/ringing": {
+            "post": {
+                "operationId": "ConferenceRinging",
+                "produces": ["text/html"],
+                "responses": {
+                    "204": {
+                        "description": "No content"
+                    }
+                },
+                "description": "Receiver Ringing status",
+                "consumes": ["application/json"],
+                "parameters": [
+                    {
+                        "description": "",
+                        "in": "path",
+                        "name": "id",
+                        "required": true,
+                        "type": "string"
+                    },
+                    {
+                        "description": "",
+                        "in": "body",
+                        "name": "input",
+                        "required": true,
+                        "schema": {
+                            "$ref": "#/definitions/RingingConferenceInvitationInput"
+                        }
+                    }
+                ]
+            }
+        },
+        "/api/conferences/{id}/cancel": {
+            "post": {
+                "operationId": "ConferenceCancelConferenceSession",
+                "produces": ["text/html"],
+                "responses": {
+                    "204": {
+                        "description": "No content"
+                    }
+                },
+                "description": "Receiver Rejects Call",
+                "consumes": ["application/json"],
+                "parameters": [
+                    {
+                        "description": "",
+                        "in": "path",
+                        "name": "id",
+                        "required": true,
+                        "type": "string"
+                    },
+                    {
+                        "description": "",
+                        "in": "body",
+                        "name": "input",
+                        "required": true,
+                        "schema": {
+                            "$ref": "#/definitions/CancelConferenceSessionInput"
+                        }
+                    }
+                ]
+            }
+        },
+        "/api/conferences/{id}/leave": {
+            "post": {
+                "operationId": "ConferenceLeaveRoom",
+                "produces": ["text/html"],
+                "responses": {
+                    "204": {
+                        "description": "No content"
+                    }
+                },
+                "description": "Receiver Ends Call",
+                "consumes": ["application/json"],
+                "parameters": [
+                    {
+                        "description": "",
+                        "in": "path",
+                        "name": "id",
+                        "required": true,
+                        "type": "string"
+                    },
+                    {
+                        "description": "",
+                        "in": "body",
+                        "name": "input",
+                        "required": true,
+                        "schema": {
+                            "$ref": "#/definitions/LeaveVideoConferenceInput"
+                        }
+                    }
+                ]
+            }
+        },
+        "/api/conferences/{id}": {
+            "post": {
+                "operationId": "ConferenceAcceptCall",
+                "produces": ["application/json"],
+                "responses": {
+                    "200": {
+                        "description": "Ok",
+                        "schema": {
+                            "$ref": "#/definitions/ConferenceModel"
+                        }
+                    }
+                },
+                "description": "Join to conference room.",
+                "consumes": ["application/json"],
+                "parameters": [
+                    {
+                        "description": "",
+                        "in": "path",
+                        "name": "id",
+                        "required": true,
+                        "type": "string"
+                    },
+                    {
+                        "description": "",
+                        "in": "body",
+                        "name": "input",
+                        "required": true,
+                        "schema": {
+                            "$ref": "#/definitions/AcceptConferenceInvitationInput"
+                        }
+                    }
+                ]
+            }
+        },
+        "/api/groups/{id}/supportusers": {
+            "get": {
+                "operationId": "GroupGetGroupSupportUsers",
+                "produces": ["application/json"],
+                "responses": {
+                    "200": {
+                        "description": "Ok",
+                        "schema": {
+                            "type": "array",
+                            "items": {
+                                "$ref": "#/definitions/UserModel"
+                            }
+                        }
+                    }
+                },
+                "description": "This API returns a list of support users of a particular group given a group Id",
+                "security": [
+                    {
+                        "Bearer": ["Insite-USER"]
+                    }
+                ],
+                "parameters": [
+                    {
+                        "description": "The group id of the group",
+                        "in": "path",
+                        "name": "id",
+                        "required": true,
+                        "type": "string"
+                    }
+                ]
+            }
+        },
+        "/api/groups/{groupId}/supportusers": {
+            "post": {
+                "operationId": "GroupAddGroupSupportUser",
+                "produces": ["application/json"],
+                "responses": {
+                    "200": {
+                        "description": "Ok",
+                        "schema": {
+                            "$ref": "#/definitions/SupportUserModel"
+                        }
+                    }
+                },
+                "description": "This API adds a support user to a given group",
+                "security": [
+                    {
+                        "Bearer": ["Insite-USER"]
+                    }
+                ],
+                "consumes": ["application/json"],
+                "parameters": [
+                    {
+                        "description": "",
+                        "in": "path",
+                        "name": "groupId",
+                        "required": true,
+                        "type": "string"
+                    },
+                    {
+                        "description": "",
+                        "in": "body",
+                        "name": "supportUser",
+                        "required": true,
+                        "schema": {
+                            "$ref": "#/definitions/SupportUserModel"
+                        }
+                    }
+                ]
+            }
+        },
+        "/api/groups/{groupId}/supportusers/{id}": {
+            "delete": {
+                "operationId": "GroupDeleteGroupSupportUsers",
+                "produces": ["text/html"],
+                "responses": {
+                    "204": {
+                        "description": "No content"
+                    }
+                },
+                "description": "This API deletes a support user from a given group",
+                "security": [
+                    {
+                        "Bearer": ["Insite-USER"]
+                    }
+                ],
+                "parameters": [
+                    {
+                        "description": "The group id of the group",
+                        "in": "path",
+                        "name": "groupId",
+                        "required": true,
+                        "type": "string"
+                    },
+                    {
+                        "description": "The username of the user",
+                        "in": "path",
+                        "name": "id",
+                        "required": true,
+                        "type": "string"
+                    }
+                ]
+            }
+        },
+        "/api/groups/registernavid": {
+            "post": {
+                "operationId": "GroupRegisterNavId",
+                "produces": ["text/html"],
+                "responses": {
+                    "204": {
+                        "description": "No content"
+                    }
+                },
+                "description": "",
+                "security": [
+                    {
+                        "Bearer": ["Insite-USER"]
+                    }
+                ],
+                "consumes": ["application/json"],
+                "parameters": [
+                    {
+                        "description": "",
+                        "in": "body",
+                        "name": "input",
+                        "required": true,
+                        "schema": {
+                            "$ref": "#/definitions/RegisterNavGroupModel"
+                        }
+                    }
+                ]
+            }
+        },
+        "/api/chat/": {
+            "post": {
+                "operationId": "ChatSendChat",
+                "produces": ["text/html"],
+                "responses": {
+                    "204": {
+                        "description": "No content"
+                    }
+                },
+                "description": "Send chat to recipient",
+                "security": [
+                    {
+                        "Bearer": ["Insite-USER", "Insite-WebPortal"]
+                    }
+                ],
+                "consumes": ["application/json"],
+                "parameters": [
+                    {
+                        "description": "",
+                        "in": "body",
+                        "name": "input",
+                        "required": true,
+                        "schema": {
+                            "type": "array",
+                            "items": {
+                                "$ref": "#/definitions/ChatMessageModel"
+                            }
+                        }
+                    }
+                ]
+            }
+        },
+        "/api/chat/{participants}": {
+            "get": {
+                "operationId": "ChatRetrieveChat",
+                "produces": ["application/json"],
+                "responses": {
+                    "200": {
+                        "description": "Ok",
+                        "schema": {
+                            "type": "array",
+                            "items": {
+                                "$ref": "#/definitions/ChatMessageModel"
+                            }
+                        }
+                    }
+                },
+                "description": "",
+                "security": [
+                    {
+                        "Bearer": ["Insite-USER", "Insite-WebPortal"]
+                    }
+                ],
+                "parameters": [
+                    {
+                        "description": "",
+                        "in": "path",
+                        "name": "participants",
+                        "required": true,
+                        "type": "string"
+                    }
+                ]
+            }
+        },
+        "/api/conferences/recordings/": {
+            "get": {
+                "operationId": "RecordingGetRecordings",
+                "produces": ["application/json"],
+                "responses": {
+                    "200": {
+                        "description": "Ok",
+                        "schema": {
+                            "type": "array",
+                            "items": {
+                                "$ref": "#/definitions/RecordingModel"
+                            }
+                        }
+                    }
+                },
+                "description": "",
+                "security": [
+                    {
+                        "Bearer": ["Insite-USER", "Insite-WebPortal"]
+                    }
+                ],
+                "parameters": []
+            }
+        },
+        "/api/versions/": {
+            "get": {
+                "operationId": "VersionGetVersion",
+                "produces": ["application/json"],
+                "responses": {
+                    "200": {
+                        "description": "Ok",
+                        "schema": {
+                            "$ref": "#/definitions/SystemVersion"
+                        }
+                    }
+                },
+                "description": "Retrieve a list of Roles",
+                "security": [
+                    {
+                        "Bearer": []
+                    }
+                ],
+                "parameters": []
+            }
+        },
+        "/api/reports/activityReport/events": {
+            "get": {
+                "operationId": "FetchActivityReportEventActivity",
+                "produces": ["application/json"],
+                "responses": {
+                    "200": {
+                        "description": "Ok",
+                        "schema": {
+                            "$ref": "#/definitions/ReportModel"
+                        }
+                    }
+                },
+                "description": "This API gets activity report the device",
+                "security": [
+                    {
+                        "Bearer": ["Insite-USER", "Insite-WebPortal"]
+                    }
+                ],
+                "parameters": [
+                    {
+                        "description": "",
+                        "in": "query",
+                        "name": "deviceId",
+                        "required": true,
+                        "type": "string"
+                    },
+                    {
+                        "description": "",
+                        "in": "query",
+                        "name": "toDate",
+                        "required": true,
+                        "type": "string"
+                    },
+                    {
+                        "description": "",
+                        "in": "query",
+                        "name": "fromDate",
+                        "required": true,
+                        "type": "string"
+                    }
+                ]
+            }
+        },
+        "/api/reports/{deviceId}/eventstats/": {
+            "get": {
+                "operationId": "EventStatsGetDeviceStats",
+                "produces": ["application/json"],
+                "responses": {
+                    "200": {
+                        "description": "Ok",
+                        "schema": {
+                            "$ref": "#/definitions/DeviceEventStatsModel"
+                        }
+                    }
+                },
+                "description": "Retrieve device stats information based on fragment type.",
+                "security": [
+                    {
+                        "Bearer": ["Insite-USER", "Insite-WebPortal"]
+                    }
+                ],
+                "parameters": [
+                    {
+                        "description": "",
+                        "in": "path",
+                        "name": "deviceId",
+                        "required": true,
+                        "type": "number",
+                        "format": "double"
+                    },
+                    {
+                        "description": "",
+                        "in": "query",
+                        "name": "metric",
+                        "required": false,
+                        "type": "string"
+                    },
+                    {
+                        "description": "",
+                        "in": "query",
+                        "name": "dateFrom",
+                        "required": false,
+                        "type": "string"
+                    },
+                    {
+                        "description": "",
+                        "in": "query",
+                        "name": "dateTo",
+                        "required": false,
+                        "type": "string"
+                    },
+                    {
+                        "description": "",
+                        "in": "query",
+                        "name": "pageSize",
+                        "required": false,
+                        "type": "string"
+                    },
+                    {
+                        "description": "",
+                        "in": "query",
+                        "name": "thresholdValue",
+                        "required": false,
+                        "type": "string",
+                        "enum": ["MAX", "AVG", "CRITICAL", "MAJOR", "MINOR"]
+                    },
+                    {
+                        "description": "",
+                        "in": "query",
+                        "name": "pointsNeeded",
+                        "required": false,
+                        "type": "number",
+                        "format": "double"
+                    }
+                ]
+            }
+        },
+        "/api/reports/{deviceId}/alarms/": {
+            "get": {
+                "operationId": "AlarmGetDeviceAlarms",
+                "produces": ["application/json"],
+                "responses": {
+                    "200": {
+                        "description": "Ok",
+                        "schema": {
+                            "$ref": "#/definitions/ReportOutputModelDeviceAlarmModelArray"
+                        }
+                    }
+                },
+                "description": "Retrieve device alarms information based on fragment type.",
+                "security": [
+                    {
+                        "Bearer": ["Insite-USER", "Insite-WebPortal"]
+                    }
+                ],
+                "parameters": [
+                    {
+                        "description": "",
+                        "in": "path",
+                        "name": "deviceId",
+                        "required": true,
+                        "type": "number",
+                        "format": "double"
+                    },
+                    {
+                        "description": "",
+                        "in": "query",
+                        "name": "dateFrom",
+                        "required": true,
+                        "type": "string"
+                    },
+                    {
+                        "description": "",
+                        "in": "query",
+                        "name": "dateTo",
+                        "required": true,
+                        "type": "string"
+                    },
+                    {
+                        "description": "",
+                        "in": "query",
+                        "name": "pageSize",
+                        "required": false,
+                        "type": "number",
+                        "format": "double",
+                        "default": 2000
+                    },
+                    {
+                        "description": "",
+                        "in": "query",
+                        "name": "pageNumber",
+                        "required": false,
+                        "type": "number",
+                        "format": "double",
+                        "default": 1
+                    },
+                    {
+                        "description": "",
+                        "in": "query",
+                        "name": "alarmType",
+                        "required": true,
+                        "type": "string"
+                    },
+                    {
+                        "description": "",
+                        "in": "query",
+                        "name": "includeAlarms",
+                        "required": false,
+                        "type": "array",
+                        "items": {
+                            "type": "string"
+                        }
+                    },
+                    {
+                        "description": "",
+                        "in": "query",
+                        "name": "includeAlarmsSeverity",
+                        "required": false,
+                        "type": "array",
+                        "items": {
+                            "type": "string"
+                        }
+                    }
+                ]
+            }
+        },
+        "/api/reports/{deviceId}/alarms/recent": {
+            "get": {
+                "operationId": "AlarmGetDeviceRecentAlarms",
+                "produces": ["application/json"],
+                "responses": {
+                    "200": {
+                        "description": "Ok",
+                        "schema": {
+                            "$ref": "#/definitions/DeviceAlarmModel"
+                        }
+                    }
+                },
+                "description": "Retrieve the most recent device alarm information for a device from database.",
+                "security": [
+                    {
+                        "Bearer": ["Insite-USER", "Insite-WebPortal"]
+                    }
+                ],
+                "parameters": [
+                    {
+                        "description": "",
+                        "in": "path",
+                        "name": "deviceId",
+                        "required": true,
+                        "type": "number",
+                        "format": "double"
+                    },
+                    {
+                        "description": "",
+                        "in": "query",
+                        "name": "includeAlarms",
+                        "required": false,
+                        "type": "array",
+                        "items": {
+                            "type": "string"
+                        }
+                    },
+                    {
+                        "description": "",
+                        "in": "query",
+                        "name": "includeAlarmsSeverity",
+                        "required": false,
+                        "type": "array",
+                        "items": {
+                            "type": "string"
+                        }
+                    }
+                ]
+            }
+        },
+        "/api/reports/{deviceId}/alarms/get-recent-alarms": {
+            "get": {
+                "operationId": "AlarmGetDeviceRecentAlarmsDB",
+                "produces": ["application/json"],
+                "responses": {
+                    "200": {
+                        "description": "Ok",
+                        "schema": {
+                            "$ref": "#/definitions/GetMostRecentAlarmReportOutputModel"
+                        }
+                    }
+                },
+                "description": "Retrieve the most recent device alarm information for a device from database.",
+                "security": [
+                    {
+                        "Bearer": ["Insite-USER", "Insite-WebPortal"]
+                    }
+                ],
+                "parameters": [
+                    {
+                        "description": "",
+                        "in": "path",
+                        "name": "deviceId",
+                        "required": true,
+                        "type": "number",
+                        "format": "double"
+                    },
+                    {
+                        "description": "",
+                        "in": "query",
+                        "name": "dateTo",
+                        "required": false,
+                        "type": "string"
+                    },
+                    {
+                        "description": "",
+                        "in": "query",
+                        "name": "includeAlarms",
+                        "required": false,
+                        "type": "array",
+                        "items": {
+                            "type": "string"
+                        }
+                    },
+                    {
+                        "description": "",
+                        "in": "query",
+                        "name": "includeAlarmsSeverity",
+                        "required": false,
+                        "type": "array",
+                        "items": {
+                            "type": "string"
+                        }
+                    }
+                ]
+            }
+        },
+        "/api/reports/{deviceId}/locationtracking/": {
+            "get": {
+                "operationId": "DeviceLocationTrackerGetDeviceLocations",
+                "produces": ["application/json"],
+                "responses": {
+                    "200": {
+                        "description": "Ok",
+                        "schema": {
+                            "$ref": "#/definitions/DeviceLocationTrackingModel"
+                        }
+                    }
+                },
+                "description": "Retrieve device location trackins information .",
+                "security": [
+                    {
+                        "Bearer": ["Insite-USER", "Insite-WebPortal"]
+                    }
+                ],
+                "parameters": [
+                    {
+                        "description": "",
+                        "in": "path",
+                        "name": "deviceId",
+                        "required": true,
+                        "type": "number",
+                        "format": "double"
+                    },
+                    {
+                        "description": "",
+                        "in": "query",
+                        "name": "metric",
+                        "required": true,
+                        "type": "string"
+                    },
+                    {
+                        "description": "",
+                        "in": "query",
+                        "name": "dateFrom",
+                        "required": true,
+                        "type": "string"
+                    },
+                    {
+                        "description": "",
+                        "in": "query",
+                        "name": "dateTo",
+                        "required": true,
+                        "type": "string"
+                    },
+                    {
+                        "description": "",
+                        "in": "query",
+                        "name": "pageSize",
+                        "required": true,
+                        "type": "string"
+                    },
+                    {
+                        "description": "",
+                        "in": "query",
+                        "name": "thresholdValue",
+                        "required": true,
+                        "type": "string",
+                        "enum": ["MAX", "AVG", "CRITICAL", "MAJOR", "MINOR"]
+                    },
+                    {
+                        "description": "",
+                        "in": "query",
+                        "name": "pointsNeeded",
+                        "required": true,
+                        "type": "number",
+                        "format": "double"
+                    }
+                ]
+            }
+        },
+        "/api/media/avatar/{userName}": {
+            "get": {
+                "operationId": "MediaGetMedia",
+                "produces": ["text/html"],
+                "responses": {
+                    "204": {
+                        "description": "No content"
+                    }
+                },
+                "description": "",
+                "parameters": [
+                    {
+                        "description": "",
+                        "in": "path",
+                        "name": "userName",
+                        "required": true,
+                        "type": "string"
+                    }
+                ]
+            }
+        },
+        "/api/media/": {
+            "post": {
+                "operationId": "MediaStoreMedia",
+                "produces": ["application/json"],
+                "responses": {
+                    "200": {
+                        "description": "Ok",
+                        "schema": {
+                            "type": "array",
+                            "items": {
+                                "$ref": "#/definitions/UploadedMedia"
+                            }
+                        }
+                    }
+                },
+                "description": "",
+                "consumes": ["multipart/form-data"],
+                "parameters": [
+                    {
+                        "description": "",
+                        "in": "formData",
+                        "name": "myFile",
+                        "required": true,
+                        "type": "file"
+                    }
+                ]
+            }
+        },
+        "/api/media/media/{fileName}": {
+            "get": {
+                "operationId": "MediaGetSecuredMedia",
+                "produces": ["text/html"],
+                "responses": {
+                    "204": {
+                        "description": "No content"
+                    }
+                },
+                "description": "",
+                "security": [
+                    {
+                        "Bearer": ["Insite-USER"]
+                    }
+                ],
+                "parameters": [
+                    {
+                        "description": "",
+                        "in": "path",
+                        "name": "fileName",
+                        "required": true,
+                        "type": "string"
+                    }
+                ]
+            }
+        },
+        "/api/register/sendinvitecode": {
+            "post": {
+                "operationId": "RegisterSendInviteCode",
+                "produces": ["text/html"],
+                "responses": {
+                    "204": {
+                        "description": "No content"
+                    }
+                },
+                "description": "This API create a register record and send invite code to user",
+                "consumes": ["application/json"],
+                "parameters": [
+                    {
+                        "description": "",
+                        "in": "body",
+                        "name": "input",
+                        "required": true,
+                        "schema": {
+                            "$ref": "#/definitions/RegisterInvitationModel"
+                        }
+                    }
+                ]
+            }
+        },
+        "/api/landing/emailUnsubscribe/{userData}": {
+            "get": {
+                "operationId": "EmailEmailUnsubscribe",
+                "produces": ["application/json"],
+                "responses": {
+                    "200": {
+                        "description": "Ok",
+                        "schema": {
+                            "type": "object"
+                        }
+                    }
+                },
+                "description": "log in and create jwt token",
+                "parameters": [
+                    {
+                        "description": "",
+                        "in": "path",
+                        "name": "userData",
+                        "required": true,
+                        "type": "string"
+                    }
+                ]
+            }
+        },
+        "/api/landing/emailUnsubscribeAll/{userData}": {
+            "get": {
+                "operationId": "EmailEmailUnsubscribeAll",
+                "produces": ["application/json"],
+                "responses": {
+                    "200": {
+                        "description": "Ok",
+                        "schema": {
+                            "type": "object"
+                        }
+                    }
+                },
+                "description": "",
+                "parameters": [
+                    {
+                        "description": "",
+                        "in": "path",
+                        "name": "userData",
+                        "required": true,
+                        "type": "string"
+                    }
+                ]
+            }
+        },
+        "/api/service-records": {
+            "get": {
+                "operationId": "ServiceRecordGetAllServiceRecords",
+                "produces": ["application/json"],
+                "responses": {
+                    "200": {
+                        "description": "Ok",
+                        "schema": {
+                            "type": "array",
+                            "items": {
+                                "$ref": "#/definitions/ServiceRecordModel"
+                            }
+                        }
+                    }
+                },
+                "description": "Retrieve a list of Service Records",
+                "security": [
+                    {
+                        "Bearer": ["Insite-USER"]
+                    }
+                ],
+                "parameters": [
+                    {
+                        "description": "",
+                        "in": "query",
+                        "name": "deviceId",
+                        "required": false,
+                        "type": "string"
+                    }
+                ]
+            }
+        },
+        "/api/service-records/{id}": {
+            "get": {
+                "operationId": "ServiceRecordGetExistingServiceRecord",
+                "produces": ["application/json"],
+                "responses": {
+                    "200": {
+                        "description": "Ok",
+                        "schema": {
+                            "$ref": "#/definitions/ServiceRecordModel"
+                        }
+                    }
+                },
+                "description": "Retrieve a Service Record  information.",
+                "security": [
+                    {
+                        "Bearer": ["Insite-USER"]
+                    }
+                ],
+                "parameters": [
+                    {
+                        "description": "The id of Service Record to be retrieved",
+                        "in": "path",
+                        "name": "id",
+                        "required": true,
+                        "type": "string"
+                    }
+                ]
+            },
+            "put": {
+                "operationId": "ServiceRecordUpdateExistingServiceRecord",
+                "produces": ["application/json"],
+                "responses": {
+                    "200": {
+                        "description": "Ok",
+                        "schema": {
+                            "$ref": "#/definitions/ServiceRecordModel"
+                        }
+                    }
+                },
+                "description": "Update a Service Record",
+                "security": [
+                    {
+                        "Bearer": ["Insite-USER"]
+                    }
+                ],
+                "consumes": ["multipart/form-data"],
+                "parameters": [
+                    {
+                        "description": "",
+                        "in": "path",
+                        "name": "id",
+                        "required": true,
+                        "type": "string"
+                    },
+                    {
+                        "description": "",
+                        "in": "formData",
+                        "name": "serviceRecord",
+                        "required": true,
+                        "type": "string"
+                    },
+                    {
+                        "description": "",
+                        "in": "formData",
+                        "name": "myFile",
+                        "required": false,
+                        "type": "file"
+                    }
+                ]
+            },
+            "delete": {
+                "operationId": "ServiceRecordDeleteExistingServiceRecord",
+                "produces": ["text/html"],
+                "responses": {
+                    "204": {
+                        "description": "No content"
+                    }
+                },
+                "description": "Delete a Service Record",
+                "security": [
+                    {
+                        "Bearer": ["Insite-USER"]
+                    }
+                ],
+                "parameters": [
+                    {
+                        "description": "",
+                        "in": "path",
+                        "name": "id",
+                        "required": true,
+                        "type": "string"
+                    }
+                ]
+            }
+        },
+        "/api/service-records/": {
+            "post": {
+                "operationId": "ServiceRecordCreateNewServiceRecord",
+                "produces": ["application/json"],
+                "responses": {
+                    "200": {
+                        "description": "Ok",
+                        "schema": {
+                            "$ref": "#/definitions/ServiceRecordModel"
+                        }
+                    }
+                },
+                "description": "Create a Service Record",
+                "security": [
+                    {
+                        "Bearer": ["Insite-USER"]
+                    }
+                ],
+                "consumes": ["multipart/form-data"],
+                "parameters": [
+                    {
+                        "description": "",
+                        "in": "formData",
+                        "name": "serviceRecord",
+                        "required": true,
+                        "type": "string"
+                    },
+                    {
+                        "description": "",
+                        "in": "formData",
+                        "name": "myFile",
+                        "required": false,
+                        "type": "file"
+                    }
+                ]
+            }
+        },
+        "/api/service-tags/": {
+            "get": {
+                "operationId": "ServiceTagGetAllServiceTags",
+                "produces": ["application/json"],
+                "responses": {
+                    "200": {
+                        "description": "Ok",
+                        "schema": {
+                            "type": "array",
+                            "items": {
+                                "$ref": "#/definitions/ServiceTagModel"
+                            }
+                        }
+                    }
+                },
+                "description": "Retrieve a list of Service Tags",
+                "security": [
+                    {
+                        "Bearer": ["Insite-USER"]
+                    }
+                ],
+                "parameters": []
+            },
+            "post": {
+                "operationId": "ServiceTagCreateNewServiceTag",
+                "produces": ["application/json"],
+                "responses": {
+                    "200": {
+                        "description": "Ok",
+                        "schema": {
+                            "$ref": "#/definitions/ServiceTagModel"
+                        }
+                    }
+                },
+                "description": "Create a Service Tag",
+                "security": [
+                    {
+                        "Bearer": ["Insite-USER"]
+                    }
+                ],
+                "consumes": ["application/json"],
+                "parameters": [
+                    {
+                        "description": "",
+                        "in": "body",
+                        "name": "serviceTag",
+                        "required": true,
+                        "schema": {
+                            "$ref": "#/definitions/CreateServiceTagModel"
+                        }
+                    }
+                ]
+            }
+        },
+        "/api/service-tags/{id}": {
+            "get": {
+                "operationId": "ServiceTagGetExistingServiceTag",
+                "produces": ["application/json"],
+                "responses": {
+                    "200": {
+                        "description": "Ok",
+                        "schema": {
+                            "$ref": "#/definitions/ServiceTagModel"
+                        }
+                    }
+                },
+                "description": "Retrieve Service Tag  information.",
+                "security": [
+                    {
+                        "Bearer": ["Insite-USER"]
+                    }
+                ],
+                "parameters": [
+                    {
+                        "description": "The id of Service Tag to be retrieved",
+                        "in": "path",
+                        "name": "id",
+                        "required": true,
+                        "type": "string"
+                    }
+                ]
+            },
+            "put": {
+                "operationId": "ServiceTagUpdateExistingServiceTag",
+                "produces": ["application/json"],
+                "responses": {
+                    "200": {
+                        "description": "Ok",
+                        "schema": {
+                            "$ref": "#/definitions/ServiceTagModel"
+                        }
+                    }
+                },
+                "description": "Update a Service Tag",
+                "security": [
+                    {
+                        "Bearer": ["Insite-USER"]
+                    }
+                ],
+                "consumes": ["application/json"],
+                "parameters": [
+                    {
+                        "description": "",
+                        "in": "path",
+                        "name": "id",
+                        "required": true,
+                        "type": "string"
+                    },
+                    {
+                        "description": "",
+                        "in": "body",
+                        "name": "serviceTagUpdate",
+                        "required": true,
+                        "schema": {
+                            "$ref": "#/definitions/UpdateServiceTagModel"
+                        }
+                    }
+                ]
+            },
+            "delete": {
+                "operationId": "ServiceTagDeleteExistingServiceTag",
+                "produces": ["text/html"],
+                "responses": {
+                    "204": {
+                        "description": "No content"
+                    }
+                },
+                "description": "Delete a Service Tag",
+                "security": [
+                    {
+                        "Bearer": ["Insite-USER"]
+                    }
+                ],
+                "parameters": [
+                    {
+                        "description": "",
+                        "in": "path",
+                        "name": "id",
+                        "required": true,
+                        "type": "string"
+                    }
+                ]
+            }
+        }
+    },
+    "swagger": "2.0",
+    "securityDefinitions": {
+        "Bearer": {
+            "type": "apiKey",
+            "scheme": "Bearer",
+            "name": "Authorization",
+            "in": "header"
+        }
+    },
+    "produces": ["application/json"]
+}

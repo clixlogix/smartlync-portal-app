@@ -1,0 +1,19 @@
+@import 'scss/main.scss';
+
+.x-cls-risk-item {
+    display: flex;
+
+    .risk-item {
+        flex: 1;
+
+        &.blue {
+            background-color: rgba(166, 213, 250, 0.24);
+        }
+        &.yellow {
+            background-color: rgba(255, 213, 153, 0.48);
+        }
+        &.red {
+            background-color: rgba(244, 67, 54, 0.5);
+        }
+    }
+}

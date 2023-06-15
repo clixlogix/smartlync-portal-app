@@ -1,0 +1,178 @@
+@import 'scss/main.scss';
+.x-cls-fleet-overview-body {
+    display: flex;
+    flex-flow: column nowrap;
+    flex: 1;
+    width: 100%;
+    .x-cls-system-overviews-wrapper-1 {
+        overflow: auto;
+        height: 76vh;
+        // padding-bottom: 17px;
+    }
+    .x-cls-data-panel-container {
+        width: 100%;
+        .system-cards {
+            display: flex;
+            flex-flow: row wrap;
+            row-gap: 10px;
+            flex: 1;
+            justify-content: space-evenly;
+        }
+
+        .tab-container {
+            width: 100%;
+            .tab-body {
+                height: 670px;
+            }
+        }
+        .x-cls-page-system-overview {
+            .page-body {
+                flex: 1;
+                display: flex;
+                flex-flow: column nowrap;
+                padding-bottom: 15px;
+                overflow: unset;
+                margin-left: initial;
+                .card-header-btns {
+                    align-items: center;
+                    display: flex;
+                    flex: 1 1;
+                    justify-content: flex-end;
+                    background: $smartlync-secondary-color-background-2 0% 0% no-repeat padding-box;
+                    padding-bottom: 10px;
+                    opacity: 1;
+                }
+                .card-header-btns > div {
+                    display: inline-flex;
+                    align-items: center;
+                }
+                .card-btns {
+                    width: 145px;
+                    @include custom-button(
+                        $button-background: $smartlync-secondary-color-background-3,
+                        $button-font: $button-font,
+                        $button-border: none,
+                        $button-color: $smartlync-white,
+                        $button-width: 145px,
+                        $button-height: 39px,
+                        $button-padding: 10px
+                    );
+                }
+            }
+            .x-cls-system-overviews-wrapper {
+                flex: 1;
+                overflow: auto;
+                height: calc(100vh - 250px);
+                overflow-x: hidden;
+            }
+            .x-cls-dashboard-filter-panel.f-panel-close {
+                height: calc(100% - 60px);
+            }
+            div.f-panel-open.f-panel-static + div {
+                width: calc(100vw - 350px);
+                padding-right: 20px;
+            }
+            div.f-panel-open.f-panel-float + div,
+            div.f-panel-close.f-panel-float + div {
+                width: calc(100vw - 50px);
+                padding-left: 30px;
+                padding-right: 20px;
+            }
+        }
+        .page-body-wrappers {
+            height: calc(100vh - 60px);
+            flex: 1;
+            display: flex;
+            flex-flow: row nowrap;
+            overflow: hidden;
+        }
+        .x-cls-overview-card {
+            margin: 10px;
+            position: relative;
+            &:hover {
+                cursor: pointer;
+                // border: 1px ridge #ffdb0a;
+                box-shadow: 4px 4px 8px -4px #060606;
+            }
+            border: 1px ridge transparent;
+        }
+        .x-cls-system-fault-report-wrapper {
+            transition: height 1s ease-in-out;
+            position: relative;
+            display: flex;
+            width: 100%;
+            margin: 5px 10px;
+            border: 1px solid rgb(82, 82, 82);
+            .system-cards {
+                min-height: 200px;
+            }
+            &.panel-open {
+                // flex: 1;
+                height: 60%;
+                max-height: calc(100% - 200px);
+            }
+            &.panel-close {
+                height: 0px;
+                bottom: -30px;
+            }
+
+            .x-cls-system-fault-report {
+                display: flex;
+                flex: 1;
+                width: 100%;
+                .x-cls-fault-report-widget {
+                    flex: 1;
+                }
+                .x-cls-fault-report-widget-table {
+                    flex: 1;
+                    width: 100%;
+                    height: 100%;
+                }
+            }
+        }
+        .card-row {
+            display: flex;
+            justify-self: center;
+            justify-content: center;
+            column-gap: 20;
+            margin-top: 10;
+            color: 'white';
+        }
+        .x-device-tab-btn-wrapper {
+            display: flex;
+            margin: 0px 8px;
+            button {
+                flex: 1;
+                padding-right: 4px;
+                padding-left: 6px;
+            }
+            .x-delete-btn {
+                padding: 10px;
+                min-width: 17px;
+                min-height: 17px;
+                width: 17px;
+                height: 17px;
+                flex: initial;
+                border-radius: 4px;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                border: 1px solid transparent;
+                background-color: transparent;
+            }
+            svg {
+                width: 16px;
+                height: 16px;
+            }
+            align-items: center;
+            justify-content: center;
+        }
+        .title-wrapper-fleet-overview {
+            display: flex;
+            justify-content: space-between;
+            padding-left: 10px;
+            padding-top: 11px;
+            padding-right: 10px;
+        }
+    }
+}

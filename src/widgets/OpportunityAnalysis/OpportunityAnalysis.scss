@@ -1,0 +1,117 @@
+.x-cls-opportunity-analysis-widget {
+    opacity: 1;
+    display: flex;
+
+    &.react-grid-item {
+        // default widget background and border
+        background-color: #333;
+        border: 1px solid #bbb;
+    }
+}
+
+.x-cls-opportunity-analysis-widget-header {
+    opacity: 1;
+}
+
+.x-cls-opportunity-analysis-widget-body {
+    opacity: 1;
+}
+
+.x-cls-opportunity-analysis-widget-table {
+    flex: 1;
+    .opportunity-status {
+        text-transform: uppercase;
+        white-space: nowrap;
+        &.open-status {
+            color: #149b74;
+        }
+        &.closed-status {
+            color: #e31837;
+        }
+    }
+    .parts-order-list {
+        display: flex;
+        flex-flow: row;
+    }
+    .opportunity-impact-estimate,
+    .opportunity-time,
+    .opportunity-impact {
+        white-space: nowrap;
+    }
+    .opportunity-stage {
+        border-radius: 50%;
+        width: 2rem;
+        height: 2rem;
+        text-align: center;
+        justify-content: center;
+        padding-top: 0.46rem;
+        margin: auto auto;
+
+        &.AR {
+            background-color: #c77b00;
+        }
+        &.AT {
+            background-color: #2f77dd;
+        }
+        &.CC {
+            background-color: #149b74;
+        }
+    }
+    .parts-order-status {
+        display: flex;
+        flex-flow: column nowrap;
+        width: 165px;
+    }
+    .contact-btn {
+        border: 1px solid #ffdb0a;
+        border-radius: 100px;
+        padding: 0px 10px;
+        height: 24px;
+        span {
+            font-size: 14px;
+            white-space: nowrap;
+        }
+        .contact-label {
+            font-size: 10px;
+        }
+        svg {
+            font-size: 14px;
+        }
+    }
+}
+.x-cls-opportunity-analysis-widget-footer {
+    float: right;
+    .opportunity-stage {
+        font-size: 12px;
+        padding: 4px;
+        color: #fff;
+    }
+    .key-footer-row {
+        td {
+            padding: 5px 5px;
+            color: #fff;
+        }
+    }
+    .legend-footer {
+        border: 0px solid transparent;
+    }
+}
+
+.part-info {
+    display: flex;
+    flex-flow: column nowrap;
+    width: 250px;
+    height: 250px;
+    .img {
+        min-width: 200px;
+        min-height: 48px;
+        flex: 1;
+        justify-self: center;
+        background-image: url(../../assets/images/car-parts.jpg);
+
+        -webkit-background-size: cover;
+        -moz-background-size: cover;
+        -o-background-size: cover;
+        background-size: cover;
+    }
+}

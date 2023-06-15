@@ -1,0 +1,29 @@
+@import 'scss/main.scss';
+
+.x-cls-device-area-graph-widget {
+    opacity: 1;
+    // height: 355px;
+    width: 50%;
+    margin-right: 1%;
+
+    // flex: 1;
+
+    & > div,
+    & > div > div {
+        flex: 1;
+    }
+
+    &.react-grid-item {
+        // default widget background and border
+        background-color: #333;
+        border: 1px solid #bbb;
+    }
+}
+
+.x-cls-device-area-graph-widget-header {
+    opacity: 1;
+}
+
+.x-cls-device-area-graph-widget-body {
+    opacity: 1;
+}

@@ -1,0 +1,41 @@
+//button configurations
+///Custom button background-color - primary color or say, #ccc or in rgb.
+$button-background: $smartlync-primary-yellow;
+///Custom button height - enter only one value in px or any other css unit.
+$button-height: 50px;
+///Custom button width - enter only one value in px or any other css unit.
+$button-width: 450px;
+///Custom button border - it can be none, or say any other css unit.
+$button-border: 1px solid $smartlync-primary-yellow;
+///Custom button border-radius - enter only one value in px or any other css unit.
+$button-border-radius: 30px;
+///Custom button color - white or say,#ccc or transparent or in rgb
+$button-color: white;
+///Custom button font-size - enter only one value in px or any other css unit.
+$button-font-size: 14px;
+///Custom button padding - any value in px or any other css unit.
+$button-padding: 5px;
+///Custom button text-tranform - uppercase/lowercase or any other css unit.
+$button-text-tranform: capitalize;
+///Custom button cursor - default/auto or any other css unit.
+$button-cursor: pointer;
+
+$button-outline: 1px solid $smartlync-primary-yellow;
+
+$button-margin: 10px;
+
+//label configurations
+///Label base font-size - enter only one value in px or any other css unit.
+$label-font-size: 14px;
+///Label base margin - enter only one value in px or any other css unit.
+$label-margin: 8px 0;
+///Label base padding - enter only one value in px or any other css unit.
+$label-padding: 0;
+///Label base line height - enter only one value in px or any other css unit.
+$label-line-height: 10px;
+///Label base color - #848484 or say, transparent or in rgb.
+$label-color: $smartlync-white;
+///Label base font-family - PMNCaeciliaW01-75Bold or say, PMNCaeciliaW01-55Roman, PMNCaeciliaW01-45Light and PMNCaeciliaW01-85Heavy.
+// $label-font-family: $stanley-font-bold;
+///Label base display - block or any other css unit.
+$label-display: inline-block;

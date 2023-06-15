@@ -1,0 +1,170 @@
+@import 'scss/main.scss';
+
+div.x-cls-settings-container {
+    position: relative;
+    color: $smartlync-white;
+    flex: 1;
+}
+
+div.x-cls-settings-body {
+    flex: 1;
+
+    .toolbar-section {
+        margin-left: 10px;
+        min-height: 49px;
+    }
+
+    .react-grid-layout {
+        overflow-y: auto;
+        flex: 1;
+        & > div {
+            display: flex;
+            flex: 1;
+        }
+    }
+    opacity: 1;
+
+    .x-cls-breadcrumb {
+        padding-left: 10px;
+    }
+
+    .x-cls-process-log {
+        opacity: 1;
+    }
+}
+
+.opertions-wrapper {
+    display: flex;
+    flex-direction: column;
+    background-color: $smartlync-secondary-color-background-2;
+    padding: 30px 30px 45px 30px;
+
+    .top-wrapper {
+        display: flex;
+        align-items: center;
+    }
+
+    .operations-title {
+        font-weight: bold;
+    }
+
+    .operations-button {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        height: 50px;
+        min-width: 150px;
+        background-color: transparent;
+        border-radius: 30px;
+        margin-left: 20px;
+        .plus {
+            color: $smartlync-primary-yellow;
+            font-size: 32px;
+            font-weight: bold;
+        }
+        .add {
+            font-size: 18px;
+            color: $smartlync-box-shadow;
+        }
+    }
+
+    .operation-block {
+        display: flex;
+        align-items: center;
+        margin-top: 50px;
+        .operation-table {
+            background-color: $smartlync-secondary-color-background-3;
+            min-height: 100px;
+            width: 100%;
+            &-header {
+                display: flex;
+                justify-content: space-around;
+                background-color: $smartlync-secondary-color-background-4;
+                padding: 10px 0 10px 0;
+                span {
+                    font-size: 16px;
+                    color: $smartlync-primary-yellow;
+                    text-align: center;
+                    min-width: 100px;
+                    &:first-child {
+                        text-align: left;
+                        min-width: 200px;
+                    }
+                    &:last-child {
+                        width: 180px;
+                    }
+                }
+            }
+            &-info {
+                display: flex;
+                justify-content: space-around;
+                align-items: center;
+                padding: 10px 0;
+                &:nth-child(odd) {
+                    background-color: $smartlync-primary-color-background;
+                }
+                .info {
+                    font-size: 16px;
+                    color: $basic-white;
+                    text-align: center;
+                    min-width: 100px;
+                    &:first-child {
+                        text-align: left;
+                        min-width: 200px;
+                    }
+                    &:last-child {
+                        width: 180px;
+                    }
+                }
+                .buttons-wrapper {
+                    display: flex;
+                    justify-content: space-around;
+                }
+                .edit-button {
+                    border: 1px solid $smartlync-primary-yellow;
+                    color: $smartlync-primary-yellow;
+                    padding: 10px;
+                    border-radius: 20px;
+                    font-size: 14px;
+                    cursor: pointer;
+                }
+                .delete-button {
+                    border: 1px solid $smartlync-red;
+                    color: $smartlync-red;
+                    padding: 10px;
+                    border-radius: 20px;
+                    font-size: 14px;
+                    cursor: pointer;
+                }
+            }
+        }
+        .operation-name {
+            color: $smartlync-box-shadow;
+            font-size: 16px;
+            width: 80px;
+        }
+    }
+}
+
+.pop-up {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-direction: column;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 300px;
+    height: 150px;
+    background: $smartlync-black;
+    border: 2px solid $smartlync-primary-yellow;
+    border-radius: 20px;
+    box-shadow: 0 4px 6px 0 hsla(0, 0%, 0%, 0.2);
+    padding: 30px;
+    &-buttons {
+        display: flex;
+        justify-content: space-between;
+        width: 200px;
+    }
+}

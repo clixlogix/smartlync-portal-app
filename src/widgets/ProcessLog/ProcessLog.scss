@@ -1,0 +1,41 @@
+.x-cls-process-log-widget {
+    opacity: 1;
+    display: flex;
+}
+
+.x-cls-process-log-widget-header {
+    opacity: 1;
+}
+
+.x-cls-process-log-widget-body {
+    opacity: 1;
+}
+
+.x-cls-process-log-widget-table {
+    flex: 1;
+}
+
+.anomaly-label.alert {
+    background-color: red;
+    width: 62px;
+    display: inline-block;
+    padding: 3px;
+}
+
+.confidence-label {
+    font-size: 16px;
+}
+.confidence-units {
+    font-size: 11px;
+}
+
+.feedback-label {
+    &.feedback-available {
+        border: 1px solid red;
+        width: 24px;
+        height: 24px;
+        display: inline-block;
+        color: red;
+        padding-top: 3px;
+    }
+}

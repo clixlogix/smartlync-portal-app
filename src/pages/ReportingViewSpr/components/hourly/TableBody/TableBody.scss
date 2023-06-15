@@ -1,0 +1,27 @@
+.x-cls-table-body-cell-hourly {
+    display: flex;
+    height: 41px;
+    background: #020102 0% 0% no-repeat padding-box;
+    border: 1px solid #3b3939;
+
+    .x-body-cell-wrapper {
+        display: flex;
+        flex: 1;
+        height: 41px;
+        background-color: #000;
+
+        .x-first {
+            flex: 1;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+    }
+    &.present {
+        border-right: 1.5px solid rgb(20, 155, 116);
+    }
+    &.future {
+        background: #191919 0% 0% no-repeat padding-box;
+        border: 1px solid #3b3939;
+    }
+}

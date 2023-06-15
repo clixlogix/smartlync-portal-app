@@ -1,0 +1,15 @@
+div.x-cls-cycle-gap-tempo-spr-body {
+    display: flex;
+    flex-flow: column nowrap;
+    flex: 1;
+    .maximize-widget {
+        width: 98% !important;
+        height: 98% !important;
+        flex: 1;
+    }
+
+    .x-cls-chart {
+        max-width: 99%;
+        flex: 1;
+    }
+}

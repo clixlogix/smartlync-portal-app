@@ -1,0 +1,10 @@
+.x-cls-table-header-cell {
+    position: sticky;
+    top: 0;
+    display: table-cell;
+    background-color: #333;
+    & > div {
+        padding-left: 0px;
+        padding-right: 0px;
+    }
+}

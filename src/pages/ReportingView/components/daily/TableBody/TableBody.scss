@@ -1,0 +1,9 @@
+.x-cls-table-body-cell {
+    &>div {
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+    &.threshold-met {
+        background-color: #e42d37;
+    }
+}

@@ -1,0 +1,32 @@
+@import 'scss/main.scss';
+
+.graphic-data-container {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+.x-cls-graphic-data-widget {
+    opacity: 1;
+    display: flex;
+    flex: 1;
+
+    & > div,
+    & > div > div {
+        flex: 1;
+    }
+
+    &.react-grid-item {
+        // default widget background and border
+        background-color: #333;
+        border: 1px solid #bbb;
+    }
+}
+
+.x-cls-graphic-data-widget-header {
+    opacity: 1;
+}
+
+.x-cls-graphic-data-widget-body {
+    opacity: 1;
+}

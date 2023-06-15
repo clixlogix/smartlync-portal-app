@@ -1,0 +1,84 @@
+.x-cls-report-threshold-filter {
+    opacity: 1;
+}
+
+.x-cls-report-threshold-filter,
+.x-cls-threshold-display {
+    position: relative;
+    & > label {
+        position: absolute;
+        top: -35px;
+        color: #fff;
+        font-size: 1em;
+        align-self: flex-start;
+    }
+    .x-cls-selector {
+        position: absolute;
+        top: -45px;
+        right: 0px;
+    }
+    .x-cls-spark-line-chart {
+        height: 54px;
+        padding: 2px;
+        display: flex;
+    }
+    &.x-cls-filter-name-reportThreshold {
+        background-color: #c4183c;
+    }
+    .x-cls-bubble-value {
+        position: absolute;
+        right: 0px;
+        top: 10px;
+        left: initial;
+        z-index: 1;
+        font-size: 0.75rem;
+        transform: scale(0);
+        transition: transform 150ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;
+        font-family: 'Roboto', 'Helvetica', 'Arial', sans-serif;
+        font-weight: 400;
+        line-height: 1.2;
+        letter-spacing: 0.01071em;
+        transform-origin: bottom center;
+        transform: scale(1) translateY(-10px);
+        .circle {
+            width: 32px;
+            height: 32px;
+            display: flex;
+            transform: rotate(-45deg);
+            align-items: center;
+            border-radius: 50% 50% 50% 0;
+            justify-content: center;
+            background-color: currentColor;
+            .label {
+                color: #fff;
+                transform: rotate(45deg);
+            }
+        }
+    }
+}
+
+// .select-field.inline label {
+//     color: #ffffff;
+//     position: relative;
+//     white-space: nowrap;
+//     align-self: center;
+//     justify-self: flex-start;
+//     font-size: 16px;
+//     transform: initial;
+//     margin-bottom: 0px;
+// }
+.select-field.label-pos.top-left.select-field .select-field label {
+    font-size: 1em;
+    align-self: flex-start;
+}
+
+.x-cls-threshold-display {
+    position: relative;
+    zoom: 0.5;
+    svg {
+        width: initial;
+        height: initial;
+        border: initial;
+        border-radius: initial;
+    }
+}

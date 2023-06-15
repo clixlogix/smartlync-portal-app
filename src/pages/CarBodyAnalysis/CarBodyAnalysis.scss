@@ -1,0 +1,41 @@
+div.x-cls-car-body-analysis-container {
+    height: calc(100vh - 60px);
+    position: relative;
+    color: #fff;
+    flex: 1;
+    display: flex;
+
+    .x-cls-filter-panel {
+        position: relative;
+        top: 0;
+        left: 0;
+        height: 100%;
+    }
+}
+
+.x-cls-carbody-graph-widget {
+    flex: 1;
+}
+
+div.x-cls-car-body-analysis-body {
+    display: flex;
+    flex-flow: column nowrap;
+    flex: 1;
+    // padding-bottom: 135px;
+    .toolbar-section {
+        min-height: 49px;
+    }
+    .react-grid-layout {
+        overflow-y: auto;
+        flex: 1 1;
+        display: flex;
+        & > div {
+            display: flex;
+            flex: 1;
+        }
+    }
+    opacity: 1;
+    .x-cls-breadcrumb {
+        padding-left: 10px;
+    }
+}

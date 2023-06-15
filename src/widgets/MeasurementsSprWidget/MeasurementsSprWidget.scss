@@ -1,0 +1,18 @@
+.x-cls-measurements-spr-widget-widget {
+    opacity: 1;
+    display: flex;
+    flex: 1;
+
+    & > div,
+    & > div > div {
+        flex: 1;
+    }
+}
+
+.x-cls-measurements-spr-widget {
+    width: 100%;
+    opacity: 1;
+    padding: 10px;
+    display: flex;
+    position: relative;
+}

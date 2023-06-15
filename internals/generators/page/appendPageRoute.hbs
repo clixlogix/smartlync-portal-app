@@ -1,0 +1,6 @@
+                <Route exact path={process.env.PUBLIC_URL + '/{{ camelCase ComponentName }}'}>
+                    <PrivateRoute>
+                        <{{ properCase ComponentName }} />
+                    </PrivateRoute>
+                </Route>
+                {/* [INSERT NEW PAGE ROUTE ABOVE]  Needed for generating pages seamlessly */}

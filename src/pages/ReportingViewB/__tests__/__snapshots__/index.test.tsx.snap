@@ -1,0 +1,264 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<ReportingView /> should match the snapshot 1`] = `
+<div
+  class="report-B"
+>
+  <div
+    class="page col"
+  >
+    <div
+      class="page-body col"
+    >
+      <div
+        class="page-filter-B"
+      >
+        <div
+          class="filter-panel-B"
+        >
+          <div
+            class="x-cls-page-filter filter-panel-reportB row"
+          >
+            <div
+              class="div-flex-auto"
+            >
+              <div
+                class="project-info-reportB column"
+              >
+                <div
+                  class="info"
+                >
+                  <span
+                    class="label"
+                  >
+                    Fault assignment
+                  </span>
+                  <div
+                    class="x-cls-menu-panel-panels bPanel col"
+                  >
+                    <div
+                      class="dropdown"
+                    >
+                      <button
+                        aria-expanded="false"
+                        aria-haspopup="true"
+                        class="dropdown-toggle btn btn-outline-light"
+                        type="button"
+                      >
+                        1
+                      </button>
+                    </div>
+                  </div>
+                </div>
+                <div
+                  class="info"
+                >
+                  <span
+                    class="label"
+                  >
+                    Status B
+                  </span>
+                  <div
+                    class="x-cls-menu-panel-panels bPanel col"
+                  >
+                    <div
+                      class="dropdown"
+                    >
+                      <button
+                        aria-expanded="false"
+                        aria-haspopup="true"
+                        class="dropdown-toggle btn btn-outline-light"
+                        type="button"
+                      >
+                        Empty
+                      </button>
+                    </div>
+                  </div>
+                </div>
+                <div
+                  class="info"
+                >
+                  <span
+                    class="label"
+                  >
+                    WeekDay
+                  </span>
+                  <div
+                    class="x-cls-menu-panel-panels bPanel col"
+                  >
+                    <div
+                      class="dropdown"
+                    >
+                      <button
+                        aria-expanded="false"
+                        aria-haspopup="true"
+                        class="dropdown-toggle btn btn-outline-light"
+                        type="button"
+                      >
+                        All
+                      </button>
+                    </div>
+                  </div>
+                </div>
+                <div
+                  class="info"
+                >
+                  <span
+                    class="label"
+                  >
+                    Device Name
+                  </span>
+                  <div
+                    class="x-cls-menu-panel-panels bPanel content col"
+                  >
+                    <div
+                      class="dropdown"
+                    >
+                      <button
+                        aria-expanded="false"
+                        aria-haspopup="true"
+                        class="dropdown-toggle btn btn-outline-light"
+                        type="button"
+                      >
+                        All
+                      </button>
+                    </div>
+                  </div>
+                </div>
+                <div
+                  class="info"
+                >
+                  <span
+                    class="label"
+                  >
+                    Stud Type
+                  </span>
+                  <div
+                    class="x-cls-menu-panel-panels bPanel content col"
+                  >
+                    <div
+                      class="dropdown"
+                    >
+                      <button
+                        aria-expanded="false"
+                        aria-haspopup="true"
+                        class="dropdown-toggle btn btn-outline-light"
+                        type="button"
+                      >
+                        All
+                      </button>
+                    </div>
+                  </div>
+                </div>
+                <div
+                  class="info"
+                >
+                  <span
+                    class="label"
+                  >
+                    Event
+                  </span>
+                  <div
+                    class="x-cls-menu-panel-panels bPanel col"
+                  >
+                    <div
+                      class="dropdown"
+                    >
+                      <button
+                        aria-expanded="false"
+                        aria-haspopup="true"
+                        class="dropdown-toggle btn btn-outline-light"
+                        type="button"
+                      >
+                        Fault
+                      </button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div
+                class="row-reverse"
+              >
+                <div
+                  class="download-option-reportB"
+                >
+                  <span
+                    class="label"
+                  >
+                    Export To PDF
+                  </span>
+                  <i
+                    class="fa fa-file-pdf-o"
+                    style="font-size: 16px; color: rgb(255, 219, 10);"
+                  />
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div
+        class="toolbar-section"
+      >
+        <div
+          class="left-section"
+        >
+          <div
+            class="x-cls-view-nav span"
+          >
+            <span>
+               
+              Red marking for ≥ 50 errors per day
+            </span>
+          </div>
+        </div>
+        <div
+          class="right-section"
+        >
+          <div
+            class=" x-cls-date-range-picker row"
+          >
+            <div
+              class="icon fa fa-fw fa-calendar"
+            />
+            <div
+              class="react-datepicker-wrapper"
+            >
+              <div
+                class="react-datepicker__input-container"
+              >
+                <div
+                  class="placeholder filter-btn "
+                >
+                  2021-03-19
+                </div>
+              </div>
+            </div>
+            <span
+              class="dash"
+            >
+              -
+            </span>
+            <div
+              class="react-datepicker-wrapper"
+            >
+              <div
+                class="react-datepicker__input-container"
+              >
+                <div
+                  class="placeholder filter-btn "
+                >
+                  2021-04-15
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div
+        class="col page-wrapper empty-table"
+      />
+    </div>
+  </div>
+</div>
+`;

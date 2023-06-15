@@ -1,0 +1,28 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<NavbarSearch  /> should match snapshot 1`] = `
+<div
+  class=" navSearch"
+>
+  <div
+    class="custom-search-bar"
+  >
+    <div
+      class="input-wrapper"
+    >
+      <input
+        class="input"
+        placeholder="Search"
+        type="text"
+      />
+    </div>
+    <div
+      class="search-icon-wrapper"
+    >
+      <i
+        class="fa fa-search"
+      />
+    </div>
+  </div>
+</div>
+`;

@@ -1,0 +1,230 @@
+.x-cls-station-anomaly-widget {
+    background: #243240 0% 0% no-repeat padding-box;
+    box-shadow: 0px 3px 6px #000000b5;
+    opacity: 1;
+    padding: 10px;
+    display: flex;
+    flex-flow: column nowrap;
+    position: relative;
+    overflow-y: scroll;
+    .info-btn {
+        height: 32px;
+        background: #19242e 0% 0% no-repeat padding-box;
+        border-radius: 100px;
+        text-align: start;
+        font: normal normal normal 16px/24px Open Sans;
+        letter-spacing: 0px;
+        color: #ffffff;
+        opacity: 1;
+        vertical-align: middle;
+        padding: 2px 0px 3px 10px;
+        text-overflow: ellipsis;
+    }
+    .device-name {
+        width: 246px;
+    }
+    .device-anomaly {
+        width: 176px;
+        height: 28px;
+        margin: 7px 0px 7px 10px;
+        display: flex;
+        flex-flow: row nowrap;
+        justify-content: flex-start;
+        align-items: baseline;
+        .alert {
+            background-color: red;
+            width: 9px;
+            height: 9px;
+            border-radius: 100%;
+            display: inline-block;
+            padding: 5px;
+        }
+    }
+    .anomaly-info {
+        & > span {
+            display: inline-block;
+        }
+    }
+    .feedback-txt {
+        width: 100%;
+        height: 22px;
+        text-align: left;
+        font: normal normal normal 12px/18px Open Sans;
+        letter-spacing: 0px;
+        color: #777777;
+        opacity: 1;
+        padding: 0px;
+    }
+    .feedback-info {
+        display: flex;
+        flex-flow: row;
+        justify-content: space-between;
+    }
+    .feedback-user {
+        text-align: left;
+        letter-spacing: 0px;
+        color: #ffffff;
+        opacity: 1;
+        font-size: 14px;
+        font-weight: 600;
+        white-space: nowrap;
+        text-overflow: ellipsis;
+    }
+    .feedback-msg {
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        margin-right: 0px;
+        &::before {
+            background: #243240 0% 0% no-repeat padding-box;
+        }
+        &::after {
+            right: 5px;
+            height: 17px;
+            background: #243240 0% 0% no-repeat padding-box;
+            color: #fff;
+            content: '\f141';
+            font-family: FontAwesome;
+            padding-top: 10px;
+        }
+    }
+    .feedback-msg-txt {
+        margin-left: 10px;
+        white-space: nowrap;
+        text-overflow: ellipsis;
+        text-align: left;
+        font: normal normal normal 16px/22px Open Sans;
+        letter-spacing: 0px;
+        color: #ffffff;
+        opacity: 1;
+        &::before {
+            color: red;
+            border: 1px ridge red;
+            font: normal normal normal 14px/1 FontAwesome;
+            font-size: inherit;
+            text-rendering: auto;
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+        }
+    }
+    .device-info {
+        height: 133px;
+        min-height: 133px;
+        margin-top: 10px;
+        background: #19242e 0% 0% no-repeat padding-box;
+        opacity: 1;
+        padding: 5px;
+        position: relative;
+        .device-info-title {
+            width: 100%;
+            height: 22px;
+            text-align: left;
+            font: normal normal normal 12px/18px Open Sans;
+            letter-spacing: 0px;
+            color: #777777;
+            opacity: 1;
+            padding: 0px 0px 10px 0px;
+        }
+        & > table {
+            border-collapse: collapse;
+            border-color: inherit;
+            text-indent: 0;
+            width: 100%;
+            td {
+                text-align: left;
+                font: normal normal 300 14px/13px Open Sans;
+                letter-spacing: 0px;
+                color: #ffffff;
+                opacity: 1;
+                padding: 5px 10px 5px 10px;
+            }
+            td:not(:first-child) {
+                text-align: left;
+                font: normal normal bold 14px/13px Open Sans;
+                letter-spacing: 0px;
+                color: #ffffff;
+                opacity: 1;
+            }
+        }
+        .x-cls-more-info-panel-btn {
+            position: absolute;
+            top: 0px;
+            right: 0px;
+        }
+    }
+    .attachment {
+        height: 177px;
+        min-height: 177px;
+        opacity: 1;
+        background-color: #19242e;
+    }
+    .x-cls-iot-flows-dashboard {
+        margin: 5px 0px;
+        display: flex;
+        flex-flow: column nowrap;
+        flex: 1;
+        & > div {
+            flex: 1;
+            padding-top: 3px;
+            padding-bottom: 3px;
+            display: flex;
+            & > div {
+                flex: 1;
+            }
+        }
+    }
+    .x-cls-iot-flows-dashboardi {
+        height: 500px;
+    }
+}
+
+.x-cls-station-anomaly-widget-header {
+    opacity: 1;
+}
+
+.x-cls-station-anomaly-widget-body {
+    opacity: 1;
+}
+
+.attachment {
+    height: 177px;
+    background-size: cover;
+    margin: 10px 0px;
+    cursor: pointer;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-around;
+    & > * {
+        flex: 1;
+        border: 2px solid #ddd;
+        background-color: #ddd;
+        margin: 5px;
+        &:hover {
+            border: 1px solid yellow;
+        }
+    }
+    &.img {
+        background-image: url(../../assets/images/processOperation/process-log-1.png);
+        border: 2px solid #fff;
+        // margin: 5px 10px;
+        padding: 5px;
+    }
+    .img-0 {
+        background-image: url(../../assets/images/processOperation/process-log-1.png);
+    }
+    .img-1 {
+        background-image: url(../../assets/images/processOperation/process-log-2.png);
+    }
+    .img-2 {
+        background-image: url(../../assets/images/processOperation/process-log-3.png);
+    }
+    .img-3 {
+        background-image: url(../../assets/images/processOperation/process-log-4.png);
+    }
+    .img-4 {
+        background-image: url(../../assets/images/processOperation/process-log-5.png);
+    }
+    .img-5 {
+        background-image: url(../../assets/images/processOperation/process-log-6.png);
+    }
+}

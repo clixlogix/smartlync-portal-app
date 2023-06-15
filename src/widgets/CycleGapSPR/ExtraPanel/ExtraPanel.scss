@@ -1,0 +1,48 @@
+.x-cls-extra-data {
+    position: relative;
+    height: calc(100vh - 280px);
+    transition: all 0.3s;
+    width: 400px;
+    &.open {
+        width: 400px;
+        margin: 0;
+        margin-left: 16px;
+    }
+    &.close {
+        width: 0;
+        border: 0;
+        padding: 0;
+        opacity: 0;
+    }
+    .extra-item {
+        display: flex;
+        min-width: 90%;
+        flex: 1;
+        border-radius: 1px;
+        flex-flow: row nowrap;
+        justify-content: space-between;
+        align-items: center;
+        opacity: 1;
+        padding: 4px 10px;
+        margin: 2px 5px 2px 0px;
+        span {
+            &:first-child {
+                font-weight: 800;
+                font-size: 16px;
+            }
+            font-size: 14px;
+            color: forestgreen;
+            text-overflow: ellipsis;
+            overflow: hidden;
+            white-space: nowrap;
+            display: inline-block;
+        }
+    }
+    .extra-search {
+        opacity: 1;
+        flex: 0.7;
+    }
+    display: flex;
+    flex-flow: column nowrap;
+    padding: 10px 10px 40px 10px;
+}

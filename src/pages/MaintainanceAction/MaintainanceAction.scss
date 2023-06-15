@@ -1,0 +1,45 @@
+@import 'scss/main.scss';
+
+div.x-cls-maintainance-action-container {
+    height: calc(100vh - 60px);
+    position: relative;
+    color: $smartlync-white;
+    flex: 1;
+    display: flex;
+
+    .x-cls-filter-panel {
+        position: relative;
+        top: 0;
+        left: 0;
+        height: 100%;
+    }
+}
+
+div.x-cls-maintainance-action-body {
+    display: flex;
+    flex-flow: column nowrap;
+    flex: 1;
+
+    .toolbar-section {
+        margin-left: 10px;
+        min-height: 49px;
+    }
+
+    .react-grid-layout {
+        overflow-y: auto;
+        flex: 1;
+        & > div {
+            display: flex;
+            flex: 1;
+        }
+    }
+    opacity: 1;
+
+    .x-cls-breadcrumb {
+        padding-left: 10px;
+    }
+
+    .x-cls-process-log {
+        opacity: 1;
+    }
+}

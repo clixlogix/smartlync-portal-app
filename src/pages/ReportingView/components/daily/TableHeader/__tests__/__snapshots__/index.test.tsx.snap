@@ -1,0 +1,23 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<TableHeader  /> should match snapshot 1`] = `
+<th
+  class=" x-cls-table-header-cell center"
+>
+  <div
+    class=""
+    style="justify-content: center;"
+  >
+    <div
+      style="font-size: 14px; color: white;"
+    >
+      Thursday
+    </div>
+    <div
+      style="font-size: 13px; color: white;"
+    >
+      (15-4月)
+    </div>
+  </div>
+</th>
+`;

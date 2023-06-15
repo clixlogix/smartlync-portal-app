@@ -1,0 +1,228 @@
+@import 'scss/main.scss';
+$card-background-color: #243240;
+$text-color-white: #ffffff;
+$text-color-grey: #a0a0a0;
+$base-color: #ffdb0a;
+$border-dark: rgba($base-color, 0.88);
+$basic-white: #ffffff;
+$basic-black: #000000;
+$project-header: #243240;
+$risk-cell-width: 2.5rem;
+$risk-cell-height: 1.5rem;
+$risk-title-cell-width: 150px;
+$risk-title-cell-height: 110px;
+$risk-cell-outline-color: #525252;
+$risk-table-background-color: #424242;
+$risk-data-background-color: #424242;
+$overall-risk-row-border: #ffd20a;
+
+.x-cls-carbody-risk-table-widget {
+    opacity: 1;
+    display: flex;
+    flex: 1;
+
+    & > div,
+    & > div > div {
+        flex: 1;
+    }
+
+    table {
+        border-collapse: separate;
+        border-spacing: 0px;
+        position: initial;
+    }
+
+    thead > tr {
+        th {
+            padding: 0px;
+            position: sticky;
+            top: 0px;
+            background-color: $risk-table-background-color;
+            z-index: 4;
+        }
+        th:first-child {
+            width: $risk-title-cell-width;
+            height: $risk-title-cell-height;
+            left: 0px;
+            background-color: $risk-table-background-color;
+            z-index: 5;
+        }
+        th:nth-child(2) {
+            width: $risk-cell-width;
+            height: $risk-title-cell-height;
+            border-left: 1px solid $text-color-white;
+            border-right: 2px solid $text-color-white;
+            left: $risk-title-cell-width;
+            background-color: $risk-table-background-color;
+            z-index: 5;
+        }
+        th.cell-header.extra {
+            opacity: 1;
+            flex: 1;
+        }
+        th:last-child {
+            outline: 0px solid transparent;
+            border: 0px solid transparent;
+            border-left: 1px solid $risk-cell-outline-color;
+        }
+        th + th + th {
+            outline: 1px solid $risk-cell-outline-color;
+        }
+    }
+
+    tbody {
+        tr:first-child {
+            td,
+            td.cell-content.risk-cell {
+                border-top: 2px solid $overall-risk-row-border;
+                border-bottom: 2px solid $overall-risk-row-border;
+                padding: 0px;
+
+                div.cell-content.risk-cell + div {
+                    width: 100%;
+                    height: calc(100% - 1px);
+                }
+                position: sticky;
+                top: $risk-title-cell-height;
+                z-index: 3;
+                background-color: $risk-data-background-color;
+            }
+
+            td:first-child {
+                width: 150px;
+                height: 33px;
+
+                border-top: 1px solid $overall-risk-row-border;
+                border-bottom: 1px solid $overall-risk-row-border;
+                & > div.cell-content.risk-cell + div {
+                    width: 100%;
+                    height: 100%;
+                }
+                position: sticky;
+                left: 0;
+                z-index: 5;
+                & > div {
+                    max-height: 35px;
+                }
+            }
+            td:nth-child(2) {
+                border-top: 0px;
+                border-bottom: 0px;
+                & > div {
+                    height: 100%;
+                }
+                position: sticky;
+                left: $risk-title-cell-width;
+                z-index: 5;
+            }
+            td:last-child {
+                &.extra-cell-content.extra-risk-cell {
+                    outline: 0px solid transparent;
+                    border: 0px solid transparent;
+                    border-left: 2px solid $overall-risk-row-border;
+                }
+            }
+        }
+        td.cell-content.risk-cell {
+            padding: 0px;
+            border-collapse: separate;
+            position: relative;
+            outline: 1px solid $risk-cell-outline-color;
+            // box-sizing: border-box;
+
+            .cell-content.risk-cell + div {
+                width: $risk-cell-width;
+                height: $risk-cell-height;
+
+                position: absolute;
+                top: 1px;
+                left: 2px;
+
+                background-color: $risk-data-background-color;
+            }
+        }
+        td:nth-child(2) {
+            outline: 1px solid $risk-cell-outline-color;
+
+            border-left: 1px solid $text-color-white;
+            border-right: 2px solid $text-color-white;
+        }
+        td:last-child {
+            outline: 0px solid transparent;
+            border: 0px solid transparent;
+            border-left: 2px solid $risk-cell-outline-color;
+        }
+
+        tr {
+            &:first-child td,
+            th,
+            td:nth-child(1),
+            td:nth-child(2) {
+                position: sticky !important;
+            }
+        }
+        tr th {
+            top: 0px;
+        }
+        tr th:first-child,
+        tr td:first-child {
+            left: 0px;
+            z-index: 5;
+            background-color: $risk-table-background-color;
+        }
+        tr td:nth-child(2) {
+            left: $risk-title-cell-width;
+            z-index: 4;
+            background-color: $risk-table-background-color;
+        }
+        tr:first-child td {
+            top: $risk-title-cell-height;
+        }
+    }
+
+    td.cell-content {
+        padding: 0px;
+        width: $risk-cell-height;
+        height: 1.7rem;
+        max-width: $risk-cell-height;
+        max-height: 1.7rem;
+
+        &.risk-cell,
+        &.overall-risk-cell {
+            & > div + div {
+                display: flex;
+                & > div {
+                    flex: 1;
+                }
+            }
+        }
+        &.carbodyid-cell {
+            width: $risk-title-cell-width;
+            height: $risk-cell-height;
+            position: sticky;
+            left: 0px;
+            z-index: 4;
+            background-color: $risk-table-background-color;
+        }
+    }
+    caption {
+        position: fixed;
+        left: 0px;
+        top: 0px;
+        z-index: 8;
+        width: $risk-title-cell-width;
+        height: $risk-title-cell-height + 1;
+        background-color: $risk-table-background-color;
+        padding: 0px !important;
+        border-top: 1px solid #fff;
+        border-left: 1px solid #fff;
+    }
+}
+
+.x-cls-carbody-risk-table-widget-header {
+    opacity: 1;
+}
+
+.x-cls-carbody-risk-table-widget-body {
+    opacity: 1;
+}

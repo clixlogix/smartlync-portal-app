@@ -1,0 +1,41 @@
+.x-cls-overall-risk-head {
+    opacity: 1;
+
+    .overall-risk-text-rotate-title {
+        color: white;
+        transform: rotate(-90deg);
+        /* Legacy vendor prefixes that you probably don't need... */
+        /* Safari */
+        -webkit-transform: rotate(-90deg);
+        /* Firefox */
+        -moz-transform: rotate(-90deg);
+        /* IE */
+        -ms-transform: rotate(-90deg);
+        /* Opera */
+        -o-transform: rotate(-90deg);
+    }
+}
+.x-cls-overall-risk-head,
+.x-cls-overall-risk-head-inline {
+    .overall-risk-label {
+        width: 33px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        .sort-icon {
+            width: 26px;
+            height: 26px;
+            margin-left: 10px;
+            display: flex;
+            flex-flow: row nowrap;
+        }
+
+        & > div {
+            font-family: Open Sans;
+            white-space: nowrap;
+            font-size: 14px;
+            font-weight: 500;
+        }
+    }
+}

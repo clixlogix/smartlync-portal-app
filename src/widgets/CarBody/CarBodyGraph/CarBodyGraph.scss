@@ -1,0 +1,25 @@
+.x-cls-car-body-graph-widget-chart {
+    flex: 1;
+    display: flex;
+    & > div {
+        flex: 1;
+    }
+
+    .react-grid-item {
+        // default widget background and border
+        background-color: #333;
+        border: 1px solid #bbb;
+    }
+}
+
+.x-cls-car-body-graph-widget {
+    opacity: 1;
+}
+
+.x-cls-car-body-graph-widget-header {
+    opacity: 1;
+}
+
+.x-cls-car-body-graph-widget-body {
+    opacity: 1;
+}

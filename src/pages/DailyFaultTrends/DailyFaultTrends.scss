@@ -1,0 +1,62 @@
+@import 'scss/main.scss';
+
+div.x-cls-daily-fault-trends-container {
+    height: calc(100vh - 60px);
+    position: relative;
+    color: $smartlync-white;
+    flex: 1;
+    display: flex;
+
+    .x-cls-filter-panel {
+        position: relative;
+        top: 0;
+        left: 0;
+        height: 100%;
+    }
+}
+
+div.x-cls-daily-fault-trends-body {
+    display: flex;
+    flex-flow: column nowrap;
+    flex: 1;
+
+    .x-cls-title {
+        font-family: Roboto;
+        font-style: normal;
+        font-weight: 500;
+        font-size: 20px;
+        line-height: 160%;
+        letter-spacing: 0.15px;
+        color: #ffffff;
+        margin-left: 10px;
+        padding-top: 20px;
+    }
+
+    .toolbar-section {
+        margin-left: 10px;
+        min-height: 49px;
+    }
+
+    .react-grid-layout {
+        overflow-y: auto;
+        flex: 1;
+        & > div {
+            display: flex;
+            flex: 1;
+        }
+    }
+    opacity: 1;
+
+    .x-cls-chart {
+        max-width: 100%;
+        flex: 1;
+    }
+
+    .x-cls-breadcrumb {
+        padding-left: 10px;
+    }
+
+    .x-cls-car-body-duration-widget {
+        opacity: 1;
+    }
+}

@@ -1,0 +1,32 @@
+@import 'scss/main.scss';
+
+.x-cls-upload-stat-widget {
+    opacity: 1;
+    display: flex;
+    flex: 1;
+
+    & > div,
+    & > div > div {
+        flex: 1;
+    }
+
+    .x-cls-toolbar-btn {
+        span {
+            text-transform: capitalize;
+        }
+    }
+
+    &.react-grid-item {
+        // default widget background and border
+        background-color: #333;
+        border: 1px solid #bbb;
+    }
+}
+
+.x-cls-upload-stat-widget-header {
+    opacity: 1;
+}
+
+.x-cls-upload-stat-widget-body {
+    opacity: 1;
+}

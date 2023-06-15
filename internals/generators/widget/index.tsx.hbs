@@ -1,0 +1,12 @@
+/**
+*
+* {{ properCase ComponentName }}
+*
+*/
+
+import {{ properCase ComponentName }}, { {{properCase ComponentName}}Property } from './{{ properCase ComponentName }}';
+{{#if wantLoadable}}import {{ properCase ComponentName }}Loadable from './Loadable';{{/if}}
+
+export { {{ properCase ComponentName }}, {{properCase ComponentName}}Property{{#if wantLoadable}}, {{ properCase ComponentName }}Loadable{{/if}} };
+
+export default {{ properCase ComponentName }};

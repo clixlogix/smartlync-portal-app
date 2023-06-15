@@ -1,0 +1,66 @@
+@import 'scss/main.scss';
+
+div.x-cls-d-report-page-container {
+    height: calc(100vh - 60px);
+    position: relative;
+    color: $smartlync-white;
+    flex: 1;
+    display: flex;
+
+    .x-cls-filter-panel {
+        position: relative;
+        top: 0;
+        left: 0;
+        height: 100%;
+    }
+
+    .maximize-widget {
+        width: 98% !important;
+        height: 98% !important;
+        flex: 1;
+    }
+
+    .maximize-widget-width {
+        width: 98% !important;
+        flex: 1;
+    }
+
+    .maximize-widget-height {
+        height: 98% !important;
+        flex: 1;
+    }
+}
+
+div.x-cls-d-report-page-body {
+    display: flex;
+    flex-flow: column nowrap;
+    flex: 1;
+
+    .toolbar-section {
+        margin-left: 10px;
+        min-height: 49px;
+    }
+
+    .react-grid-layout {
+        overflow-y: auto;
+        flex: 1;
+        & > div {
+            display: flex;
+            flex: 1;
+        }
+    }
+    opacity: 1;
+
+    .x-cls-chart {
+        max-width: 100%;
+        flex: 1;
+    }
+
+    .x-cls-breadcrumb {
+        padding-left: 10px;
+    }
+
+    .x-cls-event-rate-per-event {
+        opacity: 1;
+    }
+}

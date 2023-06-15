@@ -1,0 +1,129 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<OverviewCard  /> should match snapshot 1`] = `
+<div
+  class=""
+>
+  
+  <div
+    class="MuiPaper-root MuiCard-root card-property MuiPaper-elevation1 MuiPaper-rounded"
+  >
+    <div
+      class="MuiCardContent-root card-content-property "
+    >
+      <div
+        class="flex-row-property"
+      >
+        <div
+          class="align-property left-side"
+        >
+          RS_1234
+        </div>
+        <div
+          class="align-property right-side"
+        >
+          UB_2344_22
+        </div>
+      </div>
+      <div
+        class="flexOne"
+      >
+        <div
+          class="flex-row-property marginTen"
+        >
+          <div
+            class="flex-col-property"
+          >
+            <div
+              class="circular-progress-title"
+            >
+              Average TA
+            </div>
+            <div
+              class="centered-justification marginTen"
+            >
+              <div
+                class="MuiBox-root MuiBox-root-1"
+              >
+                <div
+                  aria-valuenow="95"
+                  class="MuiCircularProgress-root MuiCircularProgress-colorPrimary MuiCircularProgress-static"
+                  role="progressbar"
+                  style="width: 4rem; height: 4rem; transform: rotate(-90deg); color: rgb(20, 155, 116);"
+                >
+                  <svg
+                    class="MuiCircularProgress-svg"
+                    viewBox="22 22 44 44"
+                  >
+                    <circle
+                      class="MuiCircularProgress-circle MuiCircularProgress-circleStatic"
+                      cx="44"
+                      cy="44"
+                      fill="none"
+                      r="20.2"
+                      stroke-width="3.6"
+                      style="stroke-dasharray: 126.920; stroke-dashoffset: 6.346px;"
+                    />
+                  </svg>
+                </div>
+                <div
+                  class="MuiBox-root MuiBox-root-2"
+                >
+                  <div
+                    class="MuiTypography-root MuiTypography-caption"
+                    style="color: white; font-size: 18px;"
+                  >
+                    95%
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div
+            class="flexOneBox"
+          >
+            <div
+              class="greyTitle"
+            >
+              Faults
+            </div>
+            <div
+              class="valueLabels"
+            >
+              123
+            </div>
+          </div>
+          <div
+            class="flexOneBox"
+          >
+            <div
+              class="greyTitle"
+            >
+              Cycles
+            </div>
+            <div
+              class="valueLabels"
+            >
+              31,231
+            </div>
+          </div>
+          <div
+            class="flexOneBox"
+          >
+            <div
+              class="greyTitle"
+            >
+              MTTR
+            </div>
+            <div
+              class="valueLabels"
+            >
+              08:22
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+`;

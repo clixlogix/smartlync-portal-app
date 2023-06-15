@@ -1,0 +1,27 @@
+@import 'scss/main.scss';
+
+.x-cls-daily-fault-trends-widget-widget {
+    opacity: 1;
+    display: flex;
+    flex: 1;
+    max-width: 100%;
+
+    & > div,
+    & > div > div {
+        flex: 1;
+    }
+
+    &.react-grid-item {
+        // default widget background and border
+        background-color: #333;
+        border: 1px solid #bbb;
+    }
+}
+
+.x-cls-daily-fault-trends-widget-widget-header {
+    opacity: 1;
+}
+
+.x-cls-daily-fault-trends-widget-widget-body {
+    opacity: 1;
+}

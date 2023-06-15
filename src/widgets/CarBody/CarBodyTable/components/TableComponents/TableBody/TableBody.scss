@@ -1,0 +1,30 @@
+.x-carBody-table-body-cell {
+    display: flex;
+    .x-risk-item {
+        flex: 1;
+    }
+    &.cb-table-data {
+        background-color: #424242;
+    }
+    &.highLightFilter {
+        background-color: greenyellow;
+    }
+
+    .x-overall-risk-item {
+        border-bottom: 1px solid #525252;
+    }
+}
+
+.green-dot {
+    height: 12px;
+    width: 12px;
+    background-color: rgba(102, 187, 106, 1);
+    border-radius: 50%;
+}
+
+.red-dot {
+    height: 12px;
+    width: 12px;
+    background-color: rgba(244, 67, 54, 1);
+    border-radius: 50%;
+}

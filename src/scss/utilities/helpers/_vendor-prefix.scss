@@ -1,0 +1,13 @@
+/* Helper mixins and styles */
+
+///@group Utilities
+@mixin prefix($name, $value) {
+    @each $vendor in ('-webkit-', '-moz-', '-ms-', '') {
+        #{$vendor}#{$name}: #{$value};
+    }
+}
+
+/// @example scss - prefix `.foo`
+///   .foo {
+///     @include prefix(transition, 0.5s);
+///   }

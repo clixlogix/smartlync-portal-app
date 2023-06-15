@@ -1,0 +1,119 @@
+@import 'scss/main.scss';
+
+div.x-cls-station-availability-container {
+    height: calc(100vh - 60px);
+    position: relative;
+    color: $smartlync-white;
+    flex: 1;
+    display: flex;
+    .x-cls-filter-panel {
+        position: relative;
+        top: 0;
+        left: 0;
+        height: 100%;
+    }
+
+    .maximize-widget {
+        width: 98% !important;
+        height: 98% !important;
+        flex: 1;
+    }
+}
+
+.x-cls-station-availability-body {
+    .maximize-widget-width {
+        width: 98% !important;
+        flex: 1;
+    }
+    .maximize-widget-height {
+        width: 98% !important;
+        flex: 1;
+    }
+    .maximize-widget {
+        width: 98% !important;
+        width: 98% !important;
+    }
+
+    .x-cls-title {
+        font-family: Roboto;
+        font-style: normal;
+        font-weight: 500;
+        font-size: 20px;
+        line-height: 160%;
+        letter-spacing: 0.15px;
+        color: #ffffff;
+        margin-left: 10px;
+        padding-top: 20px;
+    }
+}
+
+div.x-cls-station-availability-body {
+    display: flex;
+    flex-flow: column nowrap;
+    flex: 1;
+
+    .toolbar-section {
+        margin-left: 10px;
+        min-height: 49px;
+        height: 70px;
+        background-color: $smartlync-secondary-color-background-3;
+        margin-left: 15px;
+        margin-right: 16px;
+        display: flex;
+        flex-flow: row wrap;
+        .left-section {
+            width: 440px;
+            background: $smartlync-secondary-color-background-3 0% 0% no-repeat padding-box;
+            opacity: 1;
+        }
+        .right-section {
+            align-items: center;
+            display: flex;
+            flex: 1;
+            justify-content: flex-end;
+            background: $smartlync-secondary-color-background-2 0% 0% no-repeat padding-box;
+            opacity: 1;
+            .x-cls-edit-btn {
+                display: inline-flex;
+                margin: 0 20px 0 0;
+                align-items: center;
+                border-radius: 9px;
+                background-color: #243240;
+                height: 56%;
+                font-size: 0.5em;
+                padding: 3px 10px 3px 10px;
+                .layout-text {
+                    font-size: 16px;
+                    font-weight: 600;
+                    color: $smartlync-primary-color-background-1;
+                }
+            }
+        }
+    }
+
+    .react-grid-layout {
+        overflow-y: auto;
+        flex: 1;
+        & > div {
+            display: flex;
+            flex: 1;
+        }
+    }
+    opacity: 1;
+
+    .x-cls-chart {
+        max-width: 100%;
+        flex: 1;
+    }
+
+    .x-cls-breadcrumb {
+        padding-left: 10px;
+    }
+
+    .x-cls-sa-table {
+        opacity: 1;
+    }
+    .x-cls-uptime-distribution {
+        opacity: 1;
+    }
+}

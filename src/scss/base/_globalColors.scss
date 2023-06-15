@@ -1,0 +1,84 @@
+// // @import 'utilities/fonts';
+$smartlync-primary-yellow: #ffdb0a;
+$smartlync-secondary-yellow: #ebe834;
+$smartlync-primary-color-background: #161d24;
+$smartlync-primary-color-background-1: #ffdb38;
+$smartlync-primary-color-background-outer: #12181d;
+$smartlync-secondary-color-background: #3b3939;
+$smartlync-secondary-color-background-2: #19242e;
+$smartlync-secondary-color-background-3: #243240;
+$smartlync-secondary-color-background-4: #10171b;
+$smartlync-white: #ffffff;
+$smartlync-white-2: #f6f6f6;
+$smartlync-white-3: #f8f9fa;
+$smartlync-black: #000000;
+$smart-black-1: #222;
+$smart-black-2: #333;
+$smart-black-3: #111;
+$smartlync-border: #525252;
+$smartlync-border-2: #3e3e3e;
+$smartlync-border-3: #707070;
+$smartlync-box-shadow: #ccc;
+$elu-bg-color: #212121;
+$elu-bg-color-light: #303030;
+
+$base-color: #ffdb0a;
+$border-dark: rgba($base-color, 0.88);
+$basic-white: #ffffff;
+$basic-black: #000000;
+$project-header: #243240;
+$card-background-color: #1f1f1f;
+$text-color-white: #ffffff;
+$text-color-grey: #a0a0a0;
+$page-background: #12181d;
+$label-dark: #333;
+
+//REPORTIG VIEW
+$smartlync-red: #e42d37;
+$smartlync-red-warning: #e31837;
+$smartlync-current-week: #8cd58b;
+$future-data-bg: #121;
+$current-data-bg: #565;
+$page-wrapper-border: #182129;
+//PLANT OVERVIEW
+$smartlync-green: #149b74;
+$smartlync-orange: #ff9d00;
+$smartlync-blue: #0077dd;
+//PAGE HEADER
+$smartlync-bg-header: #212529;
+//SLIDER PANEL
+$smartlync-panel-bg: #1d272f;
+$smartlync-slider-bg: #394958;
+//FILTER PANEL
+$smartlync-label: #a0a0a0;
+//SIGNIN
+$smartlync-signin-yellow: #ffd20b;
+//button configurations
+///Custom button background-color - primary color or say, #ccc or in rgb.
+$button-background: $smartlync-primary-yellow;
+///Custom button height - enter only one value in px or any other css unit.
+$button-height: 50px;
+///Custom button width - enter only one value in px or any other css unit.
+$button-width: 450px;
+///Custom button border - it can be none, or say any other css unit.
+$button-border: 1px solid $smartlync-primary-yellow;
+///Custom button border-radius - enter only one value in px or any other css unit.
+$button-border-radius: 30px;
+///Custom button color - white or say,#ccc or transparent or in rgb
+$button-color: white;
+///Custom button font-size - enter only one value in px or any other css unit.
+$button-font-size: 14px;
+$button-font: normal normal bold 15px/20px Open Sans;
+///Custom button padding - any value in px or any other css unit.
+$button-padding: 5px;
+///Custom button text-tranform - uppercase/lowercase or any other css unit.
+$button-text-tranform: capitalize;
+///Custom button cursor - default/auto or any other css unit.
+$button-cursor: pointer;
+///Custom button border - it can be none, or say any other css unit.
+$button-outline: 1px solid $smartlync-primary-yellow;
+
+/********************* Fonts ****************************************/
+
+///Stanley font-family - Open_Sans_Bold.
+$smartlync-font-bold: 'Open_Sans_Bold';

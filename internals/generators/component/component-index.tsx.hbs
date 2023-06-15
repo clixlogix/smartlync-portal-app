@@ -1,0 +1,62 @@
+/**
+*
+* {{ properCase ComponentName }}
+*
+*/
+{{#if wantMemo}}
+import React, { memo } from 'react';
+{{else}}
+import * as React from 'react';
+{{/if}}
+{{#if wantStyledComponents}}import styled from 'styled-components/macro';{{/if}}
+{{#if wantTranslations}}
+import { useTranslation } from 'react-i18next';
+import { messages } from './messages';
+{{/if}}
+
+import 'scss/main.scss';
+import './{{ properCase ComponentName }}.scss';
+
+interface Props {
+    className?: string;
+    children?: React.ReactNode | React.ReactNode[];
+}
+
+{{#if wantMemo}}
+export const {{ properCase ComponentName }} = memo((props: Props) => {
+{{else}}
+export function {{ properCase ComponentName }}(props: Props) {
+{{/if}}
+  {{#if wantTranslations}}
+  // eslint-disable-next-line @typescript-eslint/no-unused-vars
+  const { t /*, i18n*/ } = useTranslation();
+  {{/if}}
+    const { className = '' } = props;
+  return (
+  {{#if wantStyledComponents}}
+      <Div className={`${className} x-cls-{{ dashCase ComponentName }}`}>
+  {{else}}
+      <div className={`${className} x-cls-{{ dashCase ComponentName }}`}>
+  {{/if}}
+    {{#if wantTranslations}}
+        {t(messages.someThing)}  
+        {children}
+    {{/if}}
+  {{#if wantStyledComponents}}
+  </Div>
+  {{else}}
+  </div>
+  {{/if}}
+  );
+
+{{#if wantMemo}}
+});
+{{else}}
+};
+{{/if}}
+
+{{#if wantStyledComponents}}
+const Div = styled.div``;
+{{/if}}
+
+export default {{ properCase ComponentName }};

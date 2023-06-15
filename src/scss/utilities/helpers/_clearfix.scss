@@ -1,0 +1,18 @@
+/* Helper mixins and styles */
+
+.clearfix {
+    clear: both;
+    &:after {
+        clear: both;
+        display: block;
+        content: '';
+    }
+}
+///@group Utilities
+@mixin clearfix() {
+    &:after {
+        clear: both;
+        display: block;
+        content: '';
+    }
+}

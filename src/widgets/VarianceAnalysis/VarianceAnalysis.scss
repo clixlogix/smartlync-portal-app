@@ -1,0 +1,26 @@
+@import 'scss/main.scss';
+
+.x-cls-variance-analysis-widget {
+    opacity: 1;
+    display: flex;
+    flex: 1;
+
+    & > div,
+    & > div > div {
+        flex: 1;
+    }
+
+    &.react-grid-item {
+        // default widget background and border
+        background-color: #333;
+        border: 1px solid #bbb;
+    }
+}
+
+.x-cls-variance-analysis-widget-header {
+    opacity: 1;
+}
+
+.x-cls-variance-analysis-widget-body {
+    opacity: 1;
+}

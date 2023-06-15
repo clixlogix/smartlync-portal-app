@@ -1,0 +1,13 @@
+import { createSelector } from '@reduxjs/toolkit';
+
+import { RootState } from 'types';
+import { initialState } from './{{dashCase ServiceName}}-reducer';
+
+// First select the relevant part from the state
+const selectDomain = (state: RootState) => state.{{> serviceModel }}s || initialState;
+
+export const select{{> ServiceModel }}s = createSelector([selectDomain], (state) => state.{{> serviceModel }}s);
+export const select{{> ServiceModel }} = createSelector([selectDomain], (state) => state.{{> serviceModel }});
+export const select{{> ServiceModel }}Filters = createSelector([selectDomain], (state) => state.filters);
+export const select{{> ServiceModel }}IsLoading = createSelector([selectDomain], (state) => state.isLoading);
+export const select{{> ServiceModel }}Error = createSelector([selectDomain], (state) => state.error);

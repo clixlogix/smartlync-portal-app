@@ -1,0 +1,22 @@
+@import 'scss/main.scss';
+
+.x-cls-week-number {
+    opacity: 1;
+
+    white-space: nowrap;
+
+    & > div {
+        margin: auto auto;
+    }
+
+    .card-btns {
+        @include custom-button(
+            $button-background: $smartlync-primary-yellow,
+            $button-font: $button-font,
+            $button-color: $smartlync-black,
+            $button-width: 105px,
+            $button-height: 39px,
+            $button-padding: 10px
+        );
+    }
+}

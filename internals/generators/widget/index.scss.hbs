@@ -1,0 +1,27 @@
+@import 'scss/main.scss';
+
+
+.x-cls-{{dashCase ComponentName}}-widget {
+    opacity: 1;
+    display: flex;
+    flex: 1;
+
+    & > div,
+    & > div > div {
+        flex: 1;
+    }
+
+    &.react-grid-item {
+        // default widget background and border
+        background-color: #333;
+        border: 1px solid #bbb;
+    }
+}
+
+.x-cls-{{dashCase ComponentName}}-widget-header {
+    opacity: 1;
+}
+
+.x-cls-{{dashCase ComponentName}}-widget-body {
+    opacity: 1;
+}

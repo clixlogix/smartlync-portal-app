@@ -1,0 +1,48 @@
+.x-cls-table-header-cell {
+    position: sticky;
+    top: 0;
+    display: table-cell;
+    background-color: #333;
+    & > div {
+        padding-left: 0px;
+        padding-right: 0px;
+    }
+    &.col,
+    &.row {
+        padding-right: inherit;
+        padding-left: inherit;
+        margin-right: inherit;
+        margin-left: inherit;
+    }
+    .sort-label {
+        padding: 0;
+        margin: 0;
+        flex: initial !important;
+        font-size: 12px;
+        color: #fff;
+        flex: 1;
+        justify-self: center;
+        justify-content: space-around;
+        align-items: center;
+        & > * {
+            margin: 0px;
+            font: normal normal bold 16px/22px Open Sans;
+        }
+    }
+    .column-label {
+        font-size: 14px;
+        color: #fff;
+        display: flex;
+        flex-flow: row nowrap;
+        justify-content: space-around;
+        align-items: center;
+    }
+    .sort-icon {
+        &.hide {
+            color: 'red';
+        }
+        &.show {
+            color: 'blue';
+        }
+    }
+}

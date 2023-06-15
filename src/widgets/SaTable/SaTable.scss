@@ -1,0 +1,26 @@
+@import 'scss/main.scss';
+
+.x-cls-sa-table-widget {
+    opacity: 1;
+    display: flex;
+    flex: 1;
+
+    & > div,
+    & > div > div {
+        flex: 1;
+    }
+
+    &.react-grid-item {
+        // default widget background and border
+        background-color: $smart-black-2;
+        border: 1px solid #bbb;
+    }
+}
+
+.x-cls-sa-table-widget-header {
+    opacity: 1;
+}
+
+.x-cls-sa-table-widget-body {
+    opacity: 1;
+}

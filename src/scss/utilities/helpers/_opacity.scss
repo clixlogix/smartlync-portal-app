@@ -1,0 +1,13 @@
+/* Helper mixins and styles */
+
+///@group Utilities
+@mixin opacity($opacity) {
+    opacity: $opacity;
+    $opacityIE: $opacity * 100;
+    filter: alpha(opacity=$opacityIE);
+}
+
+/// @example scss - opacity `.foo`
+///   .foo {
+///     @include opacity(0.5);
+///   }

@@ -1,0 +1,20 @@
+// @import 'utilities/reset';
+// @import 'utilities/fonts';
+@import 'utilities/helpers/helpers-index';
+@import 'base/globalColors';
+
+/*********** Theme ************/
+@import 'themesettings';
+
+/*********** Vendors ************/
+
+// @import 'vendors/';
+
+/*********** Components/Modules ***********/
+
+@import 'components/buttons';
+@import 'components/label';
+
+/*********** Layouts ***********/
+
+@import 'themecomponents';

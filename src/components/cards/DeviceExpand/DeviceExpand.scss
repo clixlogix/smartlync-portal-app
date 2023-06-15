@@ -1,0 +1,252 @@
+@import 'scss/main.scss';
+
+.x-device-zoom-card {
+    opacity: 1;
+    text-align: center;
+    .box-element {
+        width: 215px;
+        height: 186px;
+        background-color: #212121;
+        margin: 17px;
+        display: inline-flex;
+        // align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        .box-input {
+            font-size: 16px;
+        }
+    }
+    .circle-element {
+        width: 105px !important;
+        height: 105px !important;
+        margin-bottom: 17px;
+        margin-top: 5px;
+    }
+
+    .x-device-zoom-card {
+        width: 100%;
+    }
+    .graphic-data {
+        display: flex;
+        // background-color: red;
+    }
+}
+
+.component-table {
+    margin-right: 1%;
+}
+
+.x-cls-graph-area {
+    margin-bottom: 2%;
+    // flex-wrap: wrap;
+    flex-flow: row wrap;
+    // grid-gap: 20px;
+    // gap: 20px;
+    // justify-content: space-evenly;
+}
+.x-health-panel {
+    padding: 15px;
+    display: flex;
+    flex-flow: row wrap;
+    align-items: center;
+    justify-content: space-evenly;
+    gap: 10px;
+    margin: auto auto;
+    max-width: 800px;
+    // background-color: #243240;
+
+    .x-title {
+        color: #fff;
+        font-weight: bold;
+        font-size: 18px;
+    }
+
+    .x-value {
+        font-size: larger;
+    }
+
+    .x-component {
+        font-size: 18px;
+    }
+
+    .x-health-change-card {
+        min-width: 95%;
+        .x-component {
+            color: #aaa;
+            white-space: nowrap;
+        }
+        .x-health {
+            overflow-y: auto;
+        }
+    }
+
+    .x-health-forecast-card {
+        max-height: 300px;
+        height: 300px;
+        width: 100%;
+        display: flex;
+        flex-flow: column nowrap;
+        padding-right: 2px;
+        flex: initial;
+
+        .x-forcasts {
+            color: #999;
+            font-size: 16px;
+            padding-left: 10px;
+            flex: 1 1;
+            grid-gap: 5px;
+            gap: 5px;
+            display: flex;
+            // flex-flow: column nowrap;
+            overflow-y: auto;
+
+            .x-main-values {
+                display: flex;
+                flex-flow: row nowrap;
+                position: relative;
+                padding: 20px;
+
+                & > div + div {
+                    opacity: 1;
+                    margin-left: 25px;
+                }
+                .x-forecast-panel {
+                    padding: 0px 0px 5px 0px;
+                    margin-top: 10px;
+                    margin-bottom: -5px;
+
+                    &:hover {
+                        cursor: pointer;
+                        border: 1px ridge silver;
+                    }
+                }
+
+                .x-name {
+                    transform: rotate(270deg);
+                    transform-origin: center center 0;
+                    color: rgba(0, 0, 0, 0.9);
+                    background-color: #ccc;
+                    align-items: center;
+                    justify-content: center;
+                    text-align: center;
+                    vertical-align: middle;
+                    white-space: nowrap;
+
+                    width: 115px;
+                    height: 25px;
+                    position: absolute;
+                    top: 60px;
+                    left: -52px;
+
+                    display: flex;
+                    flex-flow: column nowrap;
+
+                    & > span {
+                        flex: 1;
+                    }
+                }
+
+                .x-stripe {
+                    flex: initial;
+                    height: 5px;
+                    width: 100%;
+                    background-color: green;
+                    &.green {
+                        background-color: green;
+                    }
+                    &.orange {
+                        background-color: orange;
+                    }
+                    &.red {
+                        background-color: rgb(133, 71, 71);
+                    }
+                }
+            }
+        }
+
+        .x-forecast-datum {
+            display: flex;
+            flex-flow: column nowrap;
+
+            .x-label {
+                font-size: 1.1em;
+                color: aqua;
+                padding-top: 5px;
+                display: inline-block;
+            }
+            .x-value {
+                font-size: 1.8em;
+                line-height: 1em;
+                padding: 0;
+                align-self: center;
+                color: #999;
+                white-space: nowrap;
+            }
+        }
+    }
+
+    .x-health-history-card {
+        min-width: 95%;
+        max-height: 200px;
+        height: 200px;
+        // width: 240px;
+        display: flex;
+        flex-flow: column nowrap;
+        padding-right: 2px;
+
+        .x-name {
+            display: flex;
+            justify-content: space-between;
+            flex-flow: row wrap;
+            padding-right: 10px;
+        }
+
+        .x-history {
+            color: #999;
+            font-size: 16px;
+            padding-left: 10px;
+            flex: 1;
+            gap: 5px;
+
+            display: flex;
+            flex-flow: column nowrap;
+            overflow-y: auto;
+        }
+
+        .x-cmp-summaries {
+            padding-left: 10px;
+            // height: 100px;
+            display: flex;
+            flex-flow: column nowrap;
+
+            .x-summary {
+                display: flex;
+                flex-flow: column nowrap;
+            }
+
+            .changed,
+            .replacement {
+                background-color: rgba(203, 195, 195, 0.3);
+            }
+            .repaired,
+            .repair {
+                background-color: rgba(58, 47, 47, 0.7);
+            }
+        }
+    }
+
+    .x-component {
+        padding-left: 15px;
+        .x-name {
+            padding: 0px 10px 0px 5px;
+        }
+    }
+
+    & > div {
+        flex: 1;
+        border: 1px ridge #a0a0a0;
+
+        // box-shadow: 5px 12px #ebebeb;
+        // background-color: #243240;
+    }
+}

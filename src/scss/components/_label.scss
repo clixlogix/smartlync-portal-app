@@ -1,0 +1,46 @@
+// @mixins
+//
+// We use this mixin to create a default label base.
+
+///@group Components
+///@param {String} $label-color [#FFFFF] - The color of the label base
+///@param {String} $label-font-family [xzy]- The font-family of the label base
+///@param {Number} $label-font-size [14px] - The font-size of the label base
+///@param {Number} $label-margin [8px 0px] - The margin of the label base
+///@param {Number} $label-padding [0px] - The padding of the label base
+///@output 'color', 'font-family', 'font-size', 'margin' and 'padding' with fallback
+@mixin label-base(
+    $label-color: $smartlync-white,
+    // $label-font-family:$label-font-family,
+    $label-font-size: $label-font-size,
+    $label-margin: $label-margin,
+    $label-padding: $label-padding,
+    $label-display: $label-display
+) {
+    color: $label-color;
+    // font-family: $label-font-family;
+    font-size: $label-font-size;
+    margin: $label-margin;
+    padding: $label-padding;
+    display: $label-display;
+}
+
+@mixin heading($label-font-size: $label-font-size) {
+    @include label-base();
+    font-size: $label-font-size;
+}
+
+.sub-heading {
+    @include heading($label-font-size: 18px);
+}
+
+.heading {
+    @include label-base($label-font-size: 18px);
+}
+
+.sub-heading {
+    @include label-base($label-font-size: 18px);
+}
+.sub-heading-content {
+    @include label-base($label-font-size: 12px);
+}

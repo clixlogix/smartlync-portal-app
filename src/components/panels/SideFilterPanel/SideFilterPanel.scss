@@ -1,0 +1,228 @@
+.x-cls-side-filter-panel {
+    div.open {
+        transition: all 1s;
+    }
+    opacity: 1;
+    @mixin vertical-align($position) {
+        position: $position;
+        top: 40%;
+        -webkit-transform: translateY(-50%);
+        -ms-transform: translateY(-50%);
+        transform: translateY(-50%);
+    }
+
+    @mixin all-transition($time) {
+        transition: all $time;
+        -webkit-transition: all $time;
+    }
+    body {
+        margin: 0;
+        font-family: 'Muli', sans-serif;
+    }
+    .close:not(:disabled):not(.disabled):hover,
+    .close:not(:disabled):not(.disabled):focus {
+        opacity: 1;
+    }
+    .fa-2x {
+        font-size: 1.5em;
+    }
+
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    border-right: 1px solid #000;
+    border-radius: 25%;
+    height: 100%;
+
+    &.open {
+        border: 1px solid #333;
+        border-radius: 5px;
+        position: relative;
+        left: -23px;
+        top: 3px;
+        margin: 0px;
+        width: 257px;
+        animation-timing-function: 1s ease-in;
+        .menu {
+            .title .pin {
+                float: right;
+                width: 24px;
+                height: 24px;
+                color: #f9d231;
+                transform: rotate3d(1, 1, 1, 0deg);
+            }
+            &.open {
+                position: relative;
+                transform: translate3d(0px, 0, 0);
+                margin: 0px;
+                top: initial;
+                left: initial;
+                animation-timing-function: 1s ease-in;
+            }
+            &.close {
+                transform: rotate3d(1, 1, 1, 60deg);
+            }
+        }
+    }
+    .menu {
+        font-weight: 100;
+        width: 255px;
+        height: 100%;
+        position: fixed;
+        z-index: 100;
+        -webkit-box-shadow: -3px 0px 5px 0px rgba(0, 0, 0, 0.2);
+        box-shadow: -3px 0px 5px 0px rgba(0, 0, 0, 0.2);
+        left: -227px;
+        @include all-transition(0.3s);
+        color: #222;
+        background: #19242e 0% 0% no-repeat padding-box;
+        opacity: 1;
+
+        &.hover,
+        &:focus,
+        &.open {
+            transform: translate3d(220px, 0, 0);
+            animation-timing-function: 1s ease-in;
+            display: flex;
+            flex-flow: column nowrap;
+            .title {
+                top: 10px;
+                left: 22px;
+                right: 0px;
+                transform: translateY(0px);
+                transform: rotate(0deg);
+                color: #fff;
+                background-color: transparent;
+                text-transform: capitalize;
+                letter-spacing: 5px;
+
+                button {
+                    display: inline-block;
+                    &:hover {
+                        background-color: #333;
+                        i::before {
+                            animation: pulse-animation 2s infinite;
+                        }
+                    }
+                }
+                transform: translate3d(0px, 0, 0);
+                animation-timing-function: 2s ease-in;
+                margin: 0;
+                position: relative;
+                top: 5px;
+                left: 10px;
+            }
+            .nav,
+            .filter-items {
+                display: flex;
+                flex-flow: column nowrap;
+                top: initial;
+                position: relative;
+                transform: initial;
+                overflow: auto;
+            }
+        }
+        .title {
+            top: 40%;
+            @include vertical-align(absolute);
+            transform: rotate(270deg);
+            right: -100px;
+            font-weight: 800;
+            font-size: 15px;
+            color: #f9d231;
+            text-decoration: solid;
+            text-transform: uppercase;
+            letter-spacing: 12px;
+            line-height: 1em;
+            width: 88%;
+            z-index: 101;
+
+            .menu-btn {
+                width: 24px;
+                height: 24px;
+            }
+            button {
+                min-width: initial;
+                width: 28px;
+                height: 28px;
+                float: right;
+                display: none;
+                padding: 5px 5px 5px 5px;
+
+                &:hover {
+                    background-color: #333;
+                    i::before {
+                        animation: pulse-animation 2s infinite;
+                    }
+                }
+            }
+            .pin {
+                float: right;
+                width: 24px;
+                height: 24px;
+                color: #f9d231;
+            }
+        }
+        .nav,
+        .filter-items {
+            @include vertical-align(absolute);
+            font-weight: 100;
+            width: 100%;
+            padding: 5px 5px 10px 10px;
+            top: 240px;
+            display: none;
+
+            li {
+                padding-bottom: 30px;
+                list-style-type: none;
+                text-align: left;
+                font: normal normal normal 18px/24px Open Sans;
+                letter-spacing: 0px;
+                color: #f9d231;
+                opacity: 1;
+                background: #243240 0% 0% no-repeat padding-box;
+                border-radius: 10px;
+                opacity: 1;
+                padding: 10px 15px 15px 15px;
+                margin: 10px;
+
+                a {
+                    display: block;
+                    text-decoration: none;
+                    color: inherit;
+                    @include all-transition(0.3s);
+
+                    &:hover {
+                        color: #aaa;
+                    }
+                }
+                span {
+                    display: inline-block;
+                    padding: 10px 10px 10px 0px;
+                }
+                .select-field.inline input {
+                    margin: 0;
+                    text-align: left;
+                    font: normal normal bold 21px/28px Open Sans;
+                    padding: 0px 0 0px 5px !important;
+                    letter-spacing: 0px;
+                    font-size: 18px;
+                    color: #fff !important;
+                    background-color: transparent;
+                    opacity: 1;
+                    border: none;
+                }
+            }
+        }
+    }
+    .intro {
+        position: absolute;
+        top: 30%;
+        margin: 0 auto;
+        left: 0;
+        right: 0;
+        font-size: 45px;
+        text-align: center;
+        font-style: italic;
+    }
+}

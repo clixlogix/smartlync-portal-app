@@ -1,0 +1,11 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<TableHeadLabel  /> should match snapshot 1`] = `
+<div
+  class=" x-cls-table-head-label"
+>
+  <div
+    class=""
+  />
+</div>
+`;

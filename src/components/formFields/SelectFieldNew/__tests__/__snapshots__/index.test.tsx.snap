@@ -1,0 +1,92 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<SelectField  /> should match snapshot 1`] = `
+<div
+  class="select-field  inline"
+>
+  <div
+    aria-expanded="false"
+    class="MuiAutocomplete-root -auto-complete select-field-auto-complete MuiAutocomplete-hasClearIcon MuiAutocomplete-hasPopupIcon"
+    role="combobox"
+  >
+    <div
+      class="select-field  "
+    >
+      
+      <div
+        class="MuiFormControl-root MuiTextField-root MuiFormControl-fullWidth"
+      >
+        <div
+          class="MuiInputBase-root MuiInput-root MuiInput-underline MuiAutocomplete-inputRoot MuiInputBase-fullWidth MuiInput-fullWidth MuiInputBase-formControl MuiInput-formControl MuiInputBase-adornedEnd"
+        >
+          <input
+            aria-autocomplete="list"
+            aria-invalid="false"
+            autocapitalize="none"
+            autocomplete="off"
+            class="MuiInputBase-input MuiInput-input MuiAutocomplete-input MuiAutocomplete-inputFocused MuiInputBase-inputAdornedEnd"
+            id="key-0.15826076298314518"
+            spellcheck="false"
+            type="text"
+            value=""
+          />
+          <div
+            class="MuiAutocomplete-endAdornment"
+          >
+            <button
+              aria-label="Clear"
+              class="MuiButtonBase-root MuiIconButton-root MuiAutocomplete-clearIndicator"
+              tabindex="-1"
+              title="Clear"
+              type="button"
+            >
+              <span
+                class="MuiIconButton-label"
+              >
+                <svg
+                  aria-hidden="true"
+                  class="MuiSvgIcon-root MuiSvgIcon-fontSizeSmall"
+                  focusable="false"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    d="M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"
+                  />
+                </svg>
+              </span>
+              <span
+                class="MuiTouchRipple-root"
+              />
+            </button>
+            <button
+              aria-label="Open"
+              class="MuiButtonBase-root MuiIconButton-root MuiAutocomplete-popupIndicator"
+              tabindex="-1"
+              title="Open"
+              type="button"
+            >
+              <span
+                class="MuiIconButton-label"
+              >
+                <svg
+                  aria-hidden="true"
+                  class="MuiSvgIcon-root"
+                  focusable="false"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    d="M7 10l5 5 5-5z"
+                  />
+                </svg>
+              </span>
+              <span
+                class="MuiTouchRipple-root"
+              />
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+`;

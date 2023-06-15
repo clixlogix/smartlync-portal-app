@@ -1,0 +1,22 @@
+.treemap{
+    padding: 10px 0;
+    p{
+        margin: 0;
+        padding: 0;
+    }
+    &__header{
+        height: 35px;
+        max-height: 35px;
+        padding: 5px;
+        color: #fff;
+        display: flex;
+        margin-bottom: 10px;
+        justify-content: space-between;
+        p{
+            font-size: 20px;
+        }
+    }
+    &__icons{
+        display: flex;
+    }
+}

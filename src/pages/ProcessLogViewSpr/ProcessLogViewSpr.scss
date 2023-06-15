@@ -1,0 +1,213 @@
+$base-color: #ffdb0a;
+$border-dark: rgba($base-color, 0.88);
+$basic-white: #ffffff;
+$basic-black: #000000;
+$project-header: #243240;
+$page-background: #12181d;
+$label-dark: #333;
+@import 'scss/main.scss';
+div.x-cls-process-log-view-spr-container {
+    height: calc(100vh - 60px);
+    max-width: initial;
+    position: relative;
+    color: #fff;
+    flex: 1;
+    display: flex;
+    .x-cls-filter-panel {
+        position: relative;
+        top: 0;
+        left: 0;
+        height: 100%;
+    }
+    .x-cls-process-log-widget-table {
+        width: 100%;
+    }
+}
+
+div.x-cls-process-log-view-spr-body {
+    display: flex;
+    flex: 1;
+    opacity: 1;
+}
+
+.x-cls-process-log-page {
+    flex: 1;
+    background: $page-background 0% 0% no-repeat padding-box;
+    .x-cls-breadcrumb {
+        background: $page-background 0% 0% no-repeat padding-box;
+        padding-left: 30px;
+    }
+    .toolbar-section {
+        height: 70px;
+        background-color: $project-header;
+        margin-left: 15px;
+        margin-right: 16px;
+        display: flex;
+        flex-flow: row wrap;
+        .left-section {
+            width: 350px;
+            background: #243240 0% 0% no-repeat padding-box;
+            opacity: 1;
+        }
+        .right-section {
+            align-items: center;
+            display: flex;
+            flex: 1;
+            justify-content: flex-end;
+            background: $page-background 0% 0% no-repeat padding-box;
+            padding-bottom: 10px;
+            opacity: 1;
+            & > div {
+                display: inline-flex;
+                margin: 0 20px;
+                align-items: center;
+            }
+            button {
+                color: #fff;
+                border: 1px solid $base-color;
+                border-radius: 100px;
+                background-color: transparent;
+                width: 139px;
+                height: 35px;
+                margin-left: 5px;
+                margin-right: 5px;
+                text-transform: capitalize;
+            }
+            .filter-btn {
+                width: 72px;
+            }
+        }
+    }
+    .x-cls-process-log-page-body {
+        flex: 1;
+        display: flex;
+        flex-flow: row nowrap;
+    }
+    .x-cls-filter-panel-state-btn {
+        background-color: $base-color;
+        color: $basic-black;
+        position: absolute;
+        width: 43px;
+        height: 23px;
+        text-align: right;
+        font: normal normal normal 17px/23px Open Sans;
+        letter-spacing: 0px;
+        opacity: 1;
+        .open {
+            top: 85px;
+        }
+        .close {
+            top: 0px;
+        }
+    }
+    .x-cls-filter-panel {
+        background: #19242e 0% 0% no-repeat padding-box;
+        box-shadow: 0px 3px 6px #00000029;
+        opacity: 1;
+        position: relative;
+        &.panel-open {
+            width: 372px;
+        }
+        &.panel-close {
+            width: 0;
+        }
+    }
+    .x-cls-data-panel {
+        flex: 1;
+        display: flex;
+        flex-flow: column nowrap;
+        .x-cls-title {
+            padding: 15px 0 0 30px;
+        }
+        .x-cls-breadcrumb {
+            padding-top: 10px;
+        }
+        .page-title-bar {
+            padding-top: 0;
+        }
+    }
+    .x-cls-data-panel-container {
+        flex: 1;
+        display: flex;
+        padding: 10px;
+        & > div {
+            flex: 1;
+            height: initial !important;
+        }
+        .x-cls-process-log-widget-table {
+            width: 100%;
+        }
+    }
+    .x-cls-info-panel {
+        background: #19242e 0% 0% no-repeat padding-box;
+        box-shadow: 0px 3px 6px #00000029;
+        opacity: 1;
+        position: relative;
+        display: flex;
+        flex-flow: column nowrap;
+        // width: 400px;
+        // max-width: 400px;
+        width: 100%;
+        height: calc(100vh - 56px);
+        &.panel-open {
+            width: 100%;
+            right: 0px;
+        }
+        &.panel-close {
+            width: 0;
+            right: -50px;
+
+            .x-cls-more-info-panel-btn {
+                right: calc(100vw + 200px);
+            }
+        }
+        .x-cls-station-anomaly-widget {
+            flex: 1;
+        }
+    }
+}
+
+.activity-btn {
+    .activity {
+        width: 16px;
+        height: 16px;
+        color: #ccc;
+        border-radius: 16px;
+        color: #149b74;
+    }
+}
+.maximize-widget-width {
+    width: 98% !important;
+    height: 98% !important;
+    flex: 1;
+}
+
+.x-cls-iot-flows-dashboard {
+    display: flex;
+    flex-flow: column nowrap;
+    flex: 1;
+    height: 100%;
+    & > div {
+        flex: 1;
+    }
+}
+
+.x-cls-dashboard-item {
+    display: flex;
+    flex: 1;
+    & > div {
+        display: flex;
+        flex: 1;
+        height: 100%;
+        width: 100%;
+    }
+}
+
+.x-cls-process-log-widget {
+    display: flex;
+}
+
+.SplitPane {
+    display: block !important;
+    position: relative !important;
+}

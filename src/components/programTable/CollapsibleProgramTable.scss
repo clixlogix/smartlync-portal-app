@@ -1,0 +1,72 @@
+@import 'scss/main.scss';
+
+$borderColor: #3d3d3d;
+$tableBackgroundColor: #1b1b1b;
+$header-background: #2b2b2b;
+$header-sort-icon: rgba(255, 255, 255, 0.56);
+
+.x-cls-collapsible-table {
+    opacity: 1;
+    margin-right: 20px;
+    //flex: 1;
+    // overflow: auto;
+    .paper {
+        overflow-x: hidden;
+        table {
+            min-width: 250;
+            background-color: $tableBackgroundColor;
+            .table-head {
+                background-color: $header-background;
+                height: 56px;
+            }
+            th {
+                font-weight: 700;
+                color: $smartlync-white;
+                border-bottom: none;
+                .table-sort-label {
+                    color: $smartlync-white;
+                    svg {
+                        color: $header-sort-icon;
+                        height: 15px;
+                        width: 15px;
+                    }
+                }
+            }
+            td {
+                color: $smartlync-white;
+                border: none; //1px solid $borderColor;
+                a {
+                    color: $base-color;
+                    //text-decoration-color: $base-color;
+                }
+                .td-chip {
+                    color: $smartlync-white;
+                    border: $smartlync-white;
+                    background: rgba(255, 255, 255, 0.16);
+                }
+                .device-name-chip {
+                    margin-left: 8px;
+                }
+            }
+            // .left-cell {
+            //     border-left: 1px solid $base-color;
+            // }
+            // .right-cell {
+            //     border-right: 1px solid $base-color;
+            // }
+            // .top-cell {
+            //     border-top: 1px solid $base-color;
+            // }
+            // .bottom-cell {
+            //     border-bottom: 1px solid $base-color;
+            // }
+        }
+    }
+    .table-pagination {
+        color: $smartlync-white;
+        background-color: $header-background;
+        svg {
+            color: $smartlync-white;
+        }
+    }
+}

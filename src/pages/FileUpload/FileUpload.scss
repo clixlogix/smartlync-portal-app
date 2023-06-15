@@ -1,0 +1,158 @@
+@import 'scss/main.scss';
+* {
+    outline: none;
+}
+
+.upload-panels {
+    flex: 1;
+    margin: 16px;
+    .btn-bar {
+        border-bottom: 20px solid $smartlync-black;
+        justify-content: space-between;
+    }
+}
+
+.main-content-container {
+    overflow: auto;
+    flex: 1;
+    // &>div {
+    //     height: 390px;
+    // }
+    max-height: 90vh;
+}
+
+button:focus {
+    outline: 0 !important;
+}
+
+.control-btns {
+    margin: 15px;
+}
+
+.Upload {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    text-align: left;
+    overflow: hidden;
+    width: 100%;
+    padding: 20px 50px 0 50px;
+    background: $smartlync-black;
+}
+
+.Content {
+    display: flex;
+    flex-direction: row;
+    padding-top: 16px;
+    box-sizing: border-box;
+    width: 100%;
+    height: 260px;
+}
+
+.Content>div {
+    border: 1px solid silver;
+    background: $smartlync-primary-color-background-outer 0% 0% no-repeat padding-box;
+    border: 1px solid $smartlync-border-2;
+    opacity: 1;
+}
+
+.status-container {
+    width: 33%;
+    height: 243px;
+    margin-left: 32px;
+    align-items: flex-start;
+    justify-items: flex-start;
+    overflow-y: auto;
+}
+
+.Actions {
+    display: flex;
+    flex: 1;
+    width: 100%;
+    flex-direction: column;
+    margin-top: 32px;
+    margin-bottom: 32px;
+}
+
+.Title {
+    margin-bottom: 0px;
+    color: $smartlync-white;
+}
+
+.Filename {
+    display: flex;
+    margin-bottom: 8px;
+    font-size: 14px;
+    color: $smartlync-white;
+}
+
+.Row {
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+    justify-content: space-between;
+    overflow: hidden;
+    box-sizing: border-box;
+    margin-bottom: 15px;
+}
+
+.CheckIcon {
+    opacity: 0.5;
+    margin-left: 32px;
+}
+
+.ProgressWrapper {
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+    align-items: center;
+    height: 10px;
+}
+
+.drop-zone {
+    border: 1px solid silver;
+    padding: 20px;
+    width: 32%;
+}
+
+.status-span {
+    font-size: 15px;
+}
+
+.choose-btn {
+    margin-right: 185px;
+    background: transparent;
+    border-radius: 27px;
+    width: 147px;
+    outline: none;
+    height: 44px;
+    font-size: 16px;
+}
+
+.backToReports {
+    background-color: transparent !important;
+    border-color: transparent !important;
+}
+
+.pr-2 {
+    border: 1px solid $smartlync-primary-yellow;
+    border-style: solid;
+    border-radius: 63px;
+    width: 32px;
+    line-height: 2;
+    height: 32px;
+    margin-right: 8px;
+    color: $smartlync-primary-yellow;
+}
+
+.submit-button {
+    border: 1px solid $smartlync-primary-yellow !important;
+    border-style: solid !important;
+    border-radius: 63px !important;
+    background-color: transparent !important;
+    width: 131px;
+}
+
+.custLabelSize {
+    color: $smartlync-white;
+}

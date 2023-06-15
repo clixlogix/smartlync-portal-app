@@ -1,0 +1,27 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<PlantLevelKpi /> should match the snapshot 1`] = `
+<div
+  class="page-body col"
+>
+  <div
+    class="page-wrapper "
+  >
+    <iframe
+      aria-hidden="true"
+      frameborder="0"
+      src="about:blank"
+      style="display: block; opacity: 0; position: absolute; top: 0px; left: 0px; height: 100%; width: 100%; overflow: hidden; pointer-events: none; z-index: -1;"
+      tabindex="-1"
+    />
+    <iframe
+      allowfullscreen=""
+      frameborder="0"
+      height="-100"
+      src="https://app.powerbi.com/reportEmbed?reportId=4c1161f6-8be0-496c-83bf-b025ed69d20f&autoAuth=true&ctid=d4062de4-74ba-4730-a339-59645ae170de&config=eyJjbHVzdGVyVXJsIjoiaHR0cHM6Ly93YWJpLXVzLWVhc3QyLXJlZGlyZWN0LmFuYWx5c2lzLndpbmRvd3MubmV0LyJ9&formatLocale=en-US&language=en-US&filterPaneEnabled=false"
+      title="Summary Plant KPIs at a Glance"
+      width="0"
+    />
+  </div>
+</div>
+`;

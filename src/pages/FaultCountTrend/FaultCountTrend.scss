@@ -1,0 +1,23 @@
+.x-cls-fault-count-trend-body {
+    display: flex;
+    flex-flow: column nowrap;
+    flex: 1;
+    .react-grid-layout {
+        overflow-y: auto;
+        flex: 1;
+        display: flex;
+        & > div {
+            display: flex;
+            flex: 1;
+        }
+        .x-cls-chart {
+            flex: 1;
+            max-width: 100%;
+        }
+    }
+    .maximize-widget-width {
+        width: 98% !important;
+        flex: 1;
+        height: 475px !important;
+    }
+}

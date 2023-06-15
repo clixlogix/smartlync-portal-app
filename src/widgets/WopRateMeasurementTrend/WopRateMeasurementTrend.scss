@@ -1,0 +1,28 @@
+@import 'scss/main.scss';
+
+.x-cls-wop-rate-measurement-trend-widget {
+    opacity: 1;
+    flex: 1;
+
+    & > div,
+    & > div > div {
+        flex: 1;
+    }
+
+    &.react-grid-item {
+        // default widget background and border
+        background-color: #333;
+        border: 1px solid #bbb;
+    }
+    .plot-fault-rate {
+        width: 100%;
+    }
+}
+
+.x-cls-wop-rate-measurement-trend-widget-header {
+    opacity: 1;
+}
+
+.x-cls-wop-rate-measurement-trend-widget-body {
+    opacity: 1;
+}

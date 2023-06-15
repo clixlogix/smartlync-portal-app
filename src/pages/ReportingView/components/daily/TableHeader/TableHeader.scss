@@ -1,0 +1,38 @@
+.x-cls-table-header-cell {
+    position: sticky;
+    top: 0;
+    display: table-cell;
+    background-color: #333;
+    &>div {
+        padding-left: 0px;
+        padding-right: 0px;
+    }
+    .x-head-wrapper {
+        justify-content: space-around;
+        align-items: center;
+        display: flex;
+        flex-flow: column;
+        .x-second {
+            display: flex;
+        }
+    }
+    .x-trans-label {
+        position: absolute;
+        margin: 0px;
+        top: -25px;
+        width: 100%;
+        color: var(--unnamed-color-ffffff);
+        text-align: left;
+        font: normal normal 300 18px/24px Open Sans;
+        letter-spacing: 0px;
+        color: #ffffff;
+        &.day {
+            top: -30px;
+            padding: 4px 100px 2px 5px;
+            // letter-spacing: 1.2em;
+            color: linear-gradient( 90deg, rgba(160, 160, 160, 1) 0%, rgba(123, 123, 123, 0.3379726890756303) 56%, rgba(59, 57, 57, 1) 100%);
+            background: transparent;
+        }
+        color: rgba(200, 200, 200, 0.5);
+    }
+}

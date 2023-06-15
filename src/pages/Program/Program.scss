@@ -1,0 +1,57 @@
+@import 'scss/main.scss';
+$page-background: #121212;
+.container {
+    height: calc(100% - 10px);
+    background-color: $page-background;
+}
+
+div.x-cls-program-container {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    overflow: auto;
+   height: calc(100% - 160px);
+    // .x-cls-filter-panel {
+    //     position: relative;
+    //     top: 0;
+    //     left: 0;
+    //     height: 100%;
+    // }
+
+    .detail-title {
+        color: $smartlync-white;
+    }
+    .edit-program-container {
+        display: flex;
+        align-items: center;
+        padding-top: 24px;
+        padding-bottom: 16px;
+        .edit-icon {
+            margin: 10px;
+            color: rgba(255, 255, 255, 0.56);
+        }
+        .submit-button-container{
+            margin-left: 20px;
+        }
+    }
+}
+div.x-cls-program-loader-container {
+    display: flex;
+    align-items: center;
+    flex: 1;
+    .x-cls-program-loader {
+        margin-left: 50%;
+        color: $base-color;
+    }
+}
+
+div.x-cls-program-body {
+    display: flex;
+    flex-flow: column nowrap;
+    flex: 1;
+    background-color: $page-background;
+    .x-cls-breadcrumb {
+        padding-left: 10px;
+        margin-top: 20px;
+    }
+}

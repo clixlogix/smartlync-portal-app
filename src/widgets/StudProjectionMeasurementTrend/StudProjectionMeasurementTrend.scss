@@ -1,0 +1,26 @@
+@import 'scss/main.scss';
+
+.x-cls-stud-projection-measurement-trend-widget {
+    opacity: 1;
+    // display: flex;
+    flex: 1;
+
+    & > div,
+    & > div > div {
+        flex: 1;
+    }
+
+    &.react-grid-item {
+        // default widget background and border
+        background-color: #333;
+        border: 1px solid #bbb;
+    }
+}
+
+.x-cls-stud-projection-measurement-trend-widget-header {
+    opacity: 1;
+}
+
+.x-cls-stud-projection-measurement-trend-widget-body {
+    opacity: 1;
+}

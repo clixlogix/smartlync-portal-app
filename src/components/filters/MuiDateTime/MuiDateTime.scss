@@ -1,0 +1,20 @@
+@import 'scss/main.scss';
+.x-cls-mui-date-time {
+    opacity: 1;
+    label {
+        color: #fff;
+    }
+}
+.css-xcyuu-1n2mv2k-root-active {
+    padding: 0 !important;
+}
+.css-xcyuu-1n2mv2k-MuiDateRangePickerDay-root:last-of-type {
+    border-top-right-radius: 0 !important;
+    border-bottom-right-radius: 0 !important;
+}
+
+.css-xcyuu-1n2mv2k-MuiDateRangePickerDay-rangeIntervalDayHighlightEnd {
+    border-radius: 0 !important;
+    border-top-right-radius: 50% !important;
+    border-bottom-right-radius: 50% !important;
+}

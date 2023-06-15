@@ -1,0 +1,162 @@
+@import 'scss/main.scss';
+$base-color: #ffdb0a;
+$border-dark: rgba($base-color, 0.88);
+$basic-white: #ffffff;
+$basic-black: #000000;
+$project-header: #243240;
+
+.filter-panel-B {
+    .div-flex-row {
+        display: flex;
+        flex: 1;
+        width: 85%;
+        margin-top: 20px;
+    }
+    .x-cls-filter-fault-code,
+    .x-cls-filter-stud-type,
+    .x-cls-filter-device-name,
+    .x-cls-filter-stud-id {
+        border: 1px solid $base-color;
+        border-radius: 100px;
+        opacity: 1;
+    }
+    .bPanel {
+        font-size: 12;
+    }
+    .div-flex-auto {
+        flex: auto;
+        .row-reverse {
+            display: flex;
+            justify-content: flex-end;
+            width: auto;
+        }
+    }
+    .page-filter,
+    .page-filter-B {
+        padding-left: 15px;
+        padding-top: 11px;
+        padding-right: 20px;
+    }
+    .x-cls-filter-fault-code {
+        width: 604px;
+    }
+    .x-cls-filter-fault-assignment,
+    .x-cls-filter-week-day,
+    .x-cls-filter-device-name,
+    .x-cls-filter-stud-type,
+    .x-cls-filter-event {
+        width: 22rem;
+        margin-bottom: 10px;
+        margin-right: 1%;
+        margin-left: 6px;
+    }
+    .filter-panel-reportB {
+        flex-flow: row wrap;
+        margin: 5px 10px 0px 10px;
+    }
+    .filter-panel .selectors {
+        width: 800px;
+        height: 120px;
+        display: flex;
+        flex-flow: row wrap;
+        justify-content: flex-start;
+        & > div + div + div {
+            margin-left: 20px;
+        }
+    }
+
+    .content {
+        .dropdown-menu {
+            height: 206px;
+            overflow: auto;
+        }
+    }
+
+    .select-field.inline label {
+        font-size: 16px !important;
+    }
+    .status-message {
+        text-align: right;
+        font: italic normal normal 14px/19px Open Sans;
+        letter-spacing: 0px;
+        color: $basic-white;
+        opacity: 1;
+    }
+    .status-icon {
+        text-align: right;
+        font: normal normal normal 16px/19px Font Awesome 5 Pro;
+        font-family: 'Font Awesome 5 Pro';
+        letter-spacing: 0px;
+        color: #149b74;
+        opacity: 1;
+        padding-right: 5px;
+    }
+    .project-info-reportB .info {
+        color: $basic-white;
+        padding-right: 2%;
+        display: flex;
+        width: 337px;
+        margin: 5px;
+        height: 44px;
+        border: 1px solid $smartlync-primary-yellow;
+        border-radius: 31px;
+        flex-direction: row;
+        .label {
+            color: #a0a0a0;
+            padding-right: 10px;
+            font-size: 18px;
+            padding-left: 20px;
+            color: #fff;
+            position: relative;
+            white-space: nowrap;
+            align-self: center;
+            justify-self: flex-start;
+            font-size: 16px;
+            transform: initial;
+            margin-bottom: 0px;
+        }
+        .value {
+            color: $basic-white;
+            font-size: 20px;
+            border-color: 'transparent';
+        }
+    }
+
+    .filterRow {
+        justify-content: flex-start;
+        padding: 5px;
+    }
+    .download-option-reportB {
+        text-align: right;
+        color: $base-color;
+        padding-right: 14px;
+        justify-content: flex-end;
+        cursor: pointer;
+        span {
+            color: $base-color;
+            padding-right: 5px;
+            font-size: 16px;
+        }
+    }
+    .download-option:active {
+        opacity: 0;
+        transition: all 0.8s;
+        background-color: #ebe834;
+    }
+    .file-info {
+        color: $base-color;
+        padding-right: 10px;
+        font-size: 16px;
+    }
+
+    .btn-outline-light {
+        border-color: transparent;
+        background-color: transparent;
+        font-family: 'Open Sans';
+        &:hover {
+            color: #fff;
+            background-color: transparent;
+            border-color: transparent;
+        }
+    }
+}

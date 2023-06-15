@@ -1,0 +1,19 @@
+import * as React from 'react';
+import { render } from '@testing-library/react';
+import { HelmetProvider } from 'react-helmet-async';
+
+import { PlantHealthOverviewSpr } from '..';
+
+const renderComponent = () =>
+    render(
+        <HelmetProvider>
+            <PlantHealthOverviewSpr />
+        </HelmetProvider>,
+    );
+
+describe('<PlantHealthOverviewSpr />', () => {
+    it('should match the snapshot', () => {
+        const component = renderComponent();
+        expect(component.container.firstChild).toMatchSnapshot();
+    });
+});

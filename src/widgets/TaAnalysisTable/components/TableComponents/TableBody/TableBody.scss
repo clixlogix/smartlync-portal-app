@@ -1,0 +1,22 @@
+.x-ta-table-body-cell {
+    &.ta-table-data {
+        // color: black;
+        height: 25px;
+    }
+    &.highLightFilter {
+        background-color: greenyellow;
+    }
+    .ta-flex-row {
+        display: flex;
+        flex-direction: row;
+    }
+    .ta-column-value {
+        display: flex;
+        flex: 1;
+        justify-content: flex-end;
+        padding-right: 5px;
+        &.column-border-left {
+            border-left: 2px solid black;
+        }
+    }
+}

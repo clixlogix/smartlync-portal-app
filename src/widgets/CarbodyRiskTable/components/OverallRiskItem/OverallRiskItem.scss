@@ -1,0 +1,22 @@
+@import 'scss/main.scss';
+
+.x-cls-overall-risk-item {
+    opacity: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    .green-dot {
+        height: 12px;
+        width: 12px;
+        background-color: rgba(102, 187, 106, 1);
+        border-radius: 50%;
+    }
+
+    .red-dot {
+        height: 12px;
+        width: 12px;
+        background-color: rgba(244, 67, 54, 1);
+        border-radius: 50%;
+    }
+}

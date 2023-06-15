@@ -1,0 +1,32 @@
+@import 'scss/main.scss';
+
+.x-cls-faults-per-device-histogram-widget {
+    opacity: 1;
+    display: flex;
+    flex: 1;
+    overflow: visible;
+    visibility: visible;
+    display: flex;
+    width: 100%;
+    // max-width: 100%;
+
+    & > div,
+    & > div > div {
+        flex: 1;
+        max-width: fit-content;
+    }
+
+    &.react-grid-item {
+        // default widget background and border
+        background-color: #333;
+        border: 1px solid #bbb;
+    }
+}
+
+.x-cls-faults-per-device-histogram-widget-header {
+    opacity: 1;
+}
+
+.x-cls-faults-per-device-histogram-widget-body {
+    opacity: 1;
+}

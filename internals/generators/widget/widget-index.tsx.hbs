@@ -1,0 +1,190 @@
+/**
+*
+* {{ properCase ComponentName }}
+*
+*/
+import React, { useMemo, useState{{#if wantMemo}}, memo{{/if}}{{#if wantSaga}}, useEffect{{/if}} } from 'react';
+import { SizeMe } from 'react-sizeme';
+{{#if wantTranslations}}import { useTranslation } from 'react-i18next';{{/if}}
+{{#if wantStyledComponents}}import styled from 'styled-components/macro';{{/if}}
+{{#if wantSlice}}
+import { useSelector, useDispatch } from 'react-redux';
+{{#if wantSaga}}import { useInjectReducer, useInjectSaga } from 'utils/redux-injectors';{{else}}import { useInjectReducer } from 'utils/redux-injectors';{{/if}}
+{{else}}
+{{#if wantSaga}}import { useInjectSaga } from 'utils/redux-injectors';{{/if}}
+{{/if}}
+{{#if wantSlice}}
+import { {{#if wantSaga}}{{ camelCase ServiceName }}Actions,{{/if}}{{ camelCase ServiceName }}Reducer, {{ camelCase ServiceName }}Key } from 'services/{{ dashCase ServiceName }}/{{ dashCase ServiceName }}-reducer';
+import { select{{> ServiceModel }}s, select{{> ServiceModel }}IsLoading } from 'services/{{ dashCase ServiceName }}/{{ dashCase ServiceName }}-selectors';
+{{/if}}
+{{#if wantSaga}}
+{{#if wantCreate}}import { create{{> ServiceModel }}Saga } from 'services/{{ dashCase ServiceName }}/sagas/{{ dashCase ServiceName }}-saga-create';{{/if}}
+{{#if wantReadAll}}import { getAll{{> ServiceModel }}sSaga } from 'services/{{ dashCase ServiceName }}/sagas/{{ dashCase ServiceName }}-saga-get-all';{{/if}}
+{{#if wantReadByID}}import { get{{> ServiceModel }}ByIdSaga } from 'services/{{ dashCase ServiceName }}/sagas/{{ dashCase ServiceName }}-saga-get-by-id';{{/if}}
+{{#if wantUpdate}}import { update{{> ServiceModel }}Saga } from 'services/{{ dashCase ServiceName }}/sagas/{{ dashCase ServiceName }}-saga-update';{{/if}}
+{{#if wantDelete}}import { delete{{> ServiceModel }}Saga } from 'services/{{ dashCase ServiceName }}/sagas/{{ dashCase ServiceName }}-saga-delete';{{/if}}
+{{/if}}
+import { Filters{{#if wantModel}}, {{ properCase ModelName }}s {{/if}} } from 'models';
+import Table from 'components/Table';
+import { DashboardFilter,
+    DateFilterData,
+    FilterType,
+    SelectFilterData } from 'components/panels/SideFilterPanel/SideFilterPanel';
+import { WidgetProps, Widget } from 'widgets';
+{{#if wantTranslations}}import { messages } from './messages';{{/if}}
+
+import 'scss/main.scss';
+import './{{ properCase ComponentName }}.scss';
+
+interface {{ properCase ComponentName }}Props extends WidgetProps {}
+
+{{#if wantMemo}}
+export const {{ properCase ComponentName }}Widget: Widget<{{ properCase ComponentName }}Props> = memo((props: {{ properCase ComponentName }}Props) => {
+{{else}}
+export function {{ properCase ComponentName }}(props: {{ properCase ComponentName }}Props)}:React.FC<{{ properCase ComponentName }}Props> {
+{{/if}}
+const { className = '', filters = {} } = props;
+    {{#if wantSlice}}useInjectReducer({ key: {{ camelCase ServiceName }}Key, reducer: {{ camelCase ServiceName }}Reducer });{{/if}}{{#if wantSaga}}
+    {{#if wantCreate}}useInjectSaga({ key: {{ camelCase ServiceName }}Key, saga: create{{ properCase ServiceName }}Saga });{{/if}}
+    {{#if wantReadAll}}useInjectSaga({ key: {{ camelCase ServiceName }}Key, saga: getAll{{ properCase ServiceName }}sSaga });{{/if}}
+    {{#if wantReadByID}}useInjectSaga({ key: {{ camelCase ServiceName }}Key, saga: get{{ properCase ServiceName }}ByIdSaga });{{/if}}
+    {{#if wantUpdate}}useInjectSaga({ key: {{ camelCase ServiceName }}Key, saga: update{{ properCase ServiceName }}Saga });{{/if}}
+    {{#if wantDelete}}useInjectSaga({ key: {{ camelCase ServiceName }}Key, saga: delete{{ properCase ServiceName }}Saga });{{/if}}
+{{/if}}
+
+{{#if wantTranslations}}
+// eslint-disable-next-line @typescript-eslint/no-unused-vars
+const { t } = useTranslation();
+{{/if}}
+
+
+{{#if wantSlice}}
+    const {{> serviceModel }}s: {{> AnyModels }}| undefined = useSelector(select{{> ServiceModel }}s);
+    const {{> serviceModel }}IsLoading: boolean = useSelector(select{{> ServiceModel }}IsLoading);
+    const dispatch = useDispatch();
+
+    const displayRows = useMemo(() => {
+        return ({{> serviceModel }}s || []) // .filter((row) => !row.hidden);
+    }, [{{> serviceModel }}s]);
+
+    if (props.isLoading) {
+        props.isLoading({{> serviceModel }}IsLoading);
+    }
+
+    {{#if wantFilters}}
+    const [widgetFilters] = useState<Filters>({
+        ...defaultFilters,
+        // add your filters here
+        ...filters,
+    });{{/if}}
+
+    useEffect(() => {
+        {{#if wantSaga}}{{#if wantReadAll}}dispatch({{ camelCase ServiceName }}Actions.getAll{{> ServiceModel }}s(widgetFilters));{{/if}}{{/if}}
+    }, [dispatch, widgetFilters]);
+{{/if}}
+
+
+
+        return (
+        <Div className={` ${className} x-cls-{{dashCase ComponentName}}-widget`} {{#if false}}{...widgetProps}{{/if}}>
+            {{#if wantTranslations}}
+                {t(messages.{{ camelCase ComponentName }}Title)}
+                <h4>
+                   WIdget Done One
+                </h4>
+            {{/if}}
+        </Div>
+        );
+
+      /*
+        const tableTheme = useMemo(() => {
+            const obj: any = {
+                root: {
+                    '&$disabled': {
+                        color: '#ffdb38',
+                    },
+                },
+                MuiTableCell: {
+                    root: {
+                        font: 'normal normal normal 18px/60px Open Sans',
+                    },
+                },
+                MUIDataTableBodyCell: {
+                    stackedCommon: {
+                        color: '#fff',
+                        textAlign: 'center',
+                    },
+                },
+            };
+
+            return obj;
+        }, []);
+
+        const columns = [];
+
+        const options = {
+            filterType: 'checkbox',
+            elavation: 4,
+            enableNestedDataAccess: '.',
+            // responsive: 'scrollMaxHeight',
+            // responsive: 'sstackedcroll',
+            // onRowClick: handleOnRowClick,
+        };
+
+        return (
+            <Div className={`${className} x-cls-{{dashCase ComponentName}}-widget`}>
+                <SizeMe>
+                    {({ size }) => {
+                        const { height = 0 } = size as any;
+                        const tableBodyHeight = height - 220;
+
+                        return (
+                            <Table
+                                className={`x-cls-{{dashCase ComponentName}}-widget-table`}
+                                data={displayRows}
+                                columns={columns}
+                                options={ { ...options, tableBodyHeight } }
+                                themeObj={tableTheme}
+                            />
+                        );
+                    }}
+                </SizeMe>
+            </Div>
+        );
+      */
+
+{{#if wantMemo}}
+});
+{{else}}
+};
+{{/if}}
+
+{{#if wantStyledComponents}}
+const Div = styled.div``;
+{{/if}}
+
+// extra widget properties
+const defaultFilters = [
+/*
+    { name: 'deviceName', type: FilterType.Select, label: 'Device' },
+    { name: 'deviceType', type: FilterType.Select, label: 'Type' },
+*/
+];
+export const {{ properCase ComponentName }}Property = Object.assign(
+    {},
+    {
+        defaultFilters: defaultFilters,
+        'type': 'panel',
+        layout: {
+            x: 0,
+            y: 0,
+            w: 2,
+            h: 3,
+            minW: 1,
+            minH: 1,
+        },
+    },
+);
+
+
+export default  {{ properCase ComponentName }}Widget;

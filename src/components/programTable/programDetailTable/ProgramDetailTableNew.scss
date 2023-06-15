@@ -1,0 +1,36 @@
+@import 'scss/main.scss';
+
+$table-background: #1b1b1b;
+$list-item-header: #2b2b2b;
+
+.x-cls-program-detail-table-new {
+    margin-right: 20px;
+    flex: 0.4;
+    overflow: auto;
+    overflow-x: hidden;
+    .detail-list-container {
+        background-color: $table-background;
+        .program-detail-list {
+            padding-top: 0;
+            .list-item {
+                div {
+                    color: $smartlync-white;
+                }
+                span {
+                    color: $smartlync-white;
+                }
+            }
+            .list-item-header {
+                background-color: $list-item-header;
+            }
+            .list-item-text-val {
+                text-align: end;
+            }
+        }
+        .td-chip {
+            color: $smartlync-white;
+            border: $smartlync-white;
+            background: rgba(255, 255, 255, 0.16);
+        }
+    }
+}

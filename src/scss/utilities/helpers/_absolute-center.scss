@@ -1,0 +1,18 @@
+/* Helper mixins and styles */
+
+///@group Utilities
+@mixin absolute-centred($width: auto, $height: auto) {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    margin: auto;
+    width: $width;
+    height: $height;
+}
+
+/// @example scss - Absolute centered `.foo`
+///   .foo {
+///     @include absolute-centred(300px,200px);
+///   }

@@ -1,0 +1,235 @@
+$base-color: #ffdb0a;
+.x-cls-upload-panel {
+    * {
+        outline: none;
+    }
+    .main-content-container {
+        overflow: auto;
+        height: 97vh;
+    }
+    button:focus {
+        outline: 0 !important;
+    }
+    .control-btns {
+        margin: 15px;
+    }
+    .Upload {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        text-align: left;
+        // overflow: hidden;
+        width: 100%;
+        padding: 50px 50px 0 50px;
+        background: #000;
+    }
+
+    .Content {
+        display: flex;
+        flex-direction: row;
+        padding-top: 16px;
+        box-sizing: border-box;
+        width: 100%;
+        height: 260px;
+    }
+    .Content > div {
+        border: 1px solid silver;
+        background: #12181d 0% 0% no-repeat padding-box;
+        border: 1px solid #3e3e3e;
+        opacity: 1;
+    }
+    .Files {
+        margin-left: 32px;
+        padding: 0;
+        align-items: flex-start;
+        justify-items: flex-start;
+        flex: 1;
+        display: flex;
+        .file-info {
+            flex: 1;
+            display: block;
+            overflow-y: auto;
+            width: 100%;
+            & > div:before {
+                color: $base-color;
+            }
+            & > div:nth-child(even) {
+                background-color: #333;
+            }
+            & > div:nth-child(odd) {
+                background-color: #444;
+            }
+            & > div {
+                border-bottom: 1px solid #000;
+                margin-bottom: 0;
+                padding-left: 10px;
+                padding-top: 5px;
+                & > span {
+                    height: 32px;
+                    width: 92%;
+                }
+            }
+            .filename {
+                display: inline-flex;
+                font-size: 0.9em;
+                padding-left: 10px;
+                color: #fff;
+                margin-right: 0em;
+                &.multi-line-ellipsis-text:after {
+                    background-color: transparent;
+                }
+            }
+        }
+        .file-info-footer {
+            width: 100%;
+            height: 32px;
+            color: $base-color;
+            padding-right: 10px;
+            text-align: left;
+            background-color: #555;
+            border-top: 1px solid #000;
+            display: flex;
+            flex-flow: row nowrap;
+            justify-content: flex-end;
+            align-items: center;
+            font-size: 0.8em;
+        }
+    }
+    .actions-bar {
+        display: flex;
+        flex: 1;
+        width: 100%;
+        margin-top: 15px;
+        margin-bottom: 15px;
+        align-items: center;
+    }
+    .status-container {
+        width: 33%;
+        height: 243px;
+        margin-left: 32px;
+        align-items: flex-start;
+        justify-items: flex-start;
+        overflow-y: auto;
+    }
+    .Title {
+        margin-bottom: 0px;
+        color: #fff;
+    }
+    .Filename {
+        display: flex;
+        margin-bottom: 8px;
+        font-size: 14px;
+        color: #fff;
+    }
+    .Row {
+        display: flex;
+        flex: 1;
+        flex-direction: column;
+        justify-content: space-between;
+        // height: 60px;
+        // overflow: hidden;
+        box-sizing: border-box;
+        margin-bottom: 15px;
+    }
+    .CheckIcon {
+        opacity: 0.5;
+        margin-left: 32px;
+    }
+    .ProgressWrapper {
+        display: flex;
+        flex: 1;
+        flex-direction: column;
+        align-items: center;
+        height: 10px;
+    }
+    button {
+        font-family: 'Open Sans', sans-serif;
+        font-size: 14px;
+        display: inline-block;
+        height: 36px;
+        min-width: 88px;
+        padding: 6px 16px;
+        line-height: 1.42857143;
+        text-align: center;
+        white-space: nowrap;
+        vertical-align: middle;
+        -ms-touch-action: manipulation;
+        touch-action: manipulation;
+        cursor: pointer;
+        -webkit-user-select: none;
+        -moz-user-select: none;
+        -ms-user-select: none;
+        user-select: none;
+        border: 0;
+        border-radius: 2px;
+        background: #000;
+        color: #fff;
+        outline: 0;
+        border: 1px solid #ffdb0a;
+        border-radius: 15px;
+    }
+    button:disabled {
+        background: rgb(189, 189, 189);
+        cursor: default;
+        opacity: 0.3;
+        color: firebrick;
+    }
+    .drop-zone {
+        border: 1px solid silver;
+        padding: 20px;
+        width: 32%;
+    }
+    .progress-stats {
+        display: flex;
+        flex-flow: row nowrap;
+        align-items: center;
+        justify-content: space-between;
+        font-size: 11px;
+        color: #fff;
+        & > span {
+            white-space: nowrap;
+            text-align: right;
+            width: 52px;
+        }
+    }
+    .status-span {
+        font-size: 15px;
+    }
+    .action-btn {
+        border: 1px solid $base-color;
+        background: transparent;
+        border-radius: 27px;
+        width: 137px;
+        outline: none;
+        height: 34px;
+        font-size: 16px;
+        margin: 0 16px;
+    }
+    .clear-btn,
+    .upload-btn {
+        opacity: 1;
+    }
+    .backToReports {
+        background-color: transparent !important;
+        border-color: transparent !important;
+    }
+    .pr-2 {
+        border: 1px solid #ffd20a;
+        border-style: solid;
+        border-radius: 63px;
+        width: 32px;
+        line-height: 2;
+        height: 32px;
+        margin-right: 8px;
+    }
+    .submit-button {
+        border: 1px solid #ffd20a !important;
+        border-style: solid !important;
+        border-radius: 63px !important;
+        background-color: transparent !important;
+        width: 131px;
+    }
+    .custLabelSize {
+        color: white;
+    }
+}

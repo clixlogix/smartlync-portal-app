@@ -1,0 +1,31 @@
+div.x-cls-measurement-container {
+    height: calc(100vh - 60px);
+    position: relative;
+    flex: 1;
+    display: flex;
+}
+
+div.x-cls-measurement-body {
+    display: flex;
+    flex-flow: column nowrap;
+    flex: 1;
+    max-width: calc(100% - 20px);
+    .maximize-widget {
+        // width: 98% !important;
+        height: 98% !important;
+        flex: 1;
+    }
+    .react-grid-layout {
+        overflow-y: auto;
+        flex: 1;
+        & > div {
+            // display: flex;
+            // width: 100%,
+        }
+    }
+    opacity: 1;
+    .x-cls-chart {
+        max-width: 99%;
+        flex: 1;
+    }
+}
